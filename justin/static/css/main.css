@@ -17,7 +17,12 @@ body {
     left: 50%;
     transform: translate(-50%, 0);
     background-color: transparent;
-    width: 80%;
+    width: 100%;
+    margin-left: 0;
+}
+
+div.navbar-nav {
+    margin-right: -8px;
 }
 
 #collision svg {
@@ -31,10 +36,18 @@ body {
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 
+    #navigation div.row {
+        width: 80%;
+    }
+
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+
+    #navigation div.row {
+        width: 75%;
+    }
 
 }
 
@@ -46,4 +59,8 @@ body {
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     
+    #navigation div.row {
+        width: 65%;
+    }
+
 }

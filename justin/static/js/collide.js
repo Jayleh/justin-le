@@ -1,5 +1,5 @@
-let width = 600,
-    height = 600;
+let width = 325,
+    height = 325;
 
 let nodes = d3.range(50).map(function () { return { radius: Math.random() * 12 + 4 }; }),
     root = nodes[0],
@@ -20,7 +20,6 @@ force.start();
 let svg = d3.select("#collision").append("svg")
     .attr("width", width)
     .attr("height", height);
-// .attr("class", "justify-content-center");
 
 svg.selectAll("circle")
     .data(nodes.slice(1))
