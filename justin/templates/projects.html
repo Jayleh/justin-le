@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block active_page %}
+  <a class="nav-item nav-link" href="{{ url_for('home') }}">About</a>
+  <a class="nav-item nav-link active" href="{{ url_for('projects') }}">Projects</a>
+  <a class="nav-item nav-link" href="{{ url_for('home') }}">Resume</a>
+  <a class="nav-item nav-link" href="{{ url_for('home') }}">Contact</a>
+{% endblock active_page %}
+{% block content %}
+
+{% endblock content %}
+{% block script %}
+{% endblock script %}

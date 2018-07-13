@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block active_page %}
+  <a class="nav-item nav-link" href="{{ url_for('home') }}">About</a>
+  <a class="nav-item nav-link" href="{{ url_for('projects') }}">Projects</a>
+  <a class="nav-item nav-link" href="{{ url_for('home') }}">Resume</a>
+  <a class="nav-item nav-link" href="{{ url_for('home') }}">Contact</a>
+{% endblock active_page %}
+{% block content %}
+  <div id="visual">
+    <div id="collision" class="container"></div>
+  </div>
+{% endblock content %}
+{% block script %}
+  <script src="//d3js.org/d3.v3.min.js"></script>
+  <script src="{{ url_for('static', filename='js/collide.js') }}"></script>
+{% endblock script %}
