@@ -5,11 +5,18 @@
   <a class="nav-item nav-link" href="{{ url_for('home') }}">Resume</a>
   <a class="nav-item nav-link" href="{{ url_for('home') }}">Contact</a>
 {% endblock active_page %}
-{% block content %}
+{% block home_header %}
+  <div id="intro">
+    <h1>I'm Justin,</h1>
+    <p>I look at data!</p>
+  </div>
   <div id="visual">
     <div id="collision"></div>
   </div>
-{% endblock content %}
+{% endblock %}
+{% block main %}
+
+{% endblock main %}
 {% block script %}
   <script src="//d3js.org/d3.v3.min.js"></script>
   <script src="{{ url_for('static', filename='js/collide.js') }}"></script>
