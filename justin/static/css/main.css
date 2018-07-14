@@ -52,30 +52,24 @@ header h2, header p {
     padding: 1em 0;
 }
 
-header h2 {
+/* header h2 {
     padding-top: 0;
-}
+} */
 
-header p {
+/* header p {
     padding: 0;
-}
+} */
 
 #navigation {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
     padding: 0;
     background-color: #343A40;
     z-index: 1;
 }
 
 #navigation div.row {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
     background-color: transparent;
     width: 100%;
-    margin-left: 0;
+    margin: 0;
 }
 
 nav.navbar {
@@ -94,36 +88,32 @@ a.nav-item {
     font-size: 14px;
 }
 
-#intro {
-    position: absolute;
-    top: 38%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#impression {
+    margin: 0;
 }
 
-#collision svg {
-    position: absolute;
-    top: 76%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#intro {
+    margin-top: 4rem;
 }
 
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-
+    
     #navigation div.row {
         width: 80%;
     }
 
-    #intro {
-        top: 55%;
-        left: 30%;
+    #impression {
+        max-width: 100%;
     }
-    
-    #collision svg {
-        top: 60%;
-        left: 76%;
+
+    #intro {
+        margin-top: 2rem;
+    }
+
+    #visual {
+        padding: 0;
     }
 
 }
@@ -135,14 +125,12 @@ a.nav-item {
         width: 75%;
     }
 
-    #intro {
-        top: 38%;
-        left: 50%;
+    #impression {
+        margin-top: 8rem;
     }
-    
-    #collision svg {
-        top: 76%;
-        left: 50%;
+
+    #visual {
+        margin-top: 4.5rem;
     }
 
 }
@@ -150,13 +138,8 @@ a.nav-item {
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
 
-
-    #intro {
-        top: 35%;
-    }
-    
-    #collision svg {
-        top: 75%;
+    #impression {
+        margin-top: 4rem;
     }
 
 }
@@ -164,6 +147,10 @@ a.nav-item {
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     
+    #impression {
+        margin-top: 7rem;
+    }
+
     #navigation div.row {
         width: 65%;
     }

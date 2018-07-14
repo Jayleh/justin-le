@@ -11,21 +11,14 @@ body {
 }
 
 #navigation {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
     padding: 0;
     background-color: #343A40;
     z-index: 1;
 }
 
 #navigation div.row {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
     background-color: transparent;
     width: 100%;
-    margin-left: 0;
 }
 
 nav.navbar {
@@ -45,7 +38,15 @@ a.nav-item {
 }
 
 #projects {
-    margin-top: 182.5px
+    margin-top: 2rem;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+}
+
+img {
+    width: 200px;
+    height: 200px;
 }
 
 

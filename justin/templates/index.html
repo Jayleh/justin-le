@@ -8,13 +8,17 @@
   <a class="nav-item nav-link" href="{{ url_for('home') }}">Contact</a>
 {% endblock active_page %}
 {% block home_header %}
-  <div id="intro">
-    <h2>I'm Justin,</h2>
-    <p>I look at data!</p>
+<div id="impression" class="container">
+  <div class="row">
+    <div id="intro" class="col-sm-6 col-md-12">
+      <h2>I'm Justin,</h2>
+      <p>I look at data!</p>
+    </div>
+    <div id="visual" class="col-sm-6 col-md-12">
+      <div id="collision" class="d-flex justify-content-center"></div>
+    </div>
   </div>
-  <div id="visual">
-    <div id="collision"></div>
-  </div>
+</div>
 {% endblock %}
 {% block main %}
 
