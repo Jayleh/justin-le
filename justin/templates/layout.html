@@ -10,13 +10,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
       crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/main.css') }}">
+    {% block styles %} {% endblock %}
   </head>
 
   <body>
 
     <header>
-      <div id="navigation" class="container-fluid">
+      <div id="navigation" class="container-fluid fixed-top">
         <div class="row">
           <div class="col-md-12">
             <nav class="navbar navbar-expand-lg navbar-dark">

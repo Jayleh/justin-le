@@ -1,13 +1,15 @@
 {% extends "layout.html" %}
+{% block styles %}
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock styles %}
 {% block active_page %}
-  <a class="nav-item nav-link" href="{{ url_for('home') }}">About</a>
   <a class="nav-item nav-link" href="{{ url_for('projects') }}">Projects</a>
   <a class="nav-item nav-link" href="{{ url_for('home') }}">Resume</a>
   <a class="nav-item nav-link" href="{{ url_for('home') }}">Contact</a>
 {% endblock active_page %}
 {% block home_header %}
   <div id="intro">
-    <h1>I'm Justin,</h1>
+    <h2>I'm Justin,</h2>
     <p>I look at data!</p>
   </div>
   <div id="visual">
