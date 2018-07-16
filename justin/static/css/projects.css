@@ -48,9 +48,21 @@ a.nav-item {
     margin: 0.5rem 0;
 }
 
-img {
-    width: 200px;
-    height: 200px;
+.card {
+    border-radius: 0;
+}
+
+img.card-img-top {
+    height: 250px;
+    border-radius: 0;
+}
+
+div.card-body p {
+    font-size: small;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
 }
 
 

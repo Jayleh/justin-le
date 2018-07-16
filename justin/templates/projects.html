@@ -1,97 +1,133 @@
-{% extends "layout.html" %}
-{% block styles %}
-  <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/projects.css') }}">
-{% endblock styles %}
-{% block active_page %}
-  <a class="nav-item nav-link active" href="{{ url_for('projects') }}">Projects</a>
-  <a class="nav-item nav-link" href="{{ url_for('home') }}">Resume</a>
-  <a class="nav-item nav-link" href="{{ url_for('home') }}">Contact</a>
-{% endblock active_page %}
-{% block main %}
-  <div id="projects" class="container">
-    <div class="row">
-      <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="{{ url_for('static', filename='img/placeholder-square.jpg') }}" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+{% extends "layout.html" %} {% block styles %}
+<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/projects.css') }}"> {% endblock styles %} {% block active_page %}
+<a class="nav-item nav-link active" href="{{ url_for('projects') }}">Projects</a>
+<a class="nav-item nav-link" href="{{ url_for('home') }}">Resume</a>
+<a class="nav-item nav-link" href="{{ url_for('home') }}">Contact</a>
+{% endblock active_page %} {% block main %}
+<div id="projects" class="container">
+  <div class="row">
+    <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/project-card-imgs/shipstation.PNG') }}" alt="Card image cap">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Shipstation Live</h5>
+          <p class="card-text">Shipstation dashboard revealing important indicators such as awaiting and on-hold shipments, total number of orders
+            this month, and an interactive map of order locations.</p>
+          <div class="mt-auto d-flex justify-content-between">
+            <!-- <a href="#" target="_blank" class="btn btn-outline-primary btn-sm">View Website</a> -->
+            <a href="https://github.com/Jayleh/shipstation-live" target="_blank">
+              <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
+            </a>
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="{{ url_for('static', filename='img/placeholder-square.jpg') }}" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/project-card-imgs/reorder.PNG') }}" alt="Card image cap">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Reorder Plan</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <div class="mt-auto d-flex justify-content-between">
+            <!-- <a href="#" target="_blank" class="btn btn-outline-primary btn-sm">View Website</a> -->
+            <a href="https://github.com/Jayleh/reorder-app" target="_blank">
+              <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
+            </a>
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="{{ url_for('static', filename='img/placeholder-square.jpg') }}" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/placeholder-square.jpg') }}" alt="Card image cap">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Mars Mission</h5>
+          <p class="card-text">Web application that scrapes various websites for data related to the Mission to Mars and displays the information
+            in a single HTML page.</p>
+          <div class="mt-auto d-flex justify-content-between">
+            <a href="javascript:void(0)" target="_blank" class="btn btn-outline-primary btn-sm">View Website</a>
+            <a href="https://github.com/Jayleh/mars-mission" target="_blank">
+              <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
+            </a>
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="{{ url_for('static', filename='img/placeholder-square.jpg') }}" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/project-card-imgs/belly-button.PNG') }}" alt="Card image cap">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Belly Button</h5>
+          <p class="card-text">Interactive dashboard investigating a 2011 study of belly button microbe diversity.</p>
+          <div class="mt-auto d-flex justify-content-between">
+            <a href="https://bellybtn.herokuapp.com" target="_blank" class="btn btn-outline-primary btn-sm">View Website</a>
+            <a href="https://github.com/Jayleh/belly-button" target="_blank">
+              <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
+            </a>
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="{{ url_for('static', filename='img/placeholder-square.jpg') }}" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/project-card-imgs/data-journalism.PNG') }}" alt="Card image cap">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Data Journalism</h5>
+          <p class="card-text">Interactive visualization showing correlations between demographics and behavioral risk factors.</p>
+          <div class="mt-auto d-flex justify-content-between">
+            <a href="https://risky-health.herokuapp.com" target="_blank" class="btn btn-outline-primary btn-sm">View Website</a>
+            <a href="https://github.com/Jayleh/data-journalism" target="_blank">
+              <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
+            </a>
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="{{ url_for('static', filename='img/placeholder-square.jpg') }}" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/project-card-imgs/usgs-quake.PNG') }}" alt="Card image cap">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">USGS Quake</h5>
+          <p class="card-text">Earthquake datamap revealing all earthquakes in the past week; it includes location, magnitude, and timestamp.</p>
+          <div class="mt-auto d-flex justify-content-between">
+            <a href="https://jayleh.github.io/usgs-quake/" target="_blank" class="btn btn-outline-primary btn-sm">View Website</a>
+            <a href="https://github.com/Jayleh/usgs-quake" target="_blank">
+              <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
+            </a>
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="{{ url_for('static', filename='img/placeholder-square.jpg') }}" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/project-card-imgs/honey-production.PNG') }}" alt="Card image cap">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Honey Production</h5>
+          <p class="card-text">Website visualizing historical honey production data through interactive graphs and maps.</p>
+          <div class="mt-auto d-flex justify-content-between">
+            <a href="https://honeyproduction.herokuapp.com/" target="_blank" class="btn btn-outline-primary btn-sm">View Website</a>
+            <a href="https://github.com/Jayleh/honey-production" target="_blank">
+              <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
+            </a>
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="{{ url_for('static', filename='img/placeholder-square.jpg') }}" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top" src="{{ url_for('static', filename='img/project-card-imgs/nfl-dash.PNG') }}" alt="Card image cap">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">NFL Prediction</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <div class="mt-auto d-flex justify-content-between">
+            <a href="https://six-asians-and-a-shilpasian.herokuapp.com/" target="_blank" class="btn btn-outline-primary btn-sm">View Website</a>
+            <a href="https://github.com/Jayleh/nfl-predict" target="_blank">
+              <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
+            </a>
           </div>
         </div>
       </div>
     </div>
   </div>
-{% endblock main %}
-{% block script %}
-{% endblock script %}
+</div>
+{% endblock main %} {% block script %} {% endblock script %}
