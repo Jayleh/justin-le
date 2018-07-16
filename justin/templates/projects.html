@@ -1,13 +1,13 @@
 {% extends "layout.html" %} {% block styles %}
 <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/projects.css') }}"> {% endblock styles %} {% block active_page %}
 <a class="nav-item nav-link active" href="{{ url_for('projects') }}">Projects</a>
-<a class="nav-item nav-link" href="{{ url_for('home') }}">Resume</a>
+<a class="nav-item nav-link" href="{{ url_for('resume') }}">Resume</a>
 <a class="nav-item nav-link" href="{{ url_for('home') }}">Contact</a>
 {% endblock active_page %} {% block main %}
 <div id="projects" class="container">
   <div class="row">
     <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-      <div class="card" style="width: 15rem;">
+      <div class="card">
         <img class="card-img-top" src="{{ url_for('static', filename='img/project-card-imgs/shipstation.PNG') }}" alt="Card image cap">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">Shipstation Live</h5>
@@ -23,11 +23,12 @@
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-      <div class="card" style="width: 15rem;">
+      <div class="card">
         <img class="card-img-top" src="{{ url_for('static', filename='img/project-card-imgs/reorder.PNG') }}" alt="Card image cap">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">Reorder Plan</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">Table showing important numbers used in production operations such as low stock counts of products, lead time demand,
+            allocated sales quantities, and more.</p>
           <div class="mt-auto d-flex justify-content-between">
             <!-- <a href="#" target="_blank" class="btn btn-outline-primary btn-sm">View Website</a> -->
             <a href="https://github.com/Jayleh/reorder-app" target="_blank">
@@ -38,7 +39,7 @@
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-      <div class="card" style="width: 15rem;">
+      <div class="card">
         <img class="card-img-top" src="{{ url_for('static', filename='img/placeholder-square.jpg') }}" alt="Card image cap">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">Mars Mission</h5>
@@ -54,7 +55,7 @@
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-      <div class="card" style="width: 15rem;">
+      <div class="card">
         <img class="card-img-top" src="{{ url_for('static', filename='img/project-card-imgs/belly-button.PNG') }}" alt="Card image cap">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">Belly Button</h5>
@@ -69,7 +70,7 @@
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-      <div class="card" style="width: 15rem;">
+      <div class="card">
         <img class="card-img-top" src="{{ url_for('static', filename='img/project-card-imgs/data-journalism.PNG') }}" alt="Card image cap">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">Data Journalism</h5>
@@ -84,7 +85,7 @@
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-      <div class="card" style="width: 15rem;">
+      <div class="card">
         <img class="card-img-top" src="{{ url_for('static', filename='img/project-card-imgs/usgs-quake.PNG') }}" alt="Card image cap">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">USGS Quake</h5>
@@ -99,7 +100,7 @@
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-      <div class="card" style="width: 15rem;">
+      <div class="card">
         <img class="card-img-top" src="{{ url_for('static', filename='img/project-card-imgs/honey-production.PNG') }}" alt="Card image cap">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">Honey Production</h5>
@@ -114,7 +115,7 @@
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-      <div class="card" style="width: 15rem;">
+      <div class="card">
         <img class="card-img-top" src="{{ url_for('static', filename='img/project-card-imgs/nfl-dash.PNG') }}" alt="Card image cap">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">NFL Prediction</h5>
@@ -129,5 +130,8 @@
       </div>
     </div>
   </div>
+</div>
+<div id="github-btn" class="container d-flex justify-content-center">
+  <a href="https://github.com/Jayleh/" target="_blank" class="btn btn-outline-dark">View All Projects</a>
 </div>
 {% endblock main %} {% block script %} {% endblock script %}

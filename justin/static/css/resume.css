@@ -10,6 +10,15 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.row div {
+    padding: 0;
+}
+
 #navigation {
     padding: 0;
     background-color: #343A40;
@@ -36,38 +45,12 @@ a.nav-item {
     font-size: 14px;
 }
 
-#projects {
-    margin-top: 2rem;
-    /* margin-left: 0;
-    margin-right: 0;
-    max-width: 100%; */
+.date-range p, .position h4 {
+    text-align: end;
 }
 
-#projects div.col-sm-6 {
-    margin: 0.5rem 0;
-}
 
-.card {
-    width: 20rem;
-    border-radius: 0;
-}
 
-img.card-img-top {
-    border-radius: 0;
-}
-
-div.card-body p {
-    font-size: small;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-}
-
-#github-btn {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {

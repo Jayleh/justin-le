@@ -1,0 +1,48 @@
+{% extends "layout.html" %} {% block styles %}
+<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/resume.css') }}"> {% endblock styles %} {% block active_page %}
+<a class="nav-item nav-link" href="{{ url_for('projects') }}">Projects</a>
+<a class="nav-item nav-link active" href="{{ url_for('resume') }}">Resume</a>
+<a class="nav-item nav-link" href="{{ url_for('home') }}">Contact</a>
+{% endblock active_page %} {% block main %}
+<div id="about" class="container">
+  <h1>About</h1>
+  <p>Data controller, specializing in inventory management, sales analytics, and operations. Able to leverage competent data
+    exploration, wrangling, and visualization. Looking to build robust applications with a fast-paced and growing company.</p>
+</div>
+<div id="experience" class="container">
+  <h1>Work Experience</h1>
+  <div class="row experience-time-place">
+    <div class="col-6 location">
+      <p>Irvine, CA</p>
+    </div>
+    <div class="col-6 date-range">
+      <p>Dec'17 -
+        <span>today</span>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <div class="experience-image">
+        <img src="#" alt="Image">
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="position">
+        <h4>Inventory Specialist &#124; Data Analyst -
+          <a href="javascript:void(0)" target="_blank">Cellese</a>
+        </h4>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="description">
+        <p>Inventory Management: Revamp inventory software, maintain accurate stock counts, reconcile discrepancies and provide
+          creative solutions for operations. Programmatic Data Retrieval: Build desktop applications to streamline data and
+          projection reporting. Business Analytics: Identify business trends, compile sales analysis reports, suggest strategic
+          data-driven decisions based on company KPIs</p>
+      </div>
+    </div>
+  </div>
+  <h1>Education</h1>
+</div>
+{% endblock main %} {% block script %} {% endblock script %}
