@@ -9,30 +9,25 @@
     <!-- <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}"> -->
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
-      crossorigin="anonymous">
-    {% block styles %} {% endblock %}
+      crossorigin="anonymous"> {% block styles %} {% endblock %}
   </head>
 
   <body>
 
     <header>
-      <div id="navigation" class="container-fluid d-flex justify-content-center">
-        <div class="row">
-          <div class="col-md-12">
-            <nav class="navbar navbar-expand-lg navbar-dark">
-              <a class="navbar-brand" href="{{ url_for('home') }}">Justin</a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div id="navbarNavAltMarkup" class="collapse navbar-collapse justify-content-end">
-                <div class="navbar-nav">
-                  {% block active_page %} {% endblock %}
-                </div>
-              </div>
-            </nav>
+      <div id="navigation">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <a class="navbar-brand" href="{{ url_for('home') }}">Justin</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbarNavAltMarkup" class="collapse navbar-collapse">
+            <div class="navbar-nav">
+              {% block active_page %} {% endblock %}
+            </div>
           </div>
-        </div>
+        </nav>
       </div>
       {% block home_header %} {% endblock %}
     </header>

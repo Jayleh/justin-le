@@ -61,16 +61,16 @@ header h2, header p {
 } */
 
 #navigation {
-    padding: 0;
+    /* padding: 0; */
     background-color: #343A40;
 }
 
 #navigation div.row {
     background-color: transparent;
-    width: 100%;
+    /* width: 100%; */
 }
 
-nav.navbar {
+/* nav.navbar {
     padding: 5px 15px;
 }
 
@@ -84,7 +84,7 @@ button.navbar-toggler {
 
 a.nav-item {
     font-size: 14px;
-}
+} */
 
 #impression {
     margin: 0;
@@ -99,7 +99,7 @@ a.nav-item {
 @media (min-width: 576px) {
     
     #navigation div.row {
-        width: 80%;
+        /* width: 80%; */
     }
 
     #impression {
@@ -120,7 +120,7 @@ a.nav-item {
 @media (min-width: 768px) {
 
     #navigation div.row {
-        width: 75%;
+        /* width: 75%; */
     }
 
     #impression {
@@ -145,12 +145,12 @@ a.nav-item {
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     
-    #impression {
-        margin-top: 7rem;
+    #navigation div.row {
+        /* width: 65%; */
     }
 
-    #navigation div.row {
-        width: 65%;
+    #impression {
+        margin-top: 7rem;
     }
 
 }
