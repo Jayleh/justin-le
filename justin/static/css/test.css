@@ -1,4 +1,6 @@
-/* Parallax */
+html {
+    height: 100%;
+}
 
 .parallax-box {
     position: relative;
