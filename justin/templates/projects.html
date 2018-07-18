@@ -1,9 +1,25 @@
 {% extends "layout.html" %} {% block styles %}
-<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/projects.css') }}"> {% endblock styles %} {% block active_page %}
-<a class="nav-item nav-link active" href="{{ url_for('projects') }}">Projects</a>
-<a class="nav-item nav-link" href="{{ url_for('resume') }}">Resume</a>
-<a class="nav-item nav-link" href="{{ url_for('home') }}">Contact</a>
-{% endblock active_page %} {% block main %}
+<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/test.css') }}"> {% endblock styles %} {% block nav_items %}
+<li class="active">
+  <a href="{{ url_for('projects') }}">Projects</a>
+</li>
+<li>
+  <a href="{{ url_for('resume') }}">Resume</a>
+</li>
+<li>
+  <a href="{{ url_for('home') }}">Contact</a>
+</li>
+{% endblock nav_items %} {% block collapse_items %}
+<li class="active">
+  <a href="{{ url_for('projects') }}">Projects</a>
+</li>
+<li>
+  <a href="{{ url_for('resume') }}">Resume</a>
+</li>
+<li>
+  <a href="{{ url_for('home') }}">Contact</a>
+</li>
+{% endblock collapse_items %} {% block main %}
 <div id="projects" class="container">
   <div class="row">
     <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
