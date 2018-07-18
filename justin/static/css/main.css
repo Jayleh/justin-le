@@ -2,46 +2,15 @@
 
 html {
     height: 100%;
-    overflow: hidden;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    perspective: 1px;
-    transform-style: preserve-3d;
-    height: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    font-family: 'Lato', sans-serif;
-}
-
-header {
-    box-sizing: border-box;
-    min-height: 100vh;
+.parallax-box {
     position: relative;
-    transform-style: inherit;
-    width: 100vw;
-}
-
-header, header::before {
-    background: 50% 50% / cover;
-}
-
-header::before {
-    bottom: 0;
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: block;
-    background-image: url('../img/bg.svg');
-    background-size: cover;
-    transform-origin: center center 0;
-    transform: translateZ(-1px) scale(2);
-    z-index: -1;
-    min-height: 100vh;
+    height: 100vh;
+    background-image: url("../img/bg.svg");
+    background-size: auto 100vh;
+    background-position: top center;
+    background-attachment: fixed;
 }
 
 header h2, header p {
@@ -51,14 +20,6 @@ header h2, header p {
     margin: 0;
     padding: 1em 0;
 }
-
-/* header h2 {
-    padding-top: 0;
-} */
-
-/* header p {
-    padding: 0;
-} */
 
 #navigation {
     /* padding: 0; */
@@ -70,7 +31,7 @@ header h2, header p {
     /* width: 100%; */
 }
 
-/* nav.navbar {
+nav.navbar {
     padding: 5px 15px;
 }
 
@@ -84,14 +45,10 @@ button.navbar-toggler {
 
 a.nav-item {
     font-size: 14px;
-} */
+}
 
 #impression {
     margin: 0;
-}
-
-#intro {
-    margin-top: 4rem;
 }
 
 
@@ -99,19 +56,7 @@ a.nav-item {
 @media (min-width: 576px) {
     
     #navigation div.row {
-        /* width: 80%; */
-    }
-
-    #impression {
-        max-width: 100%;
-    }
-
-    #intro {
-        margin-top: 2rem;
-    }
-
-    #visual {
-        padding: 0;
+        width: 80%;
     }
 
 }
@@ -120,15 +65,7 @@ a.nav-item {
 @media (min-width: 768px) {
 
     #navigation div.row {
-        /* width: 75%; */
-    }
-
-    #impression {
-        margin-top: 8rem;
-    }
-
-    #visual {
-        margin-top: 4.5rem;
+        width: 75%;
     }
 
 }
@@ -136,9 +73,6 @@ a.nav-item {
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
 
-    #impression {
-        margin-top: 4rem;
-    }
 
 }
 
@@ -146,11 +80,7 @@ a.nav-item {
 @media (min-width: 1200px) {
     
     #navigation div.row {
-        /* width: 65%; */
-    }
-
-    #impression {
-        margin-top: 7rem;
+        width: 65%;
     }
 
 }

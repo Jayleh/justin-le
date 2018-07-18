@@ -1,29 +1,23 @@
-{% extends "layout.html" %}
-{% block styles %}
-  <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/main.css') }}">
-{% endblock styles %}
-{% block active_page %}
-  <a class="nav-item nav-link" href="{{ url_for('projects') }}">Projects</a>
-  <a class="nav-item nav-link" href="{{ url_for('resume') }}">Resume</a>
-  <a class="nav-item nav-link" href="{{ url_for('home') }}">Contact</a>
-{% endblock active_page %}
-{% block home_header %}
-<div id="impression" class="container">
-  <div class="row">
-    <div id="intro" class="col-sm-6 col-md-12">
-      <h2>I'm Justin,</h2>
-      <p>I look at data!</p>
-    </div>
-    <div id="visual" class="col-sm-6 col-md-12">
-      <div id="collision" class="d-flex justify-content-center"></div>
+{% extends "layout.html" %} {% block styles %}
+<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/main.css') }}"> {% endblock styles %} {% block active_page %}
+<a class="nav-item nav-link" href="{{ url_for('projects') }}">Projects</a>
+<a class="nav-item nav-link" href="{{ url_for('resume') }}">Resume</a>
+<a class="nav-item nav-link" href="{{ url_for('home') }}">Contact</a>
+{% endblock active_page %} {% block home_header %}
+<div class="parallax-box d-flex align-items-center justify-content-center">
+  <div id="impression" class="container">
+    <div class="row">
+      <div id="intro" class="col-sm-6 col-md-12">
+        <h2>I'm Justin,</h2>
+        <p>I look at data!</p>
+      </div>
+      <div id="visual" class="col-sm-6 col-md-12">
+        <div id="collision" class="d-flex justify-content-center"></div>
+      </div>
     </div>
   </div>
 </div>
-{% endblock %}
-{% block main %}
-
-{% endblock main %}
-{% block script %}
-  <script src="//d3js.org/d3.v3.min.js"></script>
-  <script src="{{ url_for('static', filename='js/collide.js') }}"></script>
-{% endblock script %}
+<div style="height: 2000px;"></div>
+{% endblock %} {% block main %} {% endblock main %} {% block script %}
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="{{ url_for('static', filename='js/collide.js') }}"></script> {% endblock script %}
