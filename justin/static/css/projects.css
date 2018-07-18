@@ -1,62 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
+/* .card {
+    height: 560px;
+} */
 
-html {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Lato', sans-serif;
-}
-
-#navigation {
-    padding: 0;
-    background-color: #343A40;
-}
-
-#navigation div.row {
-    background-color: transparent;
-    width: 100%;
-}
-
-nav.navbar {
-    padding: 5px 15px;
-}
-
-div.navbar-nav {
-    margin-right: -8px;
-}
-
-button.navbar-toggler {
-    padding: 2px;
-}
-
-a.nav-item {
-    font-size: 14px;
-}
-
-#projects {
-    margin-top: 2rem;
-    /* margin-left: 0;
-    margin-right: 0;
-    max-width: 100%; */
-}
-
-#projects div.col-sm-6 {
-    margin: 0.5rem 0;
-}
-
-.card {
-    width: 20rem;
-    border-radius: 0;
-}
-
-img.card-img-top {
-    border-radius: 0;
-}
-
-div.card-body p {
+.card-content p {
     font-size: small;
     overflow: hidden;
     display: -webkit-box;
@@ -64,39 +10,22 @@ div.card-body p {
     -webkit-box-orient: vertical;
 }
 
-#github-btn {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+/* div.card-action {
+    padding: 0!important;
+} */
+
+.d-flex {
+    display: flex!important;
 }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-
-    #navigation div.row {
-        width: 80%;
-    }
-
+.justify-content-between {
+    justify-content: space-between!important;
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-
-    #navigation div.row {
-        width: 75%;
-    }
-
+.flex-column {
+    flex-direction: column!important;
 }
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    
-    #navigation div.row {
-        width: 65%;
-    }
-
+.mt-auto {
+    margin-top: auto!important;
 }
