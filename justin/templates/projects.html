@@ -22,7 +22,7 @@
 {% endblock collapse_items %} {% block main %}
 <div id="projects" class="container">
   <div class="row">
-    <div class="col m6 l4">
+    <div class="col m6 l4 xl3">
       <div class="card">
         <div class="card-image">
           <img class="card-img-top" src="{{ url_for('static', filename='img/project-card-imgs/shipstation.PNG') }}" alt="Card image cap">
@@ -32,15 +32,15 @@
           <p>Shipstation dashboard revealing important indicators such as awaiting and on-hold shipments, total number of orders
             this month, and an interactive map of order locations.</p>
         </div>
-        <div class="card-action d-flex justify-content-between">
+        <div class="card-action valign-wrapper d-flex justify-content-between">
           <!-- <a href="#" target="_blank" class="waves-effect waves-light btn-small">View Website</a> -->
-          <a href="https://github.com/Jayleh/shipstation-live" target="_blank">
+          <a class="valign-wrapper" href="https://github.com/Jayleh/shipstation-live" target="_blank" style="margin: 0;">
             <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
           </a>
         </div>
       </div>
     </div>
-    <div class="col m6 l4">
+    <div class="col m6 l4 xl3">
       <div class="card">
         <div class="card-image">
           <img class="card-img-top" src="{{ url_for('static', filename='img/project-card-imgs/reorder.PNG') }}" alt="Card image cap">
@@ -50,33 +50,33 @@
           <p class="card-text">Table showing important numbers used in production operations such as low stock counts of products, lead time demand,
             allocated sales quantities, and more.</p>
         </div>
-        <div class="card-action">
+        <div class="card-action valign-wrapper d-flex justify-content-between">
           <!-- <a href="#" target="_blank" class="waves-effect waves-light btn-small">View Website</a> -->
-          <a href="https://github.com/Jayleh/reorder-app" target="_blank">
+          <a class="valign-wrapper" href="https://github.com/Jayleh/reorder-app" target="_blank" style="margin: 0;">
             <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
           </a>
         </div>
       </div>
     </div>
-    <div class="col m6 l4">
+    <div class="col m6 l4 xl3">
       <div class="card">
         <div class="card-image">
           <img class="card-img-top" src="{{ url_for('static', filename='img/placeholder-square.jpg') }}" alt="Card image cap">
         </div>
-        <div class="card-content d-flex flex-column">
+        <div class="card-content">
           <span class="card-title">Mars Mission</span>
           <p class="card-text">Web application that scrapes various websites for data related to the Mission to Mars and displays the information
             in a single HTML page.</p>
         </div>
-        <div class="card-action">
+        <div class="card-action valign-wrapper d-flex justify-content-between">
           <a href="javascript:void(0)" target="_blank" class="waves-effect waves-light btn-small">View Website</a>
-          <a href="https://github.com/Jayleh/mars-mission" target="_blank">
+          <a class="valign-wrapper" href="https://github.com/Jayleh/mars-mission" target="_blank" style="margin: 0;">
             <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
           </a>
         </div>
       </div>
     </div>
-    <div class="col m6 l4">
+    <div class="col m6 l4 xl3">
       <div class="card">
         <div class="card-image">
           <img class="card-img-top" src="{{ url_for('static', filename='img/project-card-imgs/belly-button.PNG') }}" alt="Card image cap">
@@ -85,15 +85,15 @@
           <span class="card-title">Belly Button</span>
           <p class="card-text">Interactive dashboard investigating a 2011 study of belly button microbe diversity.</p>
         </div>
-        <div class="card-action">
+        <div class="card-action valign-wrapper d-flex justify-content-between">
           <a href="https://bellybtn.herokuapp.com" target="_blank" class="waves-effect waves-light btn-small">View Website</a>
-          <a href="https://github.com/Jayleh/belly-button" target="_blank">
+          <a class="valign-wrapper" href="https://github.com/Jayleh/belly-button" target="_blank" style="margin: 0;">
             <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
           </a>
         </div>
       </div>
     </div>
-    <div class="col m6 l4">
+    <div class="col m6 l4 xl3">
       <div class="card">
         <div class="card-image">
           <img class="card-img-top" src="{{ url_for('static', filename='img/project-card-imgs/data-journalism.PNG') }}" alt="Card image cap">
@@ -102,15 +102,15 @@
           <span class="card-title">Data Journalism</span>
           <p class="card-text">Interactive visualization showing correlations between demographics and behavioral risk factors.</p>
         </div>
-        <div class="card-action">
+        <div class="card-action valign-wrapper d-flex justify-content-between">
           <a href="https://risky-health.herokuapp.com" target="_blank" class="waves-effect waves-light btn-small">View Website</a>
-          <a href="https://github.com/Jayleh/data-journalism" target="_blank">
+          <a class="valign-wrapper" href="https://github.com/Jayleh/data-journalism" target="_blank" style="margin: 0;">
             <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
           </a>
         </div>
       </div>
     </div>
-    <div class="col m6 l4">
+    <div class="col m6 l4 xl3">
       <div class="card">
         <div class="card-image">
           <img class="card-img-top" src="{{ url_for('static', filename='img/project-card-imgs/usgs-quake.PNG') }}" alt="Card image cap">
@@ -119,15 +119,15 @@
           <span class="card-title">USGS Quake</span>
           <p class="card-text">Earthquake datamap revealing all earthquakes in the past week; it includes location, magnitude, and timestamp.</p>
         </div>
-        <div class="card-action">
+        <div class="card-action valign-wrapper d-flex justify-content-between">
           <a href="https://jayleh.github.io/usgs-quake/" target="_blank" class="waves-effect waves-light btn-small">View Website</a>
-          <a href="https://github.com/Jayleh/usgs-quake" target="_blank">
+          <a class="valign-wrapper" href="https://github.com/Jayleh/usgs-quake" target="_blank" style="margin: 0;">
             <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
           </a>
         </div>
       </div>
     </div>
-    <div class="col m6 l4">
+    <div class="col m6 l4 xl3">
       <div class="card">
         <div class="card-image">
           <img class="card-img-top" src="{{ url_for('static', filename='img/project-card-imgs/honey-production.PNG') }}" alt="Card image cap">
@@ -136,15 +136,15 @@
           <span class="card-title">Honey Production</span>
           <p class="card-text">Website visualizing historical honey production data through interactive graphs and maps.</p>
         </div>
-        <div class="card-action">
+        <div class="card-action valign-wrapper d-flex justify-content-between">
           <a href="https://honeyproduction.herokuapp.com/" target="_blank" class="waves-effect waves-light btn-small">View Website</a>
-          <a href="https://github.com/Jayleh/honey-production" target="_blank">
+          <a class="valign-wrapper" href="https://github.com/Jayleh/honey-production" target="_blank" style="margin: 0;">
             <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
           </a>
         </div>
       </div>
     </div>
-    <div class="col m6 l4">
+    <div class="col m6 l4 xl3">
       <div class="card">
         <div class="card-image">
           <img class="card-img-top" src="{{ url_for('static', filename='img/project-card-imgs/nfl-dash.PNG') }}" alt="Card image cap">
@@ -153,9 +153,9 @@
           <span class="card-title">NFL Prediction</span>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
-        <div class="card-action">
+        <div class="card-action valign-wrapper d-flex justify-content-between">
           <a href="https://six-asians-and-a-shilpasian.herokuapp.com/" target="_blank" class="waves-effect waves-light btn-small">View Website</a>
-          <a href="https://github.com/Jayleh/nfl-predict" target="_blank">
+          <a class="valign-wrapper" href="https://github.com/Jayleh/nfl-predict" target="_blank" style="margin: 0;">
             <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
           </a>
         </div>
@@ -163,7 +163,7 @@
     </div>
   </div>
 </div>
-<div id="github-btn" class="container">
+<div id="github-btn" class="container center-align">
   <a href="https://github.com/Jayleh/" target="_blank" class="btn btn-outline-dark">View All Projects</a>
 </div>
 {% endblock main %} {% block script %} {% endblock script %}

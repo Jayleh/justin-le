@@ -1,5 +1,5 @@
 {% extends "layout.html" %} {% block styles %}
-<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/test.css') }}"> {% endblock styles %} {% block nav_items %}
+<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/resume.css') }}"> {% endblock styles %} {% block nav_items %}
 <li>
   <a href="{{ url_for('projects') }}">Projects</a>
 </li>
@@ -27,38 +27,102 @@
 </div>
 <div id="experience" class="container">
   <h1>Work Experience</h1>
-  <div class="row experience-time-place">
-    <div class="col-6 location">
-      <p>Irvine, CA</p>
-    </div>
-    <div class="col-6 date-range">
-      <p>Dec'17 -
-        <span>today</span>
-      </p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-4">
-      <div class="experience-image">
-        <img src="#" alt="Image">
+  <ul>
+    <li>
+      <div class="row experience-time-place">
+        <div class="col s6 location">
+          <p>Irvine, CA</p>
+        </div>
+        <div class="col s6 date-range">
+          <p>Dec'17 -
+            <span>today</span>
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="col-8">
-      <div class="position">
-        <h4>Inventory Specialist &#124; Data Analyst -
-          <a href="javascript:void(0)" target="_blank">Cellese</a>
-        </h4>
+      <div class="row">
+        <div class="col s4">
+          <div class="experience-image">
+            <img src="#" alt="Image">
+          </div>
+        </div>
+        <div class="col s8">
+          <div class="position">
+            <h4>Inventory Specialist &#124; Data Analyst -
+              <a href="javascript:void(0)" target="_blank">Cellese</a>
+            </h4>
+          </div>
+        </div>
+        <div class="col s12">
+          <div class="description">
+            <p>Inventory Management: Revamp inventory software, maintain accurate stock counts, reconcile discrepancies and
+              provide creative solutions for operations. Programmatic Data Retrieval: Build desktop applications to streamline
+              data and projection reporting. Business Analytics: Identify business trends, compile sales analysis reports,
+              suggest strategic data-driven decisions based on company KPIs</p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="col-12">
-      <div class="description">
-        <p>Inventory Management: Revamp inventory software, maintain accurate stock counts, reconcile discrepancies and provide
-          creative solutions for operations. Programmatic Data Retrieval: Build desktop applications to streamline data and
-          projection reporting. Business Analytics: Identify business trends, compile sales analysis reports, suggest strategic
-          data-driven decisions based on company KPIs</p>
-      </div>
-    </div>
-  </div>
+    </li>
+  </ul>
   <h1>Education</h1>
+  <ul>
+    <li>
+      <div class="row experience-time-place">
+        <div class="col s6 location">
+          <p>Irvine, CA</p>
+        </div>
+        <div class="col s6 date-range">
+          <p>Jan'18 - Jul'18</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s4">
+          <div class="experience-image">
+            <img src="#" alt="Image">
+          </div>
+        </div>
+        <div class="col s8">
+          <div class="position">
+            <h4>Data Analytics &amp; Visualization Bootcamp -
+              <a href="javascript:void(0)" target="_blank">UCI Continuing Education</a>
+            </h4>
+          </div>
+        </div>
+        <div class="col s12">
+          <div class="description">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="row experience-time-place">
+        <div class="col s6 location">
+          <p>Irvine, CA</p>
+        </div>
+        <div class="col s6 date-range">
+          <p>Sep'09 - Jun'13</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s4">
+          <div class="experience-image">
+            <img src="#" alt="Image">
+          </div>
+        </div>
+        <div class="col s8">
+          <div class="position">
+            <h4>Biological Sciences, Bachelor's Degree -
+              <a href="javascript:void(0)" target="_blank">Cal Poly SLO</a>
+            </h4>
+          </div>
+        </div>
+        <div class="col s12">
+          <div class="description">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>
 {% endblock main %} {% block script %} {% endblock script %}
