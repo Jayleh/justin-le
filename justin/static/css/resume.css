@@ -4,22 +4,100 @@ html {
 
 body {
     color: #9a9a9a;
+    font-size: 1rem;
 }
 
 nav {
     background-color: #607d8b !important;
 }
 
-li div.col {
+/* li div.col {
     padding: 0! important;
+} */
+
+.text-important {
+    color: #161618;
 }
 
+.color-accent {
+    color: #5a46ff;
+}
 
+h4 {
+    color: #161618;
+    font-weight: 500;
+}
+
+/* #experience {
+    list-style: none;
+} */
+
+.experience-time-place {
+    margin: 0;
+}
+
+.experience-time-place .col,
+.experience-panel .col, 
+.experience-pos-des .col {
+    padding: 0;
+}
+
+.location p,
+.position h6 {
+    color: #161618;
+}
+
+/* .position h6 {
+    margin: 0;
+} */
 
 .date-range p {
     text-align: end;
 }
 
-#experience {
-    list-style: none;
+.experience-image img {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+}
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 600px) { 
+    body {
+        font-size: 1.2rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    body {
+        font-size: 1.4rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    body {
+        font-size: 1.6rem;
+    }
+
+    /* li > div.container {
+        margin: 0;
+    } */
+
+    .location p,
+    .date-range p {
+        margin: 0;
+    }
+
+    .date-range p {
+        text-align: start;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    
 }
