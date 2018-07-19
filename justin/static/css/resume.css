@@ -3,34 +3,30 @@ html {
 }
 
 body {
-    font-family: "Graphik", sans-serif;
-}
-
-body {
     color: #9a9a9a;
 }
 
-.col {
+nav {
+    background-color: #607d8b !important;
+}
+
+/* .col {
     padding: 0! important;
 }
 
 h1 {
     color: black;
-    /* font-family: "Graphik Semibold", sans-serif; */
-    font-size: 1.5rem;
     margin-top: 0;
     font-weight: 500;
     margin: 3rem 0 1rem 0;
 }
 
 h4 {
-    font-size: 1.25rem;
     margin-top: 0;
     margin-bottom: 1rem;
 }
 
 p {
-    font-size: 1.1rem;
     margin: 0;
 }
 
@@ -40,4 +36,4 @@ p {
 
 #experience {
     list-style: none;
-}
+} */

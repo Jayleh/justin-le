@@ -30,7 +30,25 @@
   </div>
 </div>
 {% endblock home_header %} {% block main %}
-<div style="height: 2000px;"></div>
+<div class="container center-align">
+  <div class="row">
+    <div class="col s12">
+      <img src="{{ url_for('static', filename='img/portrait.jpg') }}">
+      <h3>Hi.</h3>
+      <p>I'm a data engineer / developer based in Irvine, California. I have a passion for learning new technologies and love
+        to create data visualizations and robust applications.</p>
+    </div>
+  </div>
+</div>
+<div class="container center-align">
+  <div class="row">
+    <div class="col s12">
+      <h3>What I can do.</h3>
+      <p>Insert Data Visualization Here</p>
+    </div>
+  </div>
+</div>
+<div style="height: 1000px;"></div>
 {% endblock main %} {% block script %}
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script src="{{ url_for('static', filename='js/collide.js') }}"></script>
