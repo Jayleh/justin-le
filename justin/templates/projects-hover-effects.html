@@ -1,6 +1,7 @@
 {% extends "layout.html" %} {% block styles %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/hover-effects/component-copy.css') }}">
-<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/projects-hover-effects.css') }}"> {% endblock styles %} {% block nav_items %}
+<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/projects-hover-effects.css') }}">
+<script src="{{ url_for('static', filename='js/modernizr.custom.js') }}"></script> {% endblock styles %} {% block nav_items %}
 <li class="active">
   <a href="{{ url_for('projects') }}">Projects</a>
 </li>
@@ -31,8 +32,8 @@
     <ul class="grid cs-style-1">
       <li>
         <figure>
-          <img src="{{ url_for('static', filename='img/project-card-imgs/shipstation.PNG') }}" alt="img01">
-          <figcaption>
+          <img src="{{ url_for('static', filename='img/project-card-imgs/shipstation.PNG') }}" alt="">
+          <figcaption style="background: #1763af;">
             <h4>Shipstation Live</h4>
             <p>Shipstation dashboard revealing important indicators such as awaiting and on-hold shipments, total number of
               orders this month, and an interactive map of order locations.</p>
@@ -47,14 +48,105 @@
       </li>
       <li>
         <figure>
-          <img src="{{ url_for('static', filename='img/project-card-imgs/reorder.PNG') }}" alt="img01">
-          <figcaption>
+          <img src="{{ url_for('static', filename='img/project-card-imgs/reorder.PNG') }}" alt="">
+          <figcaption style="background: #1763af;">
             <h3>Reorder Plan</h3>
             <p>Table showing important numbers used in production operations such as low stock counts of products, lead time
               demand, allocated sales quantities, and more.</p>
             <div class="action-links">
               <!-- <a href="#">Take a look</a> -->
               <a class="valign-wrapper" href="https://github.com/Jayleh/reorder-app" target="_blank" style="margin: 0;">
+                <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
+              </a>
+            </div>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure class="center-align">
+          <img src="{{ url_for('static', filename='img/placeholder-square.jpg') }}" alt="">
+          <figcaption style="background: #1763af;">
+            <h3>Mars Mission</h3>
+            <p>Web application that scrapes various websites for data related to the Mission to Mars and displays the information
+              in a single HTML page.</p>
+            <div class="action-links">
+              <a href="javascript:void(0)" target="_blank" class="waves-effect waves-light btn-small">Take a look</a>
+              <a class="valign-wrapper" href="https://github.com/Jayleh/mars-mission" target="_blank" style="margin: 0;">
+                <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
+              </a>
+            </div>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure class="center-align">
+          <img src="{{ url_for('static', filename='img/project-card-imgs/belly-button.PNG') }}" alt="">
+          <figcaption style="background: #1763af;">
+            <h3>Belly Button</h3>
+            <p>Interactive dashboard investigating a 2011 study of belly button microbe diversity.</p>
+            <div class="action-links">
+              <a href="https://bellybtn.herokuapp.com" target="_blank" class="waves-effect waves-light btn-small">Take a look</a>
+              <a class="valign-wrapper" href="https://github.com/Jayleh/belly-button" target="_blank" style="margin: 0;">
+                <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
+              </a>
+            </div>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure class="center-align">
+          <img src="{{ url_for('static', filename='img/project-card-imgs/data-journalism.PNG') }}" alt="">
+          <figcaption style="background: #1763af;">
+            <h3>Data Journalism</h3>
+            <p>Interactive visualization showing correlations between demographics and behavioral risk factors.</p>
+            <div class="action-links">
+              <a href="https://risky-health.herokuapp.com" target="_blank" class="waves-effect waves-light btn-small">Take a look</a>
+              <a class="valign-wrapper" href="https://github.com/Jayleh/data-journalism" target="_blank" style="margin: 0;">
+                <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
+              </a>
+            </div>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure class="center-align">
+          <img src="{{ url_for('static', filename='img/project-card-imgs/usgs-quake.PNG') }}" alt="">
+          <figcaption style="background: #1763af;">
+            <h3>USGS Quake</h3>
+            <p>Earthquake datamap revealing all earthquakes in the past week; it includes location, magnitude, and timestamp.</p>
+            <div class="action-links">
+              <a href="https://jayleh.github.io/usgs-quake/" target="_blank" class="waves-effect waves-light btn-small">Take a look</a>
+              <a class="valign-wrapper" href="https://github.com/Jayleh/usgs-quake" target="_blank" style="margin: 0;">
+                <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
+              </a>
+            </div>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure class="center-align">
+          <img src="{{ url_for('static', filename='img/project-card-imgs/honey-production.PNG') }}" alt="">
+          <figcaption style="background: #1763af;">
+            <h3>Honey Production</h3>
+            <p>Website visualizing historical honey production data through interactive graphs and maps.</p>
+            <div class="action-links">
+              <a href="https://honeyproduction.herokuapp.com/" target="_blank" class="waves-effect waves-light btn-small">Take a look</a>
+              <a class="valign-wrapper" href="https://github.com/Jayleh/honey-production" target="_blank" style="margin: 0;">
+                <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
+              </a>
+            </div>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure class="center-align">
+          <img src="{{ url_for('static', filename='img/project-card-imgs/nfl-dash.PNG') }}" alt="">
+          <figcaption style="background: #1763af;">
+            <h3>NFL Prediction</h3>
+            <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="action-links">
+              <a href="https://six-asians-and-a-shilpasian.herokuapp.com/" target="_blank" class="waves-effect waves-light btn-small">Take a look</a>
+              <a class="valign-wrapper" href="https://github.com/Jayleh/nfl-predict" target="_blank" style="margin: 0;">
                 <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
               </a>
             </div>
@@ -70,5 +162,4 @@
   <a href="https://github.com/Jayleh/" target="_blank" class="btn btn-outline-dark">View All Projects</a>
 </div>
 {% endblock main %} {% block script %}
-<script src="{{ url_for('static', filename='js/modernizr.custom.js') }}"></script>
 <script src="{{ url_for('static', filename='js/toucheffects.js') }}"></script> {% endblock script %}
