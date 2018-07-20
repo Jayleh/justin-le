@@ -11,10 +11,6 @@ nav {
     background-color: #607d8b !important;
 }
 
-/* li div.col {
-    padding: 0! important;
-} */
-
 .text-important {
     color: #161618;
 }
@@ -28,10 +24,6 @@ h4 {
     font-weight: 500;
 }
 
-/* #experience {
-    list-style: none;
-} */
-
 .experience-time-place {
     margin: 0;
 }
@@ -42,16 +34,12 @@ h4 {
     padding: 0;
 }
 
-.location p,
+.location,
 .position h6 {
     color: #161618;
 }
 
-/* .position h6 {
-    margin: 0;
-} */
-
-.date-range p {
+.date-range {
     text-align: end;
 }
 
@@ -63,38 +51,90 @@ h4 {
 
 
 
+/* flexbox for location and date range */
+.experience-time-place {
+    display: flex!important;
+    justify-content: space-between!important;
+}
+
+/* flexbox for img, position, and description */
+.experience-panel {
+    display: flex!important;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.experience-panel > * {
+    flex: 1 0 50%;
+}
+
+.experience-panel>div:last-child {
+    flex: 0 1 100%;
+}
+
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 600px) { 
-    body {
+    body :not(p) {
         font-size: 1.2rem;
     }
+
+
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    body {
+    body :not(p) {
         font-size: 1.4rem;
     }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    body {
+    body :not(p) {
         font-size: 1.6rem;
     }
 
-    /* li > div.container {
-        margin: 0;
-    } */
-
     .location p,
-    .date-range p {
+    .date-range p{
         margin: 0;
     }
 
-    .date-range p {
+    .date-range {
         text-align: start;
     }
+
+    /* flexbox for location and date range */
+    .experience-time-place {
+        display: block!important;
+        justify-content: left!important;
+    }
+
+    /* flexbox for img, position, and description */
+    .experience-panel {
+        display: flex!important;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .experience-panel>div:first-child {
+        flex: 1 0 0;
+    }
+
+    .experience-panel>div:last-child {
+        flex: 0 1 100%;
+    }
+
+    /* .experience-image {
+        position: absolute;
+        height: 50%;
+    } */
+
+    /* .position h6, */
+    .description p {
+        padding-left: 25%;
+    }
+
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
