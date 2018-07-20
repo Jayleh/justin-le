@@ -1,0 +1,49 @@
+{% extends "layout.html" %} {% block styles %}
+<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/projects-fade-in.css') }}"> {% endblock styles %} {% block nav_items %}
+<li class="active">
+  <a href="{{ url_for('projects') }}">Projects</a>
+</li>
+<li>
+  <a href="{{ url_for('resume') }}">Resume</a>
+</li>
+<li>
+  <a href="{{ url_for('home') }}">Contact</a>
+</li>
+{% endblock nav_items %} {% block collapse_items %}
+<li class="active">
+  <a href="{{ url_for('projects') }}">Projects</a>
+</li>
+<li>
+  <a href="{{ url_for('resume') }}">Resume</a>
+</li>
+<li>
+  <a href="{{ url_for('home') }}">Contact</a>
+</li>
+{% endblock collapse_items %} {% block main %}
+<div class="container portfolio">
+  <div class="row">
+    <div class="col s12">
+      <h4>Projects</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      <div class="portfolio-item center-align">
+        <img src="{{ url_for('static', filename='img/project-slides/shipstation.jpg') }}">
+        <div class="portfolio-item-overlay center-align">
+          <div class="portfolio-item-description">
+            <h5>Shipstation Live</h5>
+            <p>Shipstation dashboard revealing important indicators such as awaiting and on-hold shipments, total number of
+              orders this month, and an interactive map of order locations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="height: 1000px;"></div>
+<div id="github-btn" class="container center-align">
+  <a href="https://github.com/Jayleh/" target="_blank" class="btn btn-outline-dark">View All Projects</a>
+</div>
+{% endblock main %} {% block script %} {% endblock script %}

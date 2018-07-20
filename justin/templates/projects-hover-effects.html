@@ -1,0 +1,74 @@
+{% extends "layout.html" %} {% block styles %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/hover-effects/component-copy.css') }}">
+<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/projects-hover-effects.css') }}"> {% endblock styles %} {% block nav_items %}
+<li class="active">
+  <a href="{{ url_for('projects') }}">Projects</a>
+</li>
+<li>
+  <a href="{{ url_for('resume') }}">Resume</a>
+</li>
+<li>
+  <a href="{{ url_for('home') }}">Contact</a>
+</li>
+{% endblock nav_items %} {% block collapse_items %}
+<li class="active">
+  <a href="{{ url_for('projects') }}">Projects</a>
+</li>
+<li>
+  <a href="{{ url_for('resume') }}">Resume</a>
+</li>
+<li>
+  <a href="{{ url_for('home') }}">Contact</a>
+</li>
+{% endblock collapse_items %} {% block main %}
+<div class="container portfolio">
+  <div class="row">
+    <div class="col s12">
+      <h4>Projects</h4>
+    </div>
+  </div>
+  <div class="row">
+    <ul class="grid cs-style-1">
+      <li>
+        <figure>
+          <img src="{{ url_for('static', filename='img/project-card-imgs/shipstation.PNG') }}" alt="img01">
+          <figcaption>
+            <h4>Shipstation Live</h4>
+            <p>Shipstation dashboard revealing important indicators such as awaiting and on-hold shipments, total number of
+              orders this month, and an interactive map of order locations.</p>
+            <div class="action-links">
+              <!-- <a href="#">Take a look</a> -->
+              <a class="valign-wrapper" href="https://github.com/Jayleh/shipstation-live" target="_blank" style="margin: 0;">
+                <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
+              </a>
+            </div>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="{{ url_for('static', filename='img/project-card-imgs/reorder.PNG') }}" alt="img01">
+          <figcaption>
+            <h3>Reorder Plan</h3>
+            <p>Table showing important numbers used in production operations such as low stock counts of products, lead time
+              demand, allocated sales quantities, and more.</p>
+            <div class="action-links">
+              <!-- <a href="#">Take a look</a> -->
+              <a class="valign-wrapper" href="https://github.com/Jayleh/reorder-app" target="_blank" style="margin: 0;">
+                <img src="{{ url_for('static', filename='img/github-logos/PNG/GitHub-Mark-32px.png') }}" alt="GitHub">
+              </a>
+            </div>
+          </figcaption>
+        </figure>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div style="height: 1000px;"></div>
+<div id="github-btn" class="container center-align">
+  <a href="https://github.com/Jayleh/" target="_blank" class="btn btn-outline-dark">View All Projects</a>
+</div>
+{% endblock main %} {% block script %}
+<script src="{{ url_for('static', filename='js/modernizr.custom.js') }}"></script>
+<script src="{{ url_for('static', filename='js/toucheffects.js') }}"></script> {% endblock script %}
