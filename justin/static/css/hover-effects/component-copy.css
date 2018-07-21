@@ -1,5 +1,5 @@
 .grid {
-	padding: 10px 10px 100px 10px!important;
+	padding: 20px 20px 100px 20px!important;
 	max-width: 1300px;
 	margin: 0 auto;
 	list-style: none;
@@ -8,9 +8,9 @@
 
 .grid li {
 	display: inline-block;
-	width: 300px;
+	width: 440px;
 	margin: 0;
-	padding: 10px 0;
+	padding: 20px;
 	text-align: left;
 	position: relative;
 }
@@ -31,11 +31,11 @@
 	top: 0;
 	left: 0;
 	padding: 20px;
-	/* background: #2c3f52; */
-	color: #fff;
+	background: #2c3f52;
+	color: #ed4e6e;
 }
 
-.grid figcaption h3 {
+.grid figcaption h4 {
 	margin: 0;
 	padding: 0;
 	color: #fff;
@@ -45,71 +45,93 @@
 	content: 'by ';
 } */
 
-.grid figcaption a {
-	/* text-align: center;
+/* .grid figcaption a {
+	text-align: center;
 	padding: 5px 10px;
 	border-radius: 2px;
 	display: inline-block;
 	background: #ed4e6e;
-	color: #fff; */
-}
+	color: #fff;
+} */
 
 /* Individual Caption Styles */
 
-/* Caption Style 1 */
-.cs-style-1 figcaption {
+/* Caption Style 4 */
+.cs-style-4 li {
+	-webkit-perspective: 1700px;
+	-moz-perspective: 1700px;
+	perspective: 1700px;
+	-webkit-perspective-origin: 0 50%;
+	-moz-perspective-origin: 0 50%;
+	perspective-origin: 0 50%;
+}
+
+.cs-style-4 figure {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.cs-style-4 figure > div {
+	overflow: hidden;
+}
+
+.cs-style-4 figure img {
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+}
+
+.no-touch .cs-style-4 figure:hover img,
+.cs-style-4 figure.cs-hover img {
+	-webkit-transform: translateX(25%);
+	-moz-transform: translateX(25%);
+	-ms-transform: translateX(25%);
+	transform: translateX(25%);
+}
+
+.cs-style-4 figcaption {
 	height: 100%;
-	width: 100%;
+	width: 50%;
 	opacity: 0;
-	text-align: left;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	backface-visibility: hidden;
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
-	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transform: rotateY(-90deg);
+	-moz-transform: rotateY(-90deg);
+	transform: rotateY(-90deg);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
 }
 
-.no-touch .cs-style-1 figure:hover figcaption,
-.cs-style-1 figure.cs-hover figcaption {
+.no-touch .cs-style-4 figure:hover figcaption,
+.cs-style-4 figure.cs-hover figcaption {
 	opacity: 1;
-	-webkit-transform: translate(15px, 15px);
-	-moz-transform: translate(15px, 15px);
-	-ms-transform: translate(15px, 15px);
-	transform: translate(15px, 15px);
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
 }
 
-.cs-style-1 figcaption h3 {
-	margin-top: 15px;
-}
-
-.cs-style-1 figcaption span {
-	display: block;
-}
-
-/* .cs-style-1 figcaption a {
-	margin-top: 30px;
+/* .cs-style-4 figcaption a {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
 } */
 
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 600px) {
-	.grid li {
-		width: 300px;
+@media screen and (max-width: 31.5em) {
+	.grid {
+		padding: 10px 10px 100px 10px!important;
 	}
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    
+	.grid li {
+		width: 100%;
+		min-width: 300px;
+	}
 }
