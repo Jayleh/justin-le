@@ -11,7 +11,6 @@ html {
 
 body {
     font-family: 'Lato', Calibri, Arial, sans-serif;
-    font-size: 1rem;
 }
 
 nav {
@@ -46,6 +45,12 @@ img {
     width: 150px;
 }
 
+#hello article,
+#i-can-help article {
+    margin: 0 auto;
+    max-width: 460px;
+}
+
 .chart-container {
     position: relative;
     margin: auto;
@@ -53,3 +58,33 @@ img {
     width: 100%;
 }
 
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 600px) { 
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #data,
+    #grow {
+        text-align: left;
+    }
+
+    .col-push-8 {
+        left: 66.7777%!important;
+    }
+
+    .col-pull-4 {
+        right: 33.3333%!important;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    
+}

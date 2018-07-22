@@ -7,7 +7,6 @@ html {
 body {
     font-family: 'Lato', Calibri, Arial, sans-serif;
     color: #9a9a9a;
-    font-size: 1rem;
     /* background: #f9f9f9; */
 }
 
@@ -77,26 +76,16 @@ h4 {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 600px) { 
-    body :not(p) {
-        font-size: 1.2rem;
-    }
-
 
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    body :not(p) {
-        font-size: 1.4rem;
-    }
+
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    body :not(p) {
-        font-size: 1.6rem;
-    }
-
     .location p,
     .date-range p{
         margin: 0;

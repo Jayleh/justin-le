@@ -23,54 +23,79 @@
 <div class="parallax-box valign-wrapper center-align">
   <div id="impression" class="container">
     <h2>I'm Justin,</h2>
-    <p>I look at data!</p>
+    <p class="flow-text">I look at data!</p>
     <div id="visual">
       <div id="collision" class="center-align"></div>
     </div>
   </div>
 </div>
 {% endblock home_header %} {% block main %}
-<div class="container center-align">
-  <div class="row">
-    <div class="col s12">
-      <img src="{{ url_for('static', filename='img/portrait.jpg') }}" class="circle responsive-img">
-      <h3>Hi.</h3>
-      <p>I'm a data analyst / developer based in Irvine, California. I have a passion for learning new technologies and love
-        to create data visualizations and robust applications.</p>
-    </div>
-  </div>
-</div>
-<div class="container center-align">
-  <div class="row">
-    <div class="col s12">
-      <h3>What I can do.</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col s12 l6">
-      <div class="chart-container">
-        <canvas id="bar-chart"></canvas>
+<section id="hello">
+  <div class="container center-align">
+    <div class="row">
+      <div class="col s12">
+        <article>
+          <img src="{{ url_for('static', filename='img/portrait.jpg') }}" class="circle responsive-img">
+          <h3>Hi.</h3>
+          <p class="flow-text">I'm a data analyst / developer based in Irvine, California. I have a passion for learning new technologies and
+            love to create data visualizations and robust applications.</p>
+        </article>
       </div>
     </div>
-    <div class="col s12 l6">
-      <h5>Straight up data.</h5>
-      <p>From acquisition to visualizations, my goals are to focus on building content that brings meaningful insight from data.</p>
-    </div>
   </div>
-  <div class="row">
-    <div class="col s12 l6">
-      <div class="chart-container">
-        <canvas id="bubble-chart"></canvas>
+</section>
+<section id="what-i-do">
+  <div class="container center-align">
+    <div class="row">
+      <div class="col s12">
+        <article>
+          <div class="row">
+            <div class="col s12">
+              <h3>What I can do.</h3>
+            </div>
+          </div>
+          <div id="data" class="row">
+            <div class="col s12 l5">
+              <div class="chart-container">
+                <canvas id="bar-chart"></canvas>
+              </div>
+            </div>
+            <div class="col s12 l7">
+              <h5>Straight up data.</h5>
+              <p class="flow-text">From acquisition to visualizations, my goals are to focus on building content that brings meaningful insight
+                from data.</p>
+            </div>
+          </div>
+          <div id="grow" class="row">
+            <div class="col s12 l5 col-push-8">
+              <div class="chart-container">
+                <canvas id="bubble-chart"></canvas>
+              </div>
+            </div>
+            <div class="col s12 l7 col-pull-4">
+              <h5>Grow with you.</h5>
+              <p class="flow-text">I'm a data analyst, however, I also see myself as a engineer / developer. I'm driven to learn all the technologies,
+                backend to the front.</p>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
-    <div class="col s12 l6">
-      <h5>Grow with you.</h5>
-      <p>I'm a data analyst, however, I also see myself as a engineer / developer. I'm driven to learn all the technologies,
-        backend to the front.</p>
+  </div>
+</section>
+<section id="i-can-help">
+  <div class="container center-align">
+    <div class="row">
+      <div class="col s12">
+        <article>
+          <h3>I can help.</h3>
+          <h5>I'm currently on the job market.</h5>
+          <p class="flow-text">Looking to build robust applications with a fast-paced company.</p>
+        </article>
+      </div>
     </div>
   </div>
-</div>
-<div style="height: 1000px;"></div>
+</section>
 {% endblock main %} {% block script %}
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
