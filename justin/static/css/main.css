@@ -45,3 +45,11 @@ img {
     height: 150px;
     width: 150px;
 }
+
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
+

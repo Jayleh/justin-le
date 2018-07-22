@@ -44,12 +44,35 @@
   <div class="row">
     <div class="col s12">
       <h3>What I can do.</h3>
-      <p>Insert Data Visualization Here</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12 l6">
+      <div class="chart-container">
+        <canvas id="bar-chart"></canvas>
+      </div>
+    </div>
+    <div class="col s12 l6">
+      <h5>Straight up data.</h5>
+      <p>From acquisition to visualizations, my goals are to focus on building content that brings meaningful insight from data.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12 l6">
+      <div class="chart-container">
+        <canvas id="bubble-chart"></canvas>
+      </div>
+    </div>
+    <div class="col s12 l6">
+      <h5>Grow with you.</h5>
+      <p>I'm a data analyst, however, I also see myself as a engineer / developer. I'm driven to learn all the technologies,
+        backend to the front.</p>
     </div>
   </div>
 </div>
 <div style="height: 1000px;"></div>
 {% endblock main %} {% block script %}
 <script src="//d3js.org/d3.v3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 <script src="{{ url_for('static', filename='js/collide.js') }}"></script>
 <script src="{{ url_for('static', filename='js/main.js') }}"></script> {% endblock script %}
