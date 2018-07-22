@@ -1,0 +1,41 @@
+{% extends "layout.html" %} {% block styles %}
+<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/visuals.css') }}"> {% endblock styles %} {% block nav_items %}
+<li>
+  <a href="{{ url_for('projects') }}">Projects</a>
+</li>
+<li>
+  <a href="{{ url_for('resume') }}">Resume</a>
+</li>
+<li>
+  <a href="{{ url_for('home') }}">Contact</a>
+</li>
+{% endblock nav_items %} {% block collapse_items %}
+<li>
+  <a href="{{ url_for('projects') }}">Projects</a>
+</li>
+<li>
+  <a href="{{ url_for('resume') }}">Resume</a>
+</li>
+<li>
+  <a href="{{ url_for('home') }}">Contact</a>
+</li>
+{% endblock collapse_items %} {% block home_header %} {% endblock home_header %} {% block main %}
+<div class="container center-align">
+  <div class="row">
+    <div class="col s12">
+      <div class="chart-container">
+        <canvas id="bar-chart"></canvas>
+      </div>
+    </div>
+    <div class="col s12">
+        <div class="chart-container">
+          <canvas id="bubble-chart"></canvas>
+        </div>
+    </div>
+  </div>
+</div>
+<div style="height: 1000px;"></div>
+{% endblock main %} {% block script %}
+<!-- Chart JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+<script src="{{ url_for('static', filename='js/visuals.js') }}"></script> {% endblock script %}
