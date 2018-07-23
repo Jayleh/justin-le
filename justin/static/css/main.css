@@ -1,4 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+/* @import url('https://fonts.googleapis.com/css?family=Average|Fjalla+One'); */
+/* @import url('https://fonts.googleapis.com/css?family=Crimson+Text|Montserrat'); */
+/* @import url('https://fonts.googleapis.com/css?family=Cardo|Montserrat'); */
+
+/* Serif fonts to test out */
+/* @import url('https://fonts.googleapis.com/css?family=EB+Garamond|Gentium+Book+Basic'); */
 
 @font-face {
     src: url("../fonts/Luna.ttf");
@@ -10,7 +15,21 @@ html {
 }
 
 body {
-    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-family: 'Montserrat', Calibri, Arial, sans-serif;
+}
+
+p {
+    font-family: 'Crimson Text', serif;
+    /* color: #212121; */
+    color: #424242;
+}
+
+h3 {
+    color: #607d8b;
+}
+
+h4 {
+    color: #90a4ae;
 }
 
 .row {
@@ -39,6 +58,7 @@ nav {
 #impression h2,
 #impression p {
     font-family: "Luna";
+    color: black;
     /* letter-spacing: 0.2em; */
     margin: 0;
     padding: 1em 0;
@@ -120,6 +140,7 @@ img {
     #grow {
         display: flex;
         align-items: center;
+        padding: 0 75px;
     }
 
     .chart-container {
@@ -133,6 +154,10 @@ img {
 
     #data .details {
         padding-left: 35px;
+    }
+
+    #grow .details {
+        padding-right: 20px;
     }
 
     #grow {
