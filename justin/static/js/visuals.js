@@ -162,6 +162,6 @@ function randomize() {
 }
 
 // Update bubble every 10 seconds
-// window.setInterval(function () {
-//     randomize();
-// }, 10e3);
+window.setInterval(function () {
+    randomize();
+}, 10e3);

@@ -170,10 +170,10 @@ $(document).ready(function () {
         bubbleChart.update();
     }
 
-    // Update bubble every 10 seconds
-    // window.setInterval(function () {
-    //     randomize();
-    // }, 5e3);
+    // Update bubble every 5 seconds
+    window.setInterval(function () {
+        randomize();
+    }, 5e3);
 
 });
 
