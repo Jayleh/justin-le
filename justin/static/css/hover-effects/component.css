@@ -36,6 +36,8 @@
 }
 
 .grid figcaption h4 {
+	font-family: 'Amaranth', Calibri, Arial, sans-serif;
+	font-size: 16px;
 	margin: 0;
 	padding: 0;
 	color: #fff;
@@ -133,5 +135,31 @@
 	.grid li {
 		width: 100%;
 		min-width: 300px;
+	}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 600px) { 
+	.grid figcaption h4 {
+		font-size: 20px;
+	}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .grid figcaption h4 {
+		font-size: 22px;
+	}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+   
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .grid figcaption h4 {
+		font-size: 24px;
 	}
 }

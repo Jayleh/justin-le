@@ -1,3 +1,10 @@
+/* @import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans'); */
+@import url('https://fonts.googleapis.com/css?family=Amaranth|Roboto:400');
+
+/* Sans-serif fonts to test out */
+/* @import url('https://fonts.googleapis.com/css?family=Cantarell|Didact+Gothic|Titillium+Web'); */
+
+/* Below are sans-serif/serif font pairs */
 /* @import url('https://fonts.googleapis.com/css?family=Average|Fjalla+One'); */
 /* @import url('https://fonts.googleapis.com/css?family=Crimson+Text|Montserrat'); */
 /* @import url('https://fonts.googleapis.com/css?family=Cardo|Montserrat'); */
@@ -15,13 +22,22 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', Calibri, Arial, sans-serif;
+    font-family: 'Amaranth', Calibri, Arial, sans-serif;
 }
 
 p {
-    font-family: 'Crimson Text', serif;
+    /* font-family: 'Crimson Text', serif; */
+    font-family: 'Roboto', Calibri, Arial, sans-serif;
     /* color: #212121; */
     color: #424242;
+}
+
+a, li {
+    font-family: 'Roboto', Calibri, Arial, sans-serif;
+}
+
+.brand-logo {
+    font-family: 'Amaranth', Calibri, Arial, sans-serif;
 }
 
 h3 {

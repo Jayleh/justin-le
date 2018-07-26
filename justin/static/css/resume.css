@@ -1,13 +1,27 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url('https://fonts.googleapis.com/css?family=Amaranth|Roboto:300,400');
 
 html {
     height: 100%;
 }
 
 body {
-    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-family: 'Amaranth', Calibri, Arial, sans-serif;
     color: #9a9a9a;
     /* background: #f9f9f9; */
+}
+
+p {
+    font-family: 'Roboto', Calibri, Arial, sans-serif;
+    font-weight: 300;
+}
+
+a, li {
+    font-family: 'Roboto', Calibri, Arial, sans-serif;
+    font-weight: 400;
+}
+
+.brand-logo {
+    font-family: 'Amaranth', Calibri, Arial, sans-serif;
 }
 
 nav {
@@ -22,9 +36,9 @@ nav {
     color: #5a46ff;
 }
 
-h3 {
+h4 {
     color: #161618;
-    font-weight: 500;
+    /* font-weight: 500; */
 }
 
 .experience-time-place {
@@ -38,7 +52,7 @@ h3 {
 }
 
 .location,
-.position h5 {
+.position h4 {
     color: #161618;
 }
 

@@ -48,20 +48,24 @@
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
-            <h5 class="white-text">Footer Content</h5>
-            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            <h5 class="white-text">About</h5>
+            <ul>
+              <li class="grey-text text-lighten-2">Justin Le</li>
+              <li class="grey-text text-lighten-2">Data Analyst | Developer</li>
+              <li class="grey-text text-lighten-2">Irvine, CA 92614</li>
+            </ul>
           </div>
           <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Links</h5>
+            <h5 class="white-text">Site Links</h5>
             <ul>
               <li>
-                <a class="grey-text text-lighten-3" href="#!">Home</a>
+                <a class="grey-text text-lighten-3" href="{{ url_for('home') }}">Home</a>
               </li>
               <li>
-                <a class="grey-text text-lighten-3" href="#!">Projects</a>
+                <a class="grey-text text-lighten-3" href="{{ url_for('projects') }}">Projects</a>
               </li>
               <li>
-                <a class="grey-text text-lighten-3" href="#!">Contact</a>
+                <a class="grey-text text-lighten-3" href="{{ url_for('resume') }}">Resume</a>
               </li>
             </ul>
           </div>
@@ -70,7 +74,7 @@
       <div class="footer-copyright">
         <div class="container">
           © 2018 Justin Le
-          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          <a class="grey-text text-lighten-4 right" href="#!">Insert Social Media</a>
         </div>
       </div>
     </footer>
