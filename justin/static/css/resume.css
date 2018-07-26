@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Amaranth|Roboto:300,400');
+@import url('https://fonts.googleapis.com/css?family=Amaranth|Roboto|Lato');
 
 html {
     height: 100%;
@@ -10,14 +10,14 @@ body {
     /* background: #f9f9f9; */
 }
 
-p {
-    font-family: 'Roboto', Calibri, Arial, sans-serif;
-    font-weight: 300;
+.row {
+    margin-bottom: 10px;
 }
 
-a, li {
+p,
+a,
+li {
     font-family: 'Roboto', Calibri, Arial, sans-serif;
-    font-weight: 400;
 }
 
 .brand-logo {
@@ -28,6 +28,11 @@ nav {
     background-color: #607d8b !important;
 }
 
+.nav-links li a {
+    font-family: 'Lato', Calibri, Arial, san-serif;
+    letter-spacing: 1px;
+}
+
 .text-important {
     color: #161618;
 }
@@ -36,24 +41,47 @@ nav {
     color: #5a46ff;
 }
 
-h4 {
+#about h3 {
+    margin: 1rem 0;
+}
+
+h3 {
     color: #161618;
-    /* font-weight: 500; */
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.location,
+.position h4 {
+    color: #161618;
+}
+
+.position h4 {
+    font-size: 17px;
+    margin: 1.5rem 0;
+}
+
+p {
+    margin-top: 0;
+}
+
+.experience-time-place p {
+    margin: 0;
+}
+
+.description p {
+    margin-top: 0.5rem;
 }
 
 .experience-time-place {
-    margin: 0;
+    margin-bottom: 0.5rem;
 }
 
 .experience-time-place .col,
 .experience-panel .col, 
 .experience-pos-des .col {
     padding: 0;
-}
-
-.location,
-.position h4 {
-    color: #161618;
 }
 
 .date-range {
@@ -64,7 +92,6 @@ h4 {
     height: 65px;
     width: 65px;
 }
-
 
 /* flexbox for location and date range */
 .experience-time-place {
@@ -79,18 +106,40 @@ h4 {
     flex-wrap: wrap;
 }
 
-.experience-panel > * {
+.experience-panel > .experience-image {
+    flex: 1 0 10%;
+}
+
+.experience-panel > .position {
     flex: 1 0 50%;
 }
 
-.experience-panel>div:last-child {
+.experience-panel > .description {
     flex: 0 1 100%;
 }
 
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 600px) { 
+@media (min-width: 600px) {
+    h3 {
+        font-size: 28px;
+    }
+    
+    .position h4 {
+        font-size: 19px;
+    }
 
+    p {
+        font-size: 16px;
+    }
+
+    .experience-time-place {
+        margin-bottom: 1rem;
+    }
+
+    .description p {
+        margin-top: 1rem;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -115,34 +164,66 @@ h4 {
         justify-content: left!important;
     }
 
-    /* flexbox for img, position, and description */
-    .experience-panel {
+    /* align time and place vertical center */
+
+    article .row {
         display: flex!important;
-        flex-direction: row;
-        flex-wrap: wrap;
+        align-items: center;
     }
     
-    .experience-panel>div:first-child {
-        flex: 1 0 0;
+    /* flexbox for img, position, and description */
+    .experience-panel {
+        display: block!important;
+        position: relative;
     }
-
-    .experience-panel>div:last-child {
-        flex: 0 1 100%;
-    }
-
-    /* .experience-image {
+    
+    .experience-panel > .experience-image {
+        flex: none;
         position: absolute;
-        height: 50%;
-    } */
-
-    /* .position h5, */
-    .description p {
-        padding-left: 25%;
+        top: 50%;
+        transform: translateY(-50%)
+    }
+    
+    .experience-panel > .position,
+    .experience-panel > .description {
+        flex: none;
+        padding-left: 20%;
     }
 
+    h3 {
+        font-size: 30px;
+    }
+
+    .position h4 {
+        font-size: 22px;
+        margin-top: 0;
+    }
+
+    p {
+        font-size: 18px;
+        margin-top: 0!important;
+    }
+
+    article {
+        margin-bottom: 2rem;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    
+    h3 {
+        font-size: 32px;
+    }
+
+    .position h4 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    article {
+        margin-bottom: 3rem;
+    }
 }

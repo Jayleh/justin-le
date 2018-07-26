@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Amaranth|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Amaranth|Roboto|Lato');
 
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 body, html { padding: 0; margin: 0; }
@@ -13,11 +13,9 @@ body {
 	background: #f9f9f9;
 }
 
-p {
-	font-family: 'Roboto', serif;
-}
-
-a, li {
+p,
+a,
+li {
     font-family: 'Roboto', Calibri, Arial, sans-serif;
 }
 
@@ -27,6 +25,11 @@ a, li {
 
 nav {
     background-color: #607d8b !important;
+}
+
+.nav-links li a {
+    font-family: 'Lato', Calibri, Arial, san-serif;
+    letter-spacing: 1px;
 }
 
 figcaption p {
@@ -56,6 +59,10 @@ figcaption {
 	display: flex!important;
 	justify-content: space-between!important;
 	margin-top: auto;
+}
+
+#github-btn {
+	padding: 15px 0;
 }
 
 /* Small devices (landscape phones, 576px and up) */
