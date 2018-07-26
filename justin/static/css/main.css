@@ -49,7 +49,7 @@ nav {
     position: relative;
     height: 100vh;
     background-image: url("../img/wallpaper/pexels-photo-509922.jpeg");
-    background-size: contain;
+    background-size: cover;
     background-position: top center;
     /* background-attachment: fixed; */
     transform: translateY(-64px);
