@@ -1,16 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans'); */
 @import url('https://fonts.googleapis.com/css?family=Amaranth|Roboto|Lato');
-
-/* Sans-serif fonts to test out */
-/* @import url('https://fonts.googleapis.com/css?family=Cantarell|Didact+Gothic|Titillium+Web'); */
-
-/* Below are sans-serif/serif font pairs */
-/* @import url('https://fonts.googleapis.com/css?family=Average|Fjalla+One'); */
-/* @import url('https://fonts.googleapis.com/css?family=Crimson+Text|Montserrat'); */
-/* @import url('https://fonts.googleapis.com/css?family=Cardo|Montserrat'); */
-
-/* Serif fonts to test out */
-/* @import url('https://fonts.googleapis.com/css?family=EB+Garamond|Gentium+Book+Basic'); */
 
 @font-face {
     src: url("../fonts/Luna.ttf");
@@ -25,15 +13,12 @@ body {
     font-family: 'Amaranth', Calibri, Arial, sans-serif;
 }
 
-p {
-    /* font-family: 'Crimson Text', serif; */
+a, li, p {
     font-family: 'Roboto', Calibri, Arial, sans-serif;
-    /* color: #212121; */
-    color: #424242;
 }
 
-a, li {
-    font-family: 'Roboto', Calibri, Arial, sans-serif;
+p {
+    color: #424242;
 }
 
 .brand-logo {
@@ -80,13 +65,30 @@ nav {
     transform: translateY(-64px);
 }
 
+#impression {
+    display: block!important;
+}
+
 #impression h2,
 #impression p {
     font-family: "Luna";
     color: black;
     /* letter-spacing: 0.2em; */
     margin: 0;
-    padding: 1em 0;
+    padding: 1rem 0;
+}
+
+#impression h2 {
+    font-size: 3rem;
+    padding: 2rem 0;
+}
+
+#impression p {
+    font-size: 1rem;
+}
+
+.intro {
+    margin: 2rem 0;
 }
 
 img {
@@ -94,7 +96,8 @@ img {
     width: 150px;
 }
 
-#hello {
+#hello,
+#i-can-help {
     margin-bottom: 3rem;
 }
 
@@ -140,6 +143,15 @@ img {
     width: 100%
 }
 
+.social-media {
+    font-size: 24px;
+}
+
+.footer-copyright-content {
+    display: flex!important;
+    justify-content: space-between!important;
+}
+
 @media (-webkit-min-device-pixel-ratio: 1.5),(min--moz-device-pixel-ratio:1.5),(-o-min-device-pixel-ratio:1.5),(min-resolution:1.5dppx) {
     .breaker .line {
         background-image:url("../img/ui/line-bg@2x.png");
@@ -148,7 +160,16 @@ img {
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 600px) { 
+@media (min-width: 600px) {
+    #impression {
+        width: 90%;
+    }
+
+    #impression {
+        display: flex!important;
+        justify-content: space-between!important;
+    }
+
     .chart-container {
         width: 70%;
     }
@@ -156,11 +177,36 @@ img {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+    #impression {
+        width: 70%;
+    }
+
+    #impression h2 {
+        font-size: 3.2rem;
+        padding: 3rem 0;
+    }
     
+    #impression p {
+        font-size: 1.2rem;
+    }
+
+    #impression {
+        display: block!important;
+        justify-content: unset!important;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    #impression h2 {
+        font-size: 3.2rem;
+        padding: 3rem 0;
+    }
+    
+    #impression p {
+        font-size: 1.2rem;
+    }
+
     #data,
     #grow {
         display: flex;

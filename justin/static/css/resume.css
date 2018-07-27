@@ -47,9 +47,13 @@ nav {
 
 h3 {
     color: #161618;
-    font-size: 26px;
+    font-size: 28px;
     margin-top: 0;
     margin-bottom: 1rem;
+}
+
+p {
+    font-size: 16px;
 }
 
 .location,
@@ -58,8 +62,8 @@ h3 {
 }
 
 .position h4 {
-    font-size: 17px;
-    margin: 1.5rem 0;
+    font-size: 18px;
+    margin: 0;
 }
 
 p {
@@ -118,23 +122,28 @@ p {
     flex: 0 1 100%;
 }
 
+.social-media {
+    font-size: 24px;
+}
+
+.footer-copyright-content {
+    display: flex!important;
+    justify-content: space-between!important;
+}
+
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 600px) {
     h3 {
-        font-size: 28px;
+        font-size: 30px;
     }
     
     .position h4 {
-        font-size: 19px;
+        font-size: 21px;
     }
 
     p {
-        font-size: 16px;
-    }
-
-    .experience-time-place {
-        margin-bottom: 1rem;
+        font-size: 18px;
     }
 
     .description p {
@@ -144,7 +153,9 @@ p {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
+    .position h4 {
+        margin: 1rem 0;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -191,16 +202,15 @@ p {
     }
 
     h3 {
-        font-size: 30px;
+        font-size: 32px;
     }
 
     .position h4 {
-        font-size: 22px;
-        margin-top: 0;
+        font-size: 24px;
     }
 
     p {
-        font-size: 18px;
+        font-size: 20px;
         margin-top: 0!important;
     }
 
@@ -212,15 +222,15 @@ p {
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     h3 {
-        font-size: 32px;
+        font-size: 34px;
     }
 
     .position h4 {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     p {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     article {
