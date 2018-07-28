@@ -65,10 +65,10 @@
                 <a class="grey-text text-lighten-3" href="{{ url_for('home') }}">Home</a>
               </li>
               <li>
-                <a class="grey-text text-lighten-3" href="{{ url_for('projects') }}">Projects</a>
+                <a class="grey-text text-lighten-3" href="{{ url_for('about') }}">About</a>
               </li>
               <li>
-                <a class="grey-text text-lighten-3" href="{{ url_for('resume') }}">Resume</a>
+                <a class="grey-text text-lighten-3" href="{{ url_for('projects') }}">Projects</a>
               </li>
             </ul>
           </div>
@@ -108,7 +108,7 @@
       });
     </script>
     <!-- External Javascript -->
-    {% block script %} {% endblock %}
+    {% block scripts %} {% endblock %}
   </body>
 
 </html>

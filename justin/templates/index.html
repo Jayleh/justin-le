@@ -1,23 +1,23 @@
 {% extends "layout.html" %} {% block styles %}
 <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/main.css') }}"> {% endblock styles %} {% block nav_items %}
 <li>
+  <a href="{{ url_for('about') }}">About</a>
+</li>
+<li>
   <a href="{{ url_for('projects') }}">Projects</a>
 </li>
 <li>
-  <a href="{{ url_for('resume') }}">Resume</a>
-</li>
-<li>
-  <a href="{{ url_for('home') }}">Contact</a>
+  <a href="{{ url_for('contact') }}">Contact</a>
 </li>
 {% endblock nav_items %} {% block collapse_items %}
 <li>
+  <a href="{{ url_for('about') }}">About</a>
+</li>
+<li>
   <a href="{{ url_for('projects') }}">Projects</a>
 </li>
 <li>
-  <a href="{{ url_for('resume') }}">Resume</a>
-</li>
-<li>
-  <a href="{{ url_for('home') }}">Contact</a>
+  <a href="{{ url_for('contact') }}">Contact</a>
 </li>
 {% endblock collapse_items %} {% block home_header %}
 <div class="parallax-box valign-wrapper">
@@ -126,8 +126,8 @@
     </div>
   </div>
 </section>
-{% endblock main %} {% block script %}
+{% endblock main %} {% block scripts %}
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 <script src="{{ url_for('static', filename='js/collide.js') }}"></script>
-<script src="{{ url_for('static', filename='js/main.js') }}"></script> {% endblock script %}
+<script src="{{ url_for('static', filename='js/main.js') }}"></script> {% endblock scripts %}

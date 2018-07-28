@@ -2,24 +2,24 @@
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/hover-effects/component.css') }}">
 <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/hover-effects/hover.css') }}">
 <script src="{{ url_for('static', filename='js/modernizr.custom.js') }}"></script> {% endblock styles %} {% block nav_items %}
+<li>
+  <a href="{{ url_for('about') }}">About</a>
+</li>
 <li class="active">
   <a href="{{ url_for('projects') }}">Projects</a>
 </li>
 <li>
-  <a href="{{ url_for('resume') }}">Resume</a>
-</li>
-<li>
-  <a href="{{ url_for('home') }}">Contact</a>
+  <a href="{{ url_for('contact') }}">Contact</a>
 </li>
 {% endblock nav_items %} {% block collapse_items %}
+<li>
+  <a href="{{ url_for('about') }}">About</a>
+</li>
 <li class="active">
   <a href="{{ url_for('projects') }}">Projects</a>
 </li>
 <li>
-  <a href="{{ url_for('resume') }}">Resume</a>
-</li>
-<li>
-  <a href="{{ url_for('home') }}">Contact</a>
+  <a href="{{ url_for('contact') }}">Contact</a>
 </li>
 {% endblock collapse_items %} {% block main %}
 <div class="container portfolio">
@@ -173,5 +173,5 @@
 <div id="github-btn" class="container center-align">
   <a href="https://github.com/Jayleh/" target="_blank" class="btn btn-outline-dark">View All Projects</a>
 </div>
-{% endblock main %} {% block script %}
-<script src="{{ url_for('static', filename='js/toucheffects.js') }}"></script> {% endblock script %}
+{% endblock main %} {% block scripts %}
+<script src="{{ url_for('static', filename='js/toucheffects.js') }}"></script> {% endblock scripts %}

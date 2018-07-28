@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Amaranth|Roboto|Lato');
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Amaranth', Calibri, Arial, sans-serif;
+    color: #9a9a9a;
+    /* background: #f9f9f9; */
+}
+
+p,
+a,
+li {
+    font-family: 'Roboto', Calibri, Arial, sans-serif;
+}
+
+.brand-logo {
+    font-family: 'Amaranth', Calibri, Arial, sans-serif;
+}
+
+nav {
+    background-color: #607d8b !important;
+}
+
+.nav-links li a {
+    font-family: 'Lato', Calibri, Arial, san-serif;
+    letter-spacing: 1px;
+}
+
+.social-media {
+    font-size: 24px;
+}
+
+.footer-copyright-content {
+    display: flex!important;
+    justify-content: space-between!important;
+}
