@@ -20,5 +20,66 @@
   <a href="{{ url_for('contact') }}">Contact</a>
 </li>
 {% endblock collapse_items %} {% block main %}
-<div style="height: 1000px;"></div>
-{% endblock main %} {% block scripts %} {% endblock scripts %}
+<div class="container">
+  <div class="row">
+    <div class="col s12 center-align">
+      <h3>Shoot me a message.</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="card-panel {{ category }}">
+              <span class="">{{ message }}</span>
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+    </div>
+  </div>
+  <div class="row">
+    <form class="col s12" method="POST" action="">
+      {{ form.hidden_tag() }}
+      <div class="row">
+        <div class="input-field col s12">
+          {{ form.name(id="name", type="text", class="validate") }}
+          {{ form.name.label() }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          {{ form.email(id="email", type="email", class="validate") }}
+          <span class="helper-text" data-error="Invalid email." data-success="Email is valid."></span>
+          {{ form.email.label() }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          {{ form.message.label(placeholder="How can I help you?") }}
+          {{ form.message(id="message", class="materialize-textarea") }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <select>
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Personal Referral</option>
+            <option value="2">Linkedin</option>
+            <option value="3">Indeed</option>
+            <option value="4">AngelList</option>
+            <option value="5">Other</option>
+          </select>
+          <label>How did you find me?</label>
+          <span class="helper-text">Optional</span>
+        </div>
+      </div>
+      {{ form.submit(class="btn waves-effect waves-light")}}
+    </form>
+  </div>
+</div>
+<div style="height: 850px;"></div>
+{% endblock main %} {% block scripts %}
+<script src="{{ url_for('static', filename='js/contact.js') }}"></script>
+{% endblock scripts %}
