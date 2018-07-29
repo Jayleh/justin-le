@@ -57,22 +57,14 @@
       </div>
       <div class="row">
         <div class="input-field col s12">
-          {{ form.message.label(placeholder="How can I help you?") }}
           {{ form.message(id="message", class="materialize-textarea") }}
+          {{ form.message.label(placeholder="How can I help you?") }}
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s12">
-          <select>
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">Personal Referral</option>
-            <option value="2">Linkedin</option>
-            <option value="3">Indeed</option>
-            <option value="4">AngelList</option>
-            <option value="5">Other</option>
-          </select>
-          <label>How did you find me?</label>
-          <span class="helper-text">Optional</span>
+        <div class="col s12">
+          {{ form.connection.label() }}
+          {{ form.connection(id="connection", class="browser-default") }}
         </div>
       </div>
       {{ form.submit(class="btn waves-effect waves-light")}}

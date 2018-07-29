@@ -21,8 +21,24 @@ def projects():
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     form = MessageForm()
+    select_options = [
+        ("", "Choose your option."),
+        ("Personal Referral", "Personal Referral"),
+        ("Linkedin", "Linkedin"),
+        ("Indeed", "Indeed"),
+        ("AngelList", "AngelList"),
+        ("Other", "Other")
+    ]
+    form.connection.choices = select_options
 
     if form.validate_on_submit():
+        output = {
+            "Name": form.name.data,
+            "Email": form.email.data,
+            "Message": form.message.data,
+            "Connection": form.connection.data
+        }
+        print(output)
         flash(f"Message was succesfully sent!", "teal lighten-1")
         return redirect(url_for("contact"))
 
