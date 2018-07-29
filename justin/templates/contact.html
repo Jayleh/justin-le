@@ -22,53 +22,69 @@
 {% endblock collapse_items %} {% block main %}
 <div class="container">
   <div class="row">
-    <div class="col s12 center-align">
-      <h3>Shoot me a message.</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col s12">
-      {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-          {% for category, message in messages %}
-            <div class="card-panel {{ category }}">
-              <span class="">{{ message }}</span>
-            </div>
-          {% endfor %}
-        {% endif %}
-      {% endwith %}
-    </div>
-  </div>
-  <div class="row">
-    <form class="col s12" method="POST" action="">
-      {{ form.hidden_tag() }}
+    <div class="col l6">
       <div class="row">
-        <div class="input-field col s12">
-          {{ form.name(id="name", type="text", class="validate") }}
-          {{ form.name.label() }}
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          {{ form.email(id="email", type="email", class="validate") }}
-          <span class="helper-text" data-error="Invalid email." data-success="Email is valid."></span>
-          {{ form.email.label() }}
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          {{ form.message(id="message", class="materialize-textarea") }}
-          {{ form.message.label(placeholder="How can I help you?") }}
+        <div class="col s12 center-align">
+          <h3>Shoot me a message.</h3>
         </div>
       </div>
       <div class="row">
         <div class="col s12">
-          {{ form.connection.label() }}
-          {{ form.connection(id="connection", class="browser-default") }}
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="card-panel {{ category }}">
+                  <span class="">{{ message }}</span>
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
         </div>
       </div>
-      {{ form.submit(class="btn waves-effect waves-light")}}
-    </form>
+      <div class="row">
+        <form class="col s12" method="POST" action="">
+          {{ form.hidden_tag() }}
+          <div class="row">
+            <div class="input-field col s12">
+              {{ form.name(id="name", type="text", class="validate") }}
+              {{ form.name.label() }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              {{ form.email(id="email", type="email", class="validate") }}
+              <span class="helper-text" data-error="Invalid email." data-success="Email is valid."></span>
+              {{ form.email.label() }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              {{ form.subject(id="subject", type="text", class="validate") }}
+              {{ form.subject.label() }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              {{ form.message(id="message", class="materialize-textarea") }}
+              {{ form.message.label(placeholder="How can I help you?") }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              {{ form.connection.label() }}
+              {{ form.connection(id="connection", class="browser-default") }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              {{ form.recaptcha() }}
+            </div>
+          </div>
+          {{ form.submit(class="btn waves-effect waves-light")}}
+        </form>
+      </div>
+    </div>
+    <div class="col l6"></div>
   </div>
 </div>
 <div style="height: 850px;"></div>

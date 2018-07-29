@@ -1,5 +1,6 @@
 from flask import render_template, redirect, url_for, flash
-from justin import app
+from flask_mail import Message
+from justin import app, mail
 from justin.forms import MessageForm
 
 
@@ -32,14 +33,12 @@ def contact():
     form.connection.choices = select_options
 
     if form.validate_on_submit():
-        output = {
-            "Name": form.name.data,
-            "Email": form.email.data,
-            "Message": form.message.data,
-            "Connection": form.connection.data
-        }
-        print(output)
+        msg = Message(form.subject.data, recipients=['jaylehyun@gmail.com'])
+        msg.body = f"You received a message from {form.name.data.strip()} <{form.email.data.strip()}> with a connection from [{form.connection.data}].\n\n{form.message.data}"
+        mail.send(msg)
+
         flash(f"Message was succesfully sent!", "teal lighten-1")
+
         return redirect(url_for("contact"))
 
     return render_template("contact.html", form=form)

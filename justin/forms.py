@@ -1,4 +1,4 @@
-from flask_wtf import FlaskForm
+from flask_wtf import FlaskForm, RecaptchaField
 from wtforms import StringField, TextAreaField, SelectField, SubmitField
 from wtforms.validators import InputRequired, Email, Length
 
@@ -6,6 +6,8 @@ from wtforms.validators import InputRequired, Email, Length
 class MessageForm(FlaskForm):
     name = StringField("Name", validators=[InputRequired(), Length(min=2, max=50)])
     email = StringField("Email", validators=[InputRequired(), Email()])
+    subject = StringField("Subject", validators=[Length(max=100)])
     message = TextAreaField("Message", validators=[InputRequired(), Length(min=2)])
     connection = SelectField("How did you find me?")
+    recaptcha = RecaptchaField()
     submit = SubmitField("Send")
