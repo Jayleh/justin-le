@@ -4,9 +4,11 @@ html {
     height: 100%;
 }
 
-body {
+h3,
+h4,
+.brand-logo,
+#msg-form label {
     font-family: 'Amaranth', Calibri, Arial, sans-serif;
-    /* color: #9a9a9a; */
 }
 
 p,
@@ -35,4 +37,121 @@ nav {
 .footer-copyright-content {
     display: flex!important;
     justify-content: space-between!important;
+}
+
+.split {
+    margin-bottom: 0;
+    line-height: 0;
+}
+
+.split .col {
+    line-height: 1.5;
+}
+
+.msg-row {
+    margin-bottom: 10px;
+}
+
+.msg-row,
+.contact-row {
+    padding: 0 15px;
+}
+
+.image-container {
+    padding: 0!important;
+}
+
+.image-container img {
+    width: 100%;
+    margin-bottom: -5.5px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#msg-form > div:nth-child(n+6) > div {
+    margin: 1rem 0;
+}
+
+#msg-form .row {
+    margin-bottom: 0;
+}
+
+#msg-form label {
+    font-size: 14px;
+}
+
+.heading h3 {
+    font-size: 28px;
+}
+
+.contact-row h4 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #9a9a9a;
+}
+
+#submit {
+    color: #fff;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 600px) {
+    .msg-row,
+    .contact-row {
+        padding: 0 15%;
+    }
+
+    .heading h3 {
+        font-size: 30px;
+    }
+
+    .contact-row h4 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #msg-form label {
+        font-size: 16px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .msg-row,
+    .contact-row {
+        padding: 0 25%;
+    }
+
+    .heading h3 {
+        font-size: 32px;
+    }
+
+    .contact-row h4 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .heading h3 {
+        font-size: 34px;
+    }
+
+    .contact-row h4 {
+        font-size: 26px;
+    }
 }

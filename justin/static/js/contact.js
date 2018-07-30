@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('textarea#textarea1').characterCounter();
+    $('textarea#message').characterCounter();
 
     $('select').formSelect();
 
