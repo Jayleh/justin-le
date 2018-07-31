@@ -7,20 +7,20 @@ body, html { padding: 0; margin: 0; }
 .clearfix:before, .clearfix:after { content: " "; display: table; }
 .clearfix:after { clear: both; }
 
-body {
-	font-family: 'Amaranth', Calibri, Arial, sans-serif;
-	color: #b3b9bf;
-	background: #f9f9f9;
-}
-
 p,
 a,
 li {
     font-family: 'Roboto', Calibri, Arial, sans-serif;
 }
 
-.brand-logo {
+.brand-logo,
+#projects-title h3 {
     font-family: 'Amaranth', Calibri, Arial, sans-serif;
+}
+
+#projects-title h3 {
+	color: #161618;
+    font-size: 28px;
 }
 
 nav {
@@ -66,8 +66,12 @@ figcaption {
 	font-size: 30px;
 }
 
+#projects-title {
+	padding: 10px 0;
+}
+
 #github-btn {
-	padding: 15px 0;
+	padding: 20px 0;
 }
 
 .social-media {
@@ -81,25 +85,41 @@ figcaption {
 
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 600px) { 
+@media (min-width: 600px) {
+	#projects-title h3 {
+		font-size: 30px;
+	}
+
 	figcaption p {
 		font-size: 14px;
 		-webkit-line-clamp: 8;
+	}
+
+	#github-btn {
+		padding: 30px 0;
 	}
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    
+    #projects-title {
+		padding: 15px 0;
+	}
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-   
+	#projects-title h3 {
+		font-size: 32px;
+	}
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+	#projects-title h3 {
+        font-size: 34px;
+	}
+	
     figcaption p {
 		-webkit-line-clamp: 7;
 	}

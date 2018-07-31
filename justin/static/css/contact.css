@@ -23,6 +23,7 @@ li {
 
 nav {
     background-color: #607d8b !important;
+    /* box-shadow: 0 0 0 0; */
 }
 
 .nav-links li a {
@@ -48,6 +49,11 @@ nav {
     line-height: 1.5;
 }
 
+#msg-container,
+#contact-container {
+    margin: 30px 0;
+}
+
 .msg-row {
     margin-bottom: 10px;
 }
@@ -59,14 +65,12 @@ nav {
 
 .image-container {
     padding: 0!important;
+    overflow: hidden;
 }
 
 .image-container img {
-    width: 100%;
-    margin-bottom: -5.5px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    margin: 0 0 -5.5px 0;
+    width: 100%
 }
 
 #msg-form > div:nth-child(n+6) > div {
@@ -143,6 +147,20 @@ p {
     p {
         font-size: 20px;
     }
+
+    #right-img {
+        margin: 0 0 -5.5px -68%;
+        width: 240%
+    }
+
+    #left-img {
+        margin: 0 0 -5.5px -25%;
+        width: 150%;
+    }
+
+    #contact-container {
+        margin-top: 50px;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -153,5 +171,15 @@ p {
 
     .contact-row h4 {
         font-size: 26px;
+    }
+
+    #msg-container,
+    #contact-container {
+        margin-top: 80px;
+    }
+
+    #right-img {
+        margin: 0 0 -5.5px -68%;
+        width: 220%
     }
 }

@@ -21,7 +21,7 @@
 </li>
 {% endblock collapse_items %} {% block main %}
 <div class="row split">
-  <div class="col s12 l6">
+  <div id="msg-container" class="col s12 l6">
     <div class="row msg-row">
       <div class="col s12 center-align">
         <div class="heading">
@@ -90,14 +90,14 @@
     </div>
   </div>
   <div class="col s12 l6 image-container">
-    <!-- <img src="{{ url_for('static', filename='img/wallpaper/pexels-photo-1209435-portrait.jpeg') }}"> -->
+    <img id="right-img" src="{{ url_for('static', filename='img/wallpaper/aerial-android-wallpaper-architectural-design-373912.jpg') }}">
   </div>
 </div>
 <div class="row split">
   <div class="col s12 l6 image-container">
-    <!-- <img src="{{ url_for('static', filename='img/bg.svg') }}"> -->
+    <img id="left-img" src="{{ url_for('static', filename='img/wallpaper/pexels-photo-1029606.jpeg') }}">
   </div>
-  <div class="col s12 l6">
+  <div id="contact-container" class="col s12 l6">
     <div class="row contact-row">
       <div class="col s12">
         <div class="heading">
