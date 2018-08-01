@@ -47,7 +47,7 @@ figcaption a {
 
 figcaption a:hover,
 figcaption a:active {
-	color: #333;
+	/* color: #333; */
 }
 
 figcaption {
@@ -64,6 +64,18 @@ figcaption {
 .fa-github {
 	color: white;
 	font-size: 30px;
+}
+
+.btn,
+.btn-large,
+.btn-small {
+    background-color: rgba(0, 115, 140, 1)!important;
+}
+
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover {
+    background-color: rgba(0, 115, 140, 0.8)!important;
 }
 
 #projects-title {

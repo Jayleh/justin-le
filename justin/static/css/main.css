@@ -26,11 +26,25 @@ p {
 }
 
 h3 {
-    color: #607d8b;
+    /* color: #607d8b; */
+    color: #00738c;
 }
 
 h4 {
-    color: #90a4ae;
+    /* color: #90a4ae; */
+    color: #81b0b2;
+}
+
+.btn,
+.btn-large,
+.btn-small {
+    background-color: rgba(0, 115, 140, 1)!important;
+}
+
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover {
+    background-color: rgba(0, 115, 140, 0.8)!important;
 }
 
 .row {

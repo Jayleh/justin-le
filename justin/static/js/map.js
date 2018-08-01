@@ -14,7 +14,8 @@ $(function () {
             regions: [{
                 scale: {
                     'LIVED': '#161618',
-                    'VISITED': '#5a46ff'
+                    // 'VISITED': '#5a46ff'
+                    'VISITED': '#00738c'
                 },
                 attribute: 'fill',
                 values: {

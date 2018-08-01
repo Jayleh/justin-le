@@ -102,6 +102,19 @@ p {
     color: #fff;
 }
 
+.btn,
+.btn-large,
+.btn-small {
+    background-color: rgba(0, 115, 140, 1)!important;
+}
+
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover {
+    background-color: rgba(0, 115, 140, 0.8)!important;
+}
+
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 600px) {
     .msg-row,
