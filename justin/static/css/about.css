@@ -101,7 +101,6 @@ p {
 }
 
 .experience-image img {
-    height: 65px;
     width: 65px;
 }
 
@@ -205,6 +204,10 @@ p {
     #where-ive-been {
         padding: 15px 0;
     }
+
+    .experience-image img {
+        width: 70px;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -270,6 +273,10 @@ p {
     #text-word {
         display: flex!important;
         align-items: center;
+    }
+
+    .experience-image img {
+        width: 80px;
     }
 }
 
