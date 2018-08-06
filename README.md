@@ -1,2 +1,2 @@
 # justin-le
-Personal Website Flask Application
+Hi! Welcome to my personal website python flask application.
