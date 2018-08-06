@@ -7,7 +7,8 @@ html {
 h3,
 h4,
 .brand-logo,
-#msg-form label {
+#msg-form label,
+footer h5 {
     font-family: 'Amaranth', Calibri, Arial, sans-serif;
 }
 
@@ -15,10 +16,6 @@ p,
 a,
 li {
     font-family: 'Roboto', Calibri, Arial, sans-serif;
-}
-
-.brand-logo {
-    font-family: 'Amaranth', Calibri, Arial, sans-serif;
 }
 
 nav {
