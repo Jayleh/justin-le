@@ -1,7 +1,16 @@
-from flask import render_template, redirect, url_for, flash
+from urllib.parse import urlparse
+from flask import request, render_template, redirect, url_for, flash
 from flask_mail import Message
 from justin import app, mail
 from justin.forms import MessageForm
+
+
+@app.before_request
+def redirect_to_io():
+    urlparts = urlparse(request.url)
+
+    if urlparts.netloc == "justin-le.herokuapp.com":
+        redirect(f"https://www.justinle.io/{urlparts.path}", code=301)
 
 
 @app.route("/")
