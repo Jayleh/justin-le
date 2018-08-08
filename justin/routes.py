@@ -10,7 +10,7 @@ def redirect_to_io():
     urlparts = urlparse(request.url)
 
     if urlparts.netloc == "justin-le.herokuapp.com":
-        return redirect(f"https://www.justinle.io/{urlparts.path}", code=301)
+        return redirect(f"https://www.justinle.io{urlparts.path}", code=301)
 
     return None
 
