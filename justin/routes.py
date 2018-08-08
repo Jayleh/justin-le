@@ -12,6 +12,8 @@ def redirect_to_io():
     if urlparts.netloc == "justin-le.herokuapp.com":
         return redirect(f"https://www.justinle.io/{urlparts.path}", code=301)
 
+    return None
+
 
 @app.route("/")
 def home():
