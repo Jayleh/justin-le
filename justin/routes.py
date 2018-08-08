@@ -8,12 +8,9 @@ from justin.forms import MessageForm
 @app.before_request
 def redirect_to_io():
     urlparts = urlparse(request.url)
-    print (urlparts)
 
     if urlparts.netloc == "justin-le.herokuapp.com":
-        redirect(f"https://www.justinle.io/{urlparts.path}", code=301)
-
-    print("not redirected")
+        return redirect(f"https://www.justinle.io/{urlparts.path}", code=301)
 
 
 @app.route("/")
