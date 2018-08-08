@@ -39,6 +39,7 @@ def contact():
         ("Linkedin", "Linkedin"),
         ("Indeed", "Indeed"),
         ("AngelList", "AngelList"),
+        ("Google", "Google"),
         ("Other", "Other")
     ]
     form.connection.choices = select_options

@@ -151,8 +151,16 @@ p {
 #about,
 #experience,
 #education,
-#where-ive-been {
+#resume-linkedin {
     padding: 10px 0;
+}
+
+#where-ive-been {
+    padding: 30px 0;
+}
+
+#resume-linkedin {
+    background-color: #F6F7FB;
 }
 
 /* line break image */
@@ -194,6 +202,10 @@ p {
         margin-top: 1rem;
     }
 
+    #resume-linkedin {
+        padding: 20px 0;
+    }
+
     #map {
         width: 400px;
         height: 300px;
@@ -213,9 +225,16 @@ p {
 
     #about,
     #experience,
-    #education,
-    #where-ive-been {
+    #education {
         padding: 15px 0;
+    }
+    
+    #resume-linkedin {
+        padding: 25px 0;
+    }
+
+    #where-ive-been {
+        padding: 40px 0;
     }
 
     .experience-image img {
@@ -291,6 +310,10 @@ p {
     .experience-image img {
         width: 80px;
     }
+
+    #resume-linkedin {
+        padding: 40px 0;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -309,6 +332,10 @@ p {
 
     article {
         margin-bottom: 3rem;
+    }
+
+    #resume-linkedin {
+        padding: 60px 0;
     }
 
     #map {
