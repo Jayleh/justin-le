@@ -223,13 +223,20 @@
 <div id="resume-linkedin">
   <div class="container">
     <div class="row">
-      <div class="col s12 l6">
-        <p>Some visual</p>
+      <div class="col s12 m6 xl12">
+        <div class="bootcamp-image valign-wrapper">
+          <img src="{{ url_for('static', filename='img/about-imgs/resized/bootcamp.jpg') }}" class="responsive-img">
+        </div>
+        <div class="bootcamp-image valign-wrapper">
+          <img src="{{ url_for('static', filename='img/about-imgs/resized/certificate.jpg') }}" class="responsive-img">
+        </div>
       </div>
-      <div class="col s12 l6">
-        <p>If you'd like a formal document please see my
-          <a class="color-accent" href="{{ url_for('static', filename='docs/Justin Le Resume.pdf') }}" target="_blank">resume</a>. You can also checkout my
-          <a class="color-accent" href="https://www.linkedin.com/in/jayleh/" target="_blank">Linkedin</a>.</p>
+      <div class="col s12 m6 xl12">
+        <div class="resume-linkedin-description">
+          <p>If you'd like a formal document please see my
+            <a class="color-accent" href="{{ url_for('static', filename='docs/Justin Le Resume.pdf') }}" target="_blank">resume</a>. You can also checkout my
+            <a class="color-accent" href="https://www.linkedin.com/in/jayleh/" target="_blank">Linkedin</a>.</p>
+        </div>
       </div>
     </div>
   </div>

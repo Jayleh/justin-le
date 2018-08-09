@@ -177,9 +177,6 @@ img {
 @media (min-width: 600px) {
     #impression {
         width: 90%;
-    }
-
-    #impression {
         display: flex!important;
         justify-content: space-between!important;
     }
