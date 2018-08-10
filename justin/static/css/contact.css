@@ -8,8 +8,19 @@ h3,
 h4,
 .brand-logo,
 #msg-form label,
-footer h5 {
+footer h5,
+.code-link,
+.code-link a {
     font-family: 'Amaranth', Calibri, Arial, sans-serif;
+}
+
+.code-link a {
+    color: #00738c;
+    font-weight: 700;
+}
+
+.code-link {
+    font-size: 14px;
 }
 
 p,
@@ -28,13 +39,9 @@ nav {
     letter-spacing: 1px;
 }
 
-.social-media {
+.social-media i,
+.scroll-top i {
     font-size: 24px;
-}
-
-.footer-copyright-content {
-    display: flex!important;
-    justify-content: space-between!important;
 }
 
 .split {
@@ -111,6 +118,10 @@ p {
     background-color: rgba(0, 115, 140, 0.8)!important;
 }
 
+.footer-copyright-content div.row {
+    margin: 0;
+}
+
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 600px) {
@@ -129,6 +140,10 @@ p {
 
     p {
         font-size: 18px;
+    }
+
+    .code-link {
+        font-size: 16px;
     }
 }
 

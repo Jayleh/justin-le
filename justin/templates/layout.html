@@ -65,7 +65,7 @@
     <footer class="page-footer blue-grey">
       <div class="container">
         <div class="row">
-          <div class="col l6 s12">
+          <div class="col s12 m6 ">
             <h5 class="white-text">About</h5>
             <ul>
               <li class="grey-text text-lighten-2">Justin Le</li>
@@ -73,7 +73,7 @@
               <li class="grey-text text-lighten-2">Irvine, CA 92614</li>
             </ul>
           </div>
-          <div class="col l4 offset-l2 s12">
+          <div class="col s12 m4 offset-m2 ">
             <h5 class="white-text">Site Links</h5>
             <ul>
               <li>
@@ -93,36 +93,57 @@
         </div>
       </div>
       <div class="footer-copyright">
-        <div class="container footer-copyright-content valign-wrapper">
-          © 2018 Justin Le
-          <div class="social-media">
-            <!-- <a class="grey-text text-lighten-4" href="#!">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a class="grey-text text-lighten-4" href="#!">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a class="grey-text text-lighten-4" href="#!">
-              <i class="fab fa-instagram"></i>
-            </a> -->
-            <a class="grey-text text-lighten-4" href="https://www.linkedin.com/in/jayleh/" target="_blank">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a class="grey-text text-lighten-4" href="https://github.com/Jayleh" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-            <a class="grey-text text-lighten-4" href="{{ url_for('static', filename='docs/Justin Le Resume.pdf') }}" target="_blank">
-              <i class="far fa-file-alt"></i>
-            </a>
+        <div class="container footer-copyright-content">
+          <div class="row valign-wrapper">
+            <div class="col s7 m6">
+              <div class="code-link">
+                &copy; 2018 &mdash;
+                <a href="https://github.com/Jayleh/justin-le" target="_blank">Coded</a> by Justin Le.
+              </div>
+            </div>
+            <div class="col s4 m3 offset-m2">
+              <div class="social-media">
+                <!-- <a class="grey-text text-lighten-4" href="#!">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a class="grey-text text-lighten-4" href="#!">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="grey-text text-lighten-4" href="#!">
+                  <i class="fab fa-instagram"></i>
+                </a> -->
+                <a class="grey-text text-lighten-4" href="https://www.linkedin.com/in/jayleh/" target="_blank">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="grey-text text-lighten-4" href="https://github.com/Jayleh" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a class="grey-text text-lighten-4" href="{{ url_for('static', filename='docs/Justin Le Resume.pdf') }}" target="_blank">
+                  <i class="far fa-file-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col s1">
+              <div class="scroll-top right-align">
+                <a class="grey-text text-lighten-4" href="#">
+                  <i class="fas fa-chevron-up"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- jQuery, then Materialize JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous"></script>
+    <!-- Materialize JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <!-- Scrolltop -->
+    <script src="{{ url_for('static', filename='js/scrolltop.js') }}"></script>
     <script>
       $(document).ready(function () {
         $('.sidenav').sidenav();
