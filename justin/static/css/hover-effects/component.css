@@ -10,7 +10,7 @@
 	display: inline-block;
 	width: 100%;
 	margin: 0;
-	padding: 20px;
+	padding: 0;
 	text-align: left;
 	position: relative;
 }
@@ -30,7 +30,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	padding: 20px;
+	padding: 15px;
 	background: #2c3f52;
 	color: #ed4e6e;
 }
@@ -136,7 +136,7 @@
 	}
 
 	.grid li {
-		padding: 20px;
+		padding: 5px 0;
 		width: 440px;
 	}
 	
@@ -152,9 +152,11 @@
 	}
 }
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-
+/* Large devices (desktops, 940px and up) */
+@media (min-width: 940px) {
+	.grid li {
+		padding: 0 10px;
+	}
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
