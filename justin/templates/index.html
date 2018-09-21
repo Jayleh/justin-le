@@ -1,5 +1,8 @@
-{% extends "layout.html" %} {% block styles %}
-<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/main.css') }}"> {% endblock styles %} {% block nav_items %}
+{% extends "layout.html" %}
+{% block styles %}
+<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock styles %}
+{% block nav_items %}
 <li>
   <a href="{{ url_for('about') }}">About</a>
 </li>
@@ -9,7 +12,8 @@
 <li>
   <a href="{{ url_for('contact') }}">Contact</a>
 </li>
-{% endblock nav_items %} {% block collapse_items %}
+{% endblock nav_items %}
+{% block collapse_items %}
 <li>
   <a href="{{ url_for('about') }}">About</a>
 </li>
@@ -19,7 +23,8 @@
 <li>
   <a href="{{ url_for('contact') }}">Contact</a>
 </li>
-{% endblock collapse_items %} {% block home_header %}
+{% endblock collapse_items %}
+{% block home_header %}
 <div class="parallax-box valign-wrapper">
   <div id="impression" class="container valign-wrapper center-align">
     <div class="intro center-align">
@@ -31,7 +36,8 @@
     </div>
   </div>
 </div>
-{% endblock home_header %} {% block main %}
+{% endblock home_header %}
+{% block main %}
 <section id="hello">
   <div class="container center-align">
     <div class="row">
@@ -39,8 +45,8 @@
         <article>
           <img src="{{ url_for('static', filename='img/portrait.jpg') }}" class="circle responsive-img">
           <h3>Hi.</h3>
-          <p class="flow-text">I'm a data analyst / developer based in Irvine, California. I have a passion for learning new technologies and
-            love to create data visualizations and robust applications.</p>
+          <p class="flow-text">I'm a data analyst / developer based in Irvine, California. I have a passion for
+            learning new technologies and love to create data visualizations and robust applications.</p>
         </article>
       </div>
     </div>
@@ -76,8 +82,8 @@
             <div class="col s12 l7">
               <div class="details">
                 <h4>Straight up data.</h4>
-                <p class="flow-text">From acquisition to visualizations, my goals are to focus on building content that brings meaningful insight
-                  from data.</p>
+                <p class="flow-text">From acquisition to visualizations, my goals are to focus on building content that
+                  brings meaningful insight from data.</p>
               </div>
             </div>
           </div>
@@ -90,8 +96,8 @@
             <div class="col s12 l7 pull-l5">
               <div class="details">
                 <h4>Grow with you.</h4>
-                <p class="flow-text">I'm a data analyst, however, I also see myself as an engineer / developer. I'm driven to learn all the technologies,
-                  backend to front.</p>
+                <p class="flow-text">I'm a data analyst, however, I also see myself as an engineer / developer. I'm
+                  driven to learn all the technologies, backend to front.</p>
               </div>
             </div>
           </div>
@@ -126,8 +132,10 @@
     </div>
   </div>
 </section>
-{% endblock main %} {% block scripts %}
+{% endblock main %}
+{% block scripts %}
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 <script src="{{ url_for('static', filename='js/collide.js') }}"></script>
-<script src="{{ url_for('static', filename='js/main.js') }}"></script> {% endblock scripts %}
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock scripts %}

@@ -1,6 +1,9 @@
-{% extends "layout.html" %} {% block styles %}
+{% extends "layout.html" %}
+{% block styles %}
 <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/jquery-jvectormap-2.0.3.css') }}">
-<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/about.css') }}"> {% endblock styles %} {% block nav_items %}
+<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/about.css') }}">
+{% endblock styles %}
+{% block nav_items %}
 <li class="active">
   <a href="{{ url_for('about') }}">About</a>
 </li>
@@ -10,7 +13,8 @@
 <li>
   <a href="{{ url_for('contact') }}">Contact</a>
 </li>
-{% endblock nav_items %} {% block collapse_items %}
+{% endblock nav_items %}
+{% block collapse_items %}
 <li class="active">
   <a href="{{ url_for('about') }}">About</a>
 </li>
@@ -20,7 +24,8 @@
 <li>
   <a href="{{ url_for('contact') }}">Contact</a>
 </li>
-{% endblock collapse_items %} {% block main %}
+{% endblock collapse_items %}
+{% block main %}
 <div id="about" class="container">
   <div class="row">
     <div class="col s12">
@@ -30,7 +35,8 @@
   <div class="row">
     <div class="col s12">
       <p>
-        <span class="text-important">Data controller</span>, specializing in inventory management, sales analytics, and operations. Able to leverage competent
+        <span class="text-important">Data controller</span>, specializing in inventory management, sales analytics, and
+        operations. Able to leverage competent
         <span class="text-important">data exploration, wrangling, and visualization</span>. Looking to build
         <span class="text-important">robust applications</span> with a
         <span class="text-important">fast-paced</span> and growing company.</p>
@@ -75,10 +81,11 @@
             </h4>
           </div>
           <div class="description">
-            <p>Mix of Inventory Management Specialist and Data Analyst at Cellese, an ecommerce skin care company in Irvine.
-              Here is where I revamp the inventory management system, streamline data and projection reportings, and identity
-              business trends to make data-driven decisions.
-              <span class="text-important">#InventoryRevamp #BuildDesktopApps #ProjectionReport #SalesTrends #IdentifyKPIs</span>
+            <p>Mix of Inventory Management Specialist and Data Analyst at Cellese, an ecommerce skin care company in
+              Irvine. Here is where I revamp the inventory management system, streamline data and projection
+              reportings, and identity business trends to make data-driven decisions.
+              <span class="text-important">#InventoryRevamp #BuildDesktopApps #ProjectionReport #SalesTrends
+                #IdentifyKPIs</span>
             </p>
           </div>
         </div>
@@ -104,9 +111,9 @@
             </h4>
           </div>
           <div class="description">
-            <p>English Program in Korea to help improve English-speaking abilities in students, develop cultural exchange,
-              and foster and encourage individuals to take advantage of all the things this new age of information and globalization
-              has to offer.
+            <p>English Program in Korea to help improve English-speaking abilities in students, develop cultural
+              exchange, and foster and encourage individuals to take advantage of all the things this new age of
+              information and globalization has to offer.
               <span class="text-important">#WorkAbroad #MakeADifference #Countryside #UnderprivelegedStudents</span>
             </p>
           </div>
@@ -177,12 +184,14 @@
             </div>
             <div class="position valign-wrapper">
               <h4>Data Analytics &amp; Visualization &mdash;
-                <a href="https://bootcamp.ce.uci.edu/data/" target="_blank" class="color-accent">UCI Division of Continuing Education</a>
+                <a href="https://bootcamp.ce.uci.edu/data/" target="_blank" class="color-accent">UCI Division of
+                  Continuing Education</a>
               </h4>
             </div>
             <div class="description">
               <p>Intensive 24-week data bootcamp dedicated to data mining, preparation, and visualization.
-                <span class="text-important">#WorkStudy #Python #JavaScript #MachineLearning #DataWrangling #Database #FullStack #WebDevelopment</span>
+                <span class="text-important">#WorkStudy #Python #JavaScript #MachineLearning #DataWrangling #Database
+                  #FullStack #WebDevelopment</span>
               </p>
             </div>
           </div>
@@ -234,7 +243,8 @@
       <div class="col s12 m6 xl12">
         <div class="resume-linkedin-description">
           <p>If you'd like a formal document please see my
-            <a class="color-accent" href="{{ url_for('static', filename='docs/Justin Le Resume.pdf') }}" target="_blank">resume</a>. You can also checkout my
+            <a class="color-accent" href="{{ url_for('static', filename='docs/Justin Le Resume.pdf') }}" target="_blank">resume</a>.
+            You can also checkout my
             <a class="color-accent" href="https://www.linkedin.com/in/jayleh/" target="_blank">Linkedin</a>.</p>
         </div>
       </div>
@@ -258,7 +268,9 @@
     </div>
   </div>
 </div>
-{% endblock main %} {% block scripts %}
+{% endblock main %}
+{% block scripts %}
 <script src="{{ url_for('static', filename='js/jquery-jvectormap-2.0.3.min.js') }}"></script>
 <script src="{{ url_for('static', filename='js/jquery-jvectormap-world-mill.js') }}"></script>
-<script src="{{ url_for('static', filename='js/map.js') }}"></script> {% endblock scripts %}
+<script src="{{ url_for('static', filename='js/map.js') }}"></script>
+{% endblock scripts %}
