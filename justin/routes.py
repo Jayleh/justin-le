@@ -47,10 +47,16 @@ def contact():
     if form.validate_on_submit():
         msg = Message(form.subject.data, recipients=['jaylehyun@gmail.com'])
         msg.body = f"You received a message from {form.name.data.strip()} <{form.email.data.strip()}> with a connection from [{form.connection.data}].\n\n{form.message.data}"
-        mail.send(msg)
 
-        flash(f"Message was succesfully sent!", "teal lighten-1")
+        try:
+            mail.send(msg)
 
-        return redirect(url_for("contact"))
+            flash(f"Message was succesfully sent!", "teal lighten-1")
+        except Exception as e:
+            print(e)
+            flash(f"Oops, something went wrong. If you want to contact me please shoot me an email at jaylehyun@gmail.com. Thank you!",
+                  "background-color: #e57373;")
+
+        return redirect(url_for("contact"), code=302)
 
     return render_template("contact.html", form=form)
