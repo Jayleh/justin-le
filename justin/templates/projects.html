@@ -39,13 +39,34 @@
       <div class="card-content">
         <figure>
           <div>
-            <img src="{{ url_for('static', filename='img/project-card-imgs/shipstation.PNG') }}" alt="">
+            <img src="{{ url_for('static', filename='img/project-card-imgs/reduced/vid-browser-min.PNG') }}" alt="">
+          </div>
+          <figcaption>
+            <h4>Vid Browser</h4>
+            <p>Browse for the first 5 YouTube videos based on your search! <span>(React, Semantic
+                UI, YouTube Data API v3, JavaScript, HTML5/CSS3)</span></p>
+            <div class="action-links">
+              <a href="https://vid-browser.herokuapp.com" target="_blank" class="waves-effect waves-light btn-small">Take
+                a look</a>
+              <a class="valign-wrapper" href="https://github.com/Jayleh/videos" target="_blank" style="margin: 0;">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="card">
+      <div class="card-content">
+        <figure>
+          <div>
+            <img src="{{ url_for('static', filename='img/project-card-imgs/reduced/shipstation-min.PNG') }}" alt="">
           </div>
           <figcaption>
             <h4>Ship Live</h4>
-            <p>Shipstation dashboard revealing important indicators such as awaiting and on-hold shipments, total
-              number of
-              orders this month, and an interactive map of order locations.</p>
+            <p>Shipstation dashboard <span>(Python Flask, SQLite, JavaScript, HTML5/CSS3)</span></p>
             <div class="action-links">
               <a href="https://ship-live.herokuapp.com/demo" target="_blank" class="waves-effect waves-light btn-small">Take
                 a look</a>
@@ -63,11 +84,12 @@
       <div class="card-content">
         <figure>
           <div>
-            <img src="{{ url_for('static', filename='img/project-card-imgs/nfl-dash.PNG') }}" alt="">
+            <img src="{{ url_for('static', filename='img/project-card-imgs/reduced/nfl-dash-min.PNG') }}" alt="">
           </div>
           <figcaption>
             <h4>NFL Prediction</h4>
-            <p>Machine learning project to predict NFL game outcomes based on historical data.</p>
+            <p>Machine learning project to predict NFL game outcomes based on historical data <span>(Python Flask,
+                Sci-Kit Learn, JavaScript, HTML/CSS)</span></p>
             <div class="action-links">
               <a href="https://nfl-dashboard.herokuapp.com/" target="_blank" class="waves-effect waves-light btn-small">Take
                 a look</a>
@@ -85,12 +107,12 @@
       <div class="card-content">
         <figure>
           <div>
-            <img src="{{ url_for('static', filename='img/project-card-imgs/usgs-quake.PNG') }}" alt="">
+            <img src="{{ url_for('static', filename='img/project-card-imgs/reduced/usgs-quake-min.PNG') }}" alt="">
           </div>
           <figcaption>
             <h4>USGS Quake</h4>
-            <p>Earthquake datamap revealing all earthquakes in the past week; it includes location, magnitude, and
-              timestamp.</p>
+            <p>Earthquake datamap revealing all earthquakes in the past week <span>(Python Flask, Javascript, D3.js,
+                Leaflet.js, HTML/CSS/Bootstrap)</span></p>
             <div class="action-links">
               <a href="https://jayleh.github.io/usgs-quake/" target="_blank" class="waves-effect waves-light btn-small">Take
                 a look</a>
@@ -108,11 +130,12 @@
       <div class="card-content">
         <figure>
           <div>
-            <img src="{{ url_for('static', filename='img/project-card-imgs/belly-button.PNG') }}" alt="">
+            <img src="{{ url_for('static', filename='img/project-card-imgs/reduced/belly-button-min.PNG') }}" alt="">
           </div>
           <figcaption>
             <h4>Belly Button</h4>
-            <p>Interactive dashboard investigating a 2011 study of belly button microbe diversity.</p>
+            <p>Interactive dashboard investigating a 2011 study of belly button microbe diversity <span>(Python Flask,
+                SQLite, Javascript, Leaflet.js, HTML/CSS/Bootstrap)</span></p>
             <div class="action-links">
               <a href="https://bellybtn.herokuapp.com" target="_blank" class="waves-effect waves-light btn-small">Take
                 a
@@ -131,33 +154,12 @@
       <div class="card-content">
         <figure>
           <div>
-            <img src="{{ url_for('static', filename='img/project-card-imgs/data-journalism.PNG') }}" alt="">
-          </div>
-          <figcaption>
-            <h4>Data Journalism</h4>
-            <p>Interactive visualization showing correlations between demographics and behavioral risk factors.</p>
-            <div class="action-links">
-              <a href="https://risky-health.herokuapp.com" target="_blank" class="waves-effect waves-light btn-small">Take
-                a look</a>
-              <a class="valign-wrapper" href="https://github.com/Jayleh/data-journalism" target="_blank" style="margin: 0;">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-  </li>
-  <li>
-    <div class="card">
-      <div class="card-content">
-        <figure>
-          <div>
-            <img src="{{ url_for('static', filename='img/project-card-imgs/honey-production.PNG') }}" alt="">
+            <img src="{{ url_for('static', filename='img/project-card-imgs/reduced/honey-production-min.PNG') }}" alt="">
           </div>
           <figcaption>
             <h4>Honey Production</h4>
-            <p>Website visualizing historical honey production data through interactive graphs and maps.</p>
+            <p>Historical honey production data through interactive graphs and maps <span>(Python
+                Flask, Javascript, Leaflet.js, HTML/CSS/Bootstrap)</span></p>
             <div class="action-links">
               <a href="https://honeyproduction.herokuapp.com/bubble" target="_blank" class="waves-effect waves-light btn-small">Take
                 a look</a>
@@ -175,37 +177,14 @@
       <div class="card-content">
         <figure>
           <div>
-            <img src="{{ url_for('static', filename='img/project-card-imgs/mars.PNG') }}" alt="">
+            <img src="{{ url_for('static', filename='img/project-card-imgs/reduced/mars-min.PNG') }}" alt="">
           </div>
           <figcaption>
             <h4>Mars Mission</h4>
-            <p>Web application that scrapes various websites for data related to the Mission to Mars and displays the
-              information in a single HTML page.</p>
+            <p>Mars info page <span>(Python Flask, MongoDB, Javascript, HTML/CSS/Bootstrap)</span></p>
             <div class="action-links">
               <!-- <a href="javascript:void(0)" target="_blank" class="waves-effect waves-light btn-small">Take a look</a> -->
               <a class="valign-wrapper" href="https://github.com/Jayleh/mars-mission" target="_blank" style="margin: 0;">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-  </li>
-  <li>
-    <div class="card">
-      <div class="card-content">
-        <figure>
-          <div>
-            <img src="{{ url_for('static', filename='img/project-card-imgs/reorder.PNG') }}" alt="">
-          </div>
-          <figcaption>
-            <h4>Reorder Plan</h4>
-            <p>Table showing important numbers used in production operations such as low stock counts of products, lead
-              time demand, allocated sales quantities, and more.</p>
-            <div class="action-links">
-              <!-- <a href="#">Take a look</a> -->
-              <a class="valign-wrapper" href="https://github.com/Jayleh/reorder-app" target="_blank" style="margin: 0;">
                 <i class="fab fa-github"></i>
               </a>
             </div>
