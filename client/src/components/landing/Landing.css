@@ -1,0 +1,62 @@
+.parallax-box {
+  position: relative;
+  height: 100vh;
+  background-image: url('./images/pexels-photo-509922-min.jpeg');
+  background-size: cover;
+  background-position: top center;
+  /* background-attachment: fixed; */
+  transform: translateY(-64px);
+}
+
+#impression {
+  display: block !important;
+}
+
+#impression h2,
+#impression p {
+  font-family: 'Luna';
+  color: black;
+  /* letter-spacing: 0.2em; */
+  margin: 0;
+  padding: 1rem 0;
+}
+
+#impression h2 {
+  font-size: 3rem;
+  padding: 2rem 0;
+}
+
+#impression p {
+  font-size: 1rem;
+}
+
+.intro {
+  margin: 2rem 0;
+}
+
+#hello,
+#i-can-help {
+  margin-bottom: 3rem;
+}
+
+#hello article,
+#i-can-help article {
+  margin: 0 auto;
+  max-width: 460px;
+}
+
+#i-can-help article h4 {
+  padding-top: 2rem;
+}
+
+#i-can-help article p {
+  margin-top: 0;
+}
+
+.heading {
+  padding: 2rem 0;
+}
+
+.details {
+  padding: 2rem 0;
+}

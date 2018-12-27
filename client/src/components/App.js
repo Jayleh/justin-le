@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import './App.css';
 
-import Header from './Header';
-import Landing from './Landing';
-import About from './About';
-import Projects from './Projects';
-import Contact from './Contact';
+import Header from './header/Header';
+import Landing from './landing/Landing';
+import About from './about/About';
+import Projects from './projects/Projects';
+import Contact from './contact/Contact';
 
 const App = () => {
   return (
