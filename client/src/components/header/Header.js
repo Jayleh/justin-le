@@ -32,13 +32,9 @@ class Header extends Component {
                   <Link to="/" className="brand-logo">
                     Justin
                   </Link>
-                  <a
-                    href="javascript:void(0)"
-                    data-target="mobile-nav"
-                    className="sidenav-trigger"
-                  >
+                  <button data-target="mobile-nav" className="sidenav-trigger">
                     <i className="material-icons">menu</i>
-                  </a>
+                  </button>
                   <ul className="right hide-on-med-and-down nav-links">
                     {this.renderLinks()}
                   </ul>

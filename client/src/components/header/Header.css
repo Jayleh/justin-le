@@ -10,7 +10,8 @@ nav {
   box-shadow: 0 0 0 0;
 }
 
-.nav-wrapper a {
+.nav-wrapper a,
+.sidenav-trigger {
   color: #b0bec5;
 }
 
@@ -21,4 +22,20 @@ nav {
 
 .nav-wrapper {
   z-index: 1;
+}
+
+.sidenav-trigger {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.sidenav-trigger:focus {
+  background-color: transparent;
+}
+
+@media only screen and (min-width: 993px) {
+  .sidenav-trigger {
+    display: none;
+  }
 }

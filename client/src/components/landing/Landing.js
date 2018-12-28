@@ -1,22 +1,31 @@
 import React from 'react';
 import Breaker from '../breaker/Breaker';
 import portrait from './images/portrait.jpg';
+import Collision from '../visuals/Collision';
+import ChartBubble from '../visuals/ChartBubble';
+import ChartBar from '../visuals/ChartBar';
+import './Landing.css';
 
 const Landing = () => {
   return (
-    <div>
-      <div className="parallax-box valign-wrapper">
-        <div id="impression" className="container valign-wrapper center-align">
-          <div className="intro center-align">
-            <h2>I'm Justin,</h2>
-            <p>a developer!</p>
-          </div>
-          <div id="visual">
-            <div id="collision" className="center-align" />
+    <React.Fragment>
+      <main>
+        <div className="parallax-box valign-wrapper">
+          <div
+            id="impression"
+            className="container valign-wrapper center-align"
+          >
+            <div className="intro center-align">
+              <h2>I'm Justin,</h2>
+              <p>a developer!</p>
+            </div>
+            <div id="visual">
+              <div id="collision" className="center-align">
+                <Collision />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <main>
         <section id="hello">
           <div className="container center-align">
             <div className="row">
@@ -54,7 +63,7 @@ const Landing = () => {
                   <div id="data" className="row">
                     <div className="col s12 l5">
                       <div className="chart-container">
-                        <canvas id="bubble-chart" />
+                        <ChartBubble />
                       </div>
                     </div>
                     <div className="col s12 l7">
@@ -70,7 +79,7 @@ const Landing = () => {
                   <div id="grow" className="row">
                     <div className="col s12 l5 push-l7">
                       <div className="chart-container">
-                        <canvas id="bar-chart" />
+                        <ChartBar />
                       </div>
                     </div>
                     <div className="col s12 l7 pull-l5">
@@ -115,7 +124,7 @@ const Landing = () => {
           </div>
         </section>
       </main>
-    </div>
+    </React.Fragment>
   );
 };
 

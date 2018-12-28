@@ -33,12 +33,10 @@ p {
 }
 
 h3 {
-  /* color: #607d8b; */
   color: #00738c;
 }
 
 h4 {
-  /* color: #90a4ae; */
   color: #81b0b2;
 }
 
@@ -63,103 +61,7 @@ img {
   width: 150px;
 }
 
-/* Visual containers */
-.chart-container {
-  position: relative;
-  margin: auto;
-  height: 100%;
-  width: 100%;
-}
-
-/* line break image */
-.breaker {
-  margin: 0 auto;
-  max-width: 100px;
-}
-
 .social-media i,
 .scroll-top i {
   font-size: 24px;
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 600px) {
-  #impression {
-    width: 90%;
-    display: flex !important;
-    justify-content: space-between !important;
-  }
-
-  .chart-container {
-    width: 70%;
-  }
-
-  .code-link {
-    font-size: 16px;
-  }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  #impression {
-    width: 70%;
-  }
-
-  #impression h2 {
-    font-size: 3.2rem;
-    padding: 3rem 0;
-  }
-
-  #impression p {
-    font-size: 1.2rem;
-  }
-
-  #impression {
-    display: block !important;
-    justify-content: unset !important;
-  }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  #impression h2 {
-    font-size: 3.2rem;
-    padding: 3rem 0;
-  }
-
-  #impression p {
-    font-size: 1.2rem;
-  }
-
-  #data,
-  #grow {
-    display: flex;
-    align-items: center;
-    padding: 0 75px;
-  }
-
-  .chart-container {
-    width: 100%;
-  }
-
-  .details {
-    padding: 0;
-    text-align: left;
-  }
-
-  #data .details {
-    padding-left: 35px;
-  }
-
-  #grow .details {
-    padding-right: 20px;
-  }
-
-  #grow {
-    margin: 3rem 0;
-  }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
 }
