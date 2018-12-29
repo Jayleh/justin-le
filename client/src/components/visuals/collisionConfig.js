@@ -1,6 +1,6 @@
 import * as d3 from 'd3';
 
-let width = 325,
+const width = 325,
   height = 325;
 
 let nodes = d3.range(50).map(function() {
@@ -24,51 +24,7 @@ let force = d3.layout
   .nodes(nodes)
   .size([width, height]);
 
-force.start();
-
-let svg = d3
-  .select('#collision')
-  .append('svg')
-  .attr('width', width)
-  .attr('height', height);
-
-svg
-  .selectAll('circle')
-  .data(nodes.slice(1))
-  .enter()
-  .append('circle')
-  .attr('r', function(d) {
-    return d.radius;
-  })
-  .style('fill', function(d, i) {
-    return color(i);
-  });
-
-force.on('tick', function(e) {
-  let q = d3.geom.quadtree(nodes),
-    i = 0,
-    n = nodes.length;
-
-  while (++i < n) q.visit(collide(nodes[i]));
-
-  svg
-    .selectAll('circle')
-    .attr('cx', function(d) {
-      return d.x;
-    })
-    .attr('cy', function(d) {
-      return d.y;
-    });
-});
-
-svg.on('mousemove', function() {
-  let p1 = d3.mouse(this);
-  root.px = p1[0];
-  root.py = p1[1];
-  force.resume();
-});
-
-function collide(node) {
+const collide = node => {
   let r = node.radius + 16,
     nx1 = node.x - r,
     nx2 = node.x + r,
@@ -90,4 +46,49 @@ function collide(node) {
     }
     return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
   };
-}
+};
+
+export const generateCollision = domElement => {
+  let svg = domElement
+    .append('svg')
+    .attr('width', width)
+    .attr('height', height);
+
+  svg
+    .selectAll('circle')
+    .data(nodes.slice(1))
+    .enter()
+    .append('circle')
+    .attr('r', function(d) {
+      return d.radius;
+    })
+    .style('fill', function(d, i) {
+      return color(i);
+    });
+
+  svg.on('mousemove', function() {
+    let p1 = d3.mouse(this);
+    root.px = p1[0];
+    root.py = p1[1];
+    force.resume();
+  });
+
+  force.start();
+
+  force.on('tick', function(e) {
+    let q = d3.geom.quadtree(nodes),
+      i = 0,
+      n = nodes.length;
+
+    while (++i < n) q.visit(collide(nodes[i]));
+
+    svg
+      .selectAll('circle')
+      .attr('cx', function(d) {
+        return d.x;
+      })
+      .attr('cy', function(d) {
+        return d.y;
+      });
+  });
+};

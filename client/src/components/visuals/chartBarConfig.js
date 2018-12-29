@@ -15,7 +15,8 @@ export const barData = {
         'rgba(255, 255, 255, 1)',
         'rgba(255, 255, 255, 1)'
       ],
-      borderWidth: 1
+      borderWidth: 1,
+      label: '5'
     },
     {
       data: [5, 7.5, 1.5, 2.5],
@@ -31,13 +32,15 @@ export const barData = {
         'rgba(255, 255, 255, 1)',
         'rgba(255, 255, 255, 1)'
       ],
-      borderWidth: 1
+      borderWidth: 1,
+      label: '6'
     },
     {
       data: [5, 7.5, 1.5, 2.5],
       type: 'line',
       backgroundColor: ['rgba(207, 216, 220, 0.2)'],
-      borderColor: ['rgba(207, 216, 220, 1)']
+      borderColor: ['rgba(207, 216, 220, 1)'],
+      label: '7'
     }
   ]
 };

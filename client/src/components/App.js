@@ -7,6 +7,7 @@ import Landing from './landing/Landing';
 import About from './about/About';
 import Projects from './projects/Projects';
 import Contact from './contact/Contact';
+import Footer from './footer/Footer';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/about" exact component={About} />
         <Route path="/projects" exact component={Projects} />
         <Route path="/contact" exact component={Contact} />
+        <Footer />
       </React.Fragment>
     </BrowserRouter>
   );

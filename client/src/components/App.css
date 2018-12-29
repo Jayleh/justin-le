@@ -18,18 +18,8 @@ p {
   color: #424242;
 }
 
-.brand-logo,
-.code-link a {
+.brand-logo {
   font-family: 'Amaranth', Calibri, Arial, sans-serif;
-}
-
-.code-link a {
-  color: #00738c;
-  font-weight: 700;
-}
-
-.code-link {
-  font-size: 14px;
 }
 
 h3 {
@@ -54,14 +44,4 @@ h4 {
 
 .row {
   margin-bottom: 0;
-}
-
-img {
-  height: 150px;
-  width: 150px;
-}
-
-.social-media i,
-.scroll-top i {
-  font-size: 24px;
 }
