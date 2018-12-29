@@ -5,28 +5,19 @@ import { Link } from 'react-router-dom';
 import { viewLinks, socialLinks } from './footerLinks';
 import resume from '../../assets/docs/Justin Le Resume.pdf';
 import './Footer.css';
+import scrollTop from './scrollTop';
 
 class Footer extends Component {
   componentDidMount() {
-    // console.log(this.scrollButton);
-    // Click event to scroll to top
-    $(this.scrollButton).click(function() {
-      console.log('hi');
-      $('html, body').animate(
-        {
-          scrollTop: 0
-        },
-        1500,
-        'easeInOutCubic'
-      );
-    });
+    scrollTop($('.scroll-top > button'));
+    scrollTop($('.view-link'));
   }
 
   renderViewLinks = () =>
     _.map(viewLinks, ({ link, label }) => {
       return (
         <li key={label}>
-          <Link className="grey-text text-lighten-3" to={link}>
+          <Link className="grey-text text-lighten-3 view-link" to={link}>
             {label}
           </Link>
         </li>
@@ -100,10 +91,7 @@ class Footer extends Component {
               </div>
               <div className="col s1">
                 <div className="scroll-top right-align">
-                  <button
-                    className="grey-text text-lighten-4"
-                    ref={e => (this.scrollButton = e)}
-                  >
+                  <button className="grey-text text-lighten-4">
                     <i className="fas fa-chevron-up" />
                   </button>
                 </div>

@@ -1,22 +1,14 @@
-export default () => {
-  const body = document.querySelector('body');
+import $ from 'jquery';
+import 'jquery-ui/ui/effect';
 
-  body.style.animation = '{ scrollTop: 0 } 1500 easeInOutCubic';
-
-  return;
+export default selector => {
+  selector.click(function() {
+    $('html, body').animate(
+      {
+        scrollTop: 0
+      },
+      1500,
+      'easeInOutCubic'
+    );
+  });
 };
-
-// // Click event to scroll to top
-// $(scrollTop).click(function(event) {
-//   event.preventDefault();
-
-//   $('html, body').animate(
-//     {
-//       scrollTop: 0
-//     },
-//     1500,
-//     'easeInOutCubic'
-//   );
-
-//   return false;
-// });
