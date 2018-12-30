@@ -2,16 +2,16 @@ import 'jvectormap-next/jquery-jvectormap.css';
 import React, { Component } from 'react';
 import { VectorMap } from 'react-jvectormap';
 import Breaker from '../breaker/Breaker';
-import CardExperience from './CardExperience';
+import AboutCard from './AboutCard';
 
-import bootcamp from './images/bootcamp-min.jpg';
-import certificate from './images/certificate-min.jpg';
-import cliff from './images/cliff-min.jpg';
-import moon from './images/moon-min.jpg';
-import pose from './images/pose-min.jpg';
-import rest from './images/rest-min.jpg';
-import turtle from './images/turtle-min.jpg';
-import resume from '../../assets/docs/Justin Le Resume.pdf';
+import bootcampImg from './images/bootcamp-min.jpg';
+import certificateImg from './images/certificate-min.jpg';
+import cliffImg from './images/cliff-min.jpg';
+import moonImg from './images/moon-min.jpg';
+import poseImg from './images/pose-min.jpg';
+import restImg from './images/rest-min.jpg';
+import turtleImg from './images/turtle-min.jpg';
+import resumePdf from '../../assets/docs/Justin Le Resume.pdf';
 
 import './About.css';
 import mapConfig from './mapConfig';
@@ -86,10 +86,10 @@ class About extends Component {
             </div>
           </div>
           <section>
-            <CardExperience
+            <AboutCard
               location="Irvine, CA"
               dates={this.renderDates("Dec'17", 'today')}
-              imageSrc={turtle}
+              imageSrc={turtleImg}
               imageAlt="turtle"
               title="Developer &#124; Data Analyst &#124; Inventory Specialist"
               subTitle={this.renderWebLink('https://anteage.com/', 'Cellese')}
@@ -101,10 +101,10 @@ class About extends Component {
               hashtags="#BuildWebApps #InventoryRevamp #ProjectionReport
                       #SalesTrends #IdentifyKPIs"
             />
-            <CardExperience
+            <AboutCard
               location="Sangju, South Korea"
               dates={"Feb'15 - Mar'17"}
-              imageSrc={moon}
+              imageSrc={moonImg}
               imageAlt="moon"
               title="English Teacher"
               subTitle={this.renderWebLink(
@@ -129,10 +129,10 @@ class About extends Component {
             </div>
           </div>
           <section>
-            <CardExperience
+            <AboutCard
               location="Everywhere"
               dates={this.renderAccentSpan('Always')}
-              imageSrc={rest}
+              imageSrc={restImg}
               imageAlt="rest"
               title="Self-learning"
               subTitle={
@@ -141,10 +141,10 @@ class About extends Component {
               description="This is how I learned 80% of what I know now."
               hashtags="#LearnByDoing"
             />
-            <CardExperience
+            <AboutCard
               location="Irvine, CA"
               dates={"Jan'18 - Jul'18"}
-              imageSrc={pose}
+              imageSrc={poseImg}
               imageAlt="pose"
               title="Data Analytics & Visualization"
               subTitle={this.renderWebLink(
@@ -154,10 +154,10 @@ class About extends Component {
               description="Intensive 24-week data bootcamp dedicated to data mining, preparation, and visualization."
               hashtags="#WorkStudy #Python #JavaScript #MachineLearning #DataWrangling #Database #FullStack #WebDevelopment"
             />
-            <CardExperience
+            <AboutCard
               location="SLO, CA"
               dates={"Sep'09 - Jun'13"}
-              imageSrc={cliff}
+              imageSrc={cliffImg}
               imageAlt="cliff"
               title="Biological Sciences, Bachelor's Degree"
               subTitle={this.renderWebLink(
@@ -175,14 +175,14 @@ class About extends Component {
               <div className="col s12 m6 xl12">
                 <div className="bootcamp-image valign-wrapper">
                   <img
-                    src={bootcamp}
+                    src={bootcampImg}
                     className="responsive-img"
                     alt="bootcamp"
                   />
                 </div>
                 <div className="bootcamp-image valign-wrapper">
                   <img
-                    src={certificate}
+                    src={certificateImg}
                     className="responsive-img"
                     alt="certificate"
                   />
@@ -194,7 +194,7 @@ class About extends Component {
                     If you'd like a formal document please see my
                     <a
                       className="color-accent"
-                      href={resume}
+                      href={resumePdf}
                       target="_blank"
                       rel="noopener noreferrer"
                     >

@@ -3,9 +3,10 @@ import $ from 'jquery';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { viewLinks, socialLinks } from './footerLinks';
-import resume from '../../assets/docs/Justin Le Resume.pdf';
+
 import './Footer.css';
 import scrollTop from './scrollTop';
+import resumePdf from '../../assets/docs/Justin Le Resume.pdf';
 
 class Footer extends Component {
   componentDidMount() {
@@ -82,7 +83,7 @@ class Footer extends Component {
                   {this.renderSocialLinks()}
                   <Link
                     className="grey-text text-lighten-4"
-                    to={resume}
+                    to={resumePdf}
                     target="_blank"
                   >
                     <i className="far fa-file-alt" />
