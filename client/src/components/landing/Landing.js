@@ -71,7 +71,7 @@ class Landing extends Component {
                     <img
                       src={portrait}
                       alt="Justin Le"
-                      className="circle responsive-img"
+                      className="circle responsive-img portrait-img"
                     />
                     <h3>Hi.</h3>
                     <p className="flow-text">
