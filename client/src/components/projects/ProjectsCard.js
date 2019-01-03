@@ -1,64 +1,87 @@
 import React from 'react';
 
-const ProjectsCard = ({
+const ProjectsTestCard = ({
   imageSrc,
   imageAlt,
   title,
-  description,
-  techStack,
   webSiteLink,
-  gitHubLink
+  gitHubLink,
+  description,
+  techStack
 }) => {
   const renderWebSiteLink = webSiteLink => {
+    if (webSiteLink) {
+      return (
+        <div>
+          <a
+            href={webSiteLink}
+            className="waves-effect waves-light btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Take A Look
+          </a>
+        </div>
+      );
+    }
     return (
-      <a
-        href={webSiteLink}
-        target="_blank"
-        className="waves-effect waves-light btn-small"
-        rel="noopener noreferrer"
-      >
-        Take a look
-      </a>
+      <div>
+        <a
+          href={webSiteLink}
+          className="waves-effect waves-light btn disabled"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Take A Look
+        </a>
+      </div>
     );
   };
 
   const renderGitHubLink = gitHubLink => {
+    if (gitHubLink) {
+      return (
+        <div className="github-link">
+          <a href={gitHubLink} target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-github" />
+          </a>
+        </div>
+      );
+    }
     return (
-      <a
-        className="valign-wrapper"
-        href={gitHubLink}
-        target="_blank"
-        style={{ margin: 0 }}
-        rel="noopener noreferrer"
-      >
-        <i className="fab fa-github" />
-      </a>
+      <div>
+        <a
+          href={gitHubLink}
+          className="disabled"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-github" />
+        </a>
+      </div>
     );
   };
 
   return (
-    <li>
-      <div className="card">
-        <div className="card-content">
-          <figure>
-            <div>
-              <img src={imageSrc} alt={imageAlt} />
-            </div>
-            <figcaption>
-              <h4>{title}</h4>
-              <p>
-                {description} <span>({techStack})</span>
-              </p>
-              <div className="action-links">
-                {renderWebSiteLink(webSiteLink)}
-                {renderGitHubLink(gitHubLink)}
-              </div>
-            </figcaption>
-          </figure>
+    <figure className="effect-julia">
+      <img src={imageSrc} alt={imageAlt} />
+      <figcaption>
+        <h2>
+          {title}
+          {/* Passionate <span>Julia</span> */}
+        </h2>
+        <div>
+          <p>{description}</p>
+          <p>{techStack}</p>
+          <div className="action-links valign-wrapper">
+            {renderWebSiteLink(webSiteLink)}
+            {renderGitHubLink(gitHubLink)}
+          </div>
         </div>
-      </div>
-    </li>
+        {/* <a href="#">View more</a> */}
+      </figcaption>
+    </figure>
   );
 };
 
-export default ProjectsCard;
+export default ProjectsTestCard;

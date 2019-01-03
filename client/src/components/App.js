@@ -5,7 +5,7 @@ import './App.css';
 import Header from './header/Header';
 import Landing from './landing/Landing';
 import About from './about/About';
-import Projects from './projects/ProjectsTest';
+import Projects from './projects/Projects';
 import Contact from './contact/Contact';
 import Footer from './footer/Footer';
 

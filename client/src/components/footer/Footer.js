@@ -66,7 +66,7 @@ class Footer extends Component {
             <div className="row valign-wrapper">
               <div className="col s7 m6">
                 <div className="code-link">
-                  &copy; 2018 &mdash;
+                  &copy; 2019 &mdash;
                   <a
                     href="https://github.com/Jayleh/justin-le"
                     target="_blank"
