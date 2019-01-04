@@ -4,4 +4,8 @@ import ReactDOM from 'react-dom';
 
 import App from './components/App';
 
+// temporary test for email
+import axios from 'axios';
+window.axios = axios;
+
 ReactDOM.render(<App />, document.querySelector('#root'));

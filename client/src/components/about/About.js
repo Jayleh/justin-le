@@ -53,7 +53,7 @@ class About extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <main>
         <div id="about" className="container">
           <div className="row">
             <div className="col s12">
@@ -246,7 +246,7 @@ class About extends Component {
             </div>
           </div>
         </div>
-      </React.Fragment>
+      </main>
     );
   }
 }
