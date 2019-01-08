@@ -7,22 +7,17 @@ module.exports = app => {
 
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-      host: keys.googleUsername,
-      port: 465,
-      secure: true, // true for 465, false for other ports
+      service: 'gmail',
       auth: {
-        type: 'OAuth2',
         user: keys.googleUsername,
-        clientId: keys.googleClientId,
-        clientSecret: keys.googleClientSecret,
-        refreshToken: keys.refreshToken
+        pass: keys.googlePassword
       }
     });
 
     // setup email data with unicode symbols
     let mailOptions = {
       from: '"Test Tester 👻" <foo@example.com>', // sender address
-      to: '', // list of receivers
+      to: keys.defaultRecipient, // list of receivers
       subject: 'Hello ✔', // Subject line
       text: 'Hello world?', // plain text body
       html: '<b>Hello world?</b>' // html body
@@ -34,6 +29,8 @@ module.exports = app => {
         return console.log(error);
       }
       console.log(`Message sent: ${info.messageId}`);
+      console.log(info);
+      // console.log(info.envelope.from); // foo@example.com
       // Preview only available when sending through an Ethereal account
       // console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 

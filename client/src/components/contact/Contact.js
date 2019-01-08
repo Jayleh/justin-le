@@ -5,43 +5,49 @@ import cityScapeImg from './images/pexels-photo-373912-min.jpeg';
 import glassWindowImg from './images/pexels-photo-1029606-min.jpeg';
 
 const Contact = () => {
+  console.log(process.env.REACT_APP_RECAPTCHA_SITE_KEY);
   return (
     <main>
-      <div class="row split">
-        <div id="msg-container" class="col s12 l6">
-          <div class="row msg-row">
-            <div class="col s12 center-align">
-              <div class="heading">
+      <div className="row split">
+        <div id="msg-container" className="col s12 l6">
+          <div className="row msg-row">
+            <div className="col s12 center-align">
+              <div className="heading">
                 <h3>Say Hi.</h3>
               </div>
             </div>
           </div>
-          <div class="row msg-row">
-            <div class="col s12" />
+          <div className="row msg-row">
+            <div className="col s12" />
           </div>
-          <div class="row msg-row">
-            <form id="msg-form" class="col s12" method="POST" action="" />
+          <div className="row msg-row">
+            <form id="msg-form" className="col s12" method="POST" action="">
+              <div
+                className="g-recaptcha"
+                data-sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+              />
+            </form>
           </div>
         </div>
-        <div class="col s12 l6 image-container">
+        <div className="col s12 l6 image-container">
           <img id="right-img" src={cityScapeImg} alt="City Scape" />
         </div>
       </div>
-      <div class="row split">
-        <div class="col s12 l6 image-container">
+      <div className="row split">
+        <div className="col s12 l6 image-container">
           <img id="left-img" src={glassWindowImg} alt="Glass Window" />
         </div>
-        <div id="contact-container" class="col s12 l6">
-          <div class="row contact-row">
-            <div class="col s12">
-              <div class="heading">
+        <div id="contact-container" className="col s12 l6">
+          <div className="row contact-row">
+            <div className="col s12">
+              <div className="heading">
                 <h3>Contact</h3>
               </div>
               <hr />
             </div>
           </div>
-          <div class="row contact-row">
-            <div class="col s12">
+          <div className="row contact-row">
+            <div className="col s12">
               <h4>Email</h4>
               <p>jaylehyun@gmail.com</p>
             </div>
