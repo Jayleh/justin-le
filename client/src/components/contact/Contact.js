@@ -1,11 +1,12 @@
 import React from 'react';
 
+import ContactForm from './ContactForm';
+
 import './Contact.css';
 import cityScapeImg from './images/pexels-photo-373912-min.jpeg';
 import glassWindowImg from './images/pexels-photo-1029606-min.jpeg';
 
 const Contact = () => {
-  console.log(process.env.REACT_APP_RECAPTCHA_SITE_KEY);
   return (
     <main>
       <div className="row split">
@@ -18,15 +19,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="row msg-row">
-            <div className="col s12" />
-          </div>
-          <div className="row msg-row">
-            <form id="msg-form" className="col s12" method="POST" action="">
-              <div
-                className="g-recaptcha"
-                data-sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-              />
-            </form>
+            <ContactForm />
           </div>
         </div>
         <div className="col s12 l6 image-container">
