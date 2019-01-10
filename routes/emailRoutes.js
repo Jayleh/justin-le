@@ -1,9 +1,10 @@
 const nodemailer = require('nodemailer');
 const keys = require('../config/keys');
+const contactTemplate = require('./emailTemplates/contactTemplate');
 
 module.exports = app => {
   app.post('/api/email', (req, res) => {
-    // const { name, email, subject, message, connection } = req.body;
+    const { name, email, subject, message } = req.body;
 
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
@@ -16,11 +17,11 @@ module.exports = app => {
 
     // setup email data with unicode symbols
     let mailOptions = {
-      from: '"Test Tester 👻" <foo@example.com>', // sender address
+      from: `"${name}" <${email}>`, // sender address
       to: keys.defaultRecipient, // list of receivers
-      subject: 'Hello ✔', // Subject line
-      text: 'Hello world?', // plain text body
-      html: '<b>Hello world?</b>' // html body
+      subject: subject, // Subject line
+      // text: message, // plain text body
+      html: contactTemplate(req.body) // html body
     };
 
     // send mail with defined transport object
