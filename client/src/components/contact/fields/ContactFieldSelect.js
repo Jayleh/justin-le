@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { selectOptions } from './formFields';
-import renderError from './utils/renderError';
+import renderError from '../utils/renderError';
 
 const ContactFieldSelect = ({ input, meta }) => {
   const renderOptions = () => {

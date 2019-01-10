@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import renderError from './utils/renderError';
+import renderError from '../utils/renderError';
 
 class ContactField extends Component {
   state = { labelClass: '' };
 
   onFocusInput = () => {
     this.setState({ labelClass: 'active' });
-    // console.log(this.props);
   };
 
   onBlurInput = value => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import renderError from './utils/renderError';
+import renderError from '../utils/renderError';
 
 const ContactFieldTextArea = ({ input, label, meta }) => {
   return (

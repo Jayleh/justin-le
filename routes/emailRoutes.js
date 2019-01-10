@@ -20,7 +20,7 @@ module.exports = app => {
       from: `"${name}" <${email}>`, // sender address
       to: keys.defaultRecipient, // list of receivers
       subject: subject, // Subject line
-      // text: message, // plain text body
+      text: message, // plain text body
       html: contactTemplate(req.body) // html body
     };
 
@@ -30,16 +30,8 @@ module.exports = app => {
         return console.log(error);
       }
       console.log(`Message sent: ${info.messageId}`);
-      console.log(info);
       // console.log(info.envelope.from); // foo@example.com
-      // Preview only available when sending through an Ethereal account
-      // console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-
-      // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-      // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
     });
-
-    console.log('message sent');
 
     res.send({ message: 'Hi there!' });
   });

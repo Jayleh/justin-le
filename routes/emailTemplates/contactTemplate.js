@@ -1,4 +1,7 @@
 module.exports = ({ name, email, message, connection }) => {
+  const formattedMessage = message.replace(/(?:\r\n|\r|\n)/g, '<br />');
+  console.log(formattedMessage);
+
   return `
   <html>
     <body>
@@ -7,7 +10,7 @@ module.exports = ({ name, email, message, connection }) => {
         email: ${email}<br />
         conn: ${connection}<br />
         <br />
-        ${message}
+        ${formattedMessage}
       </div>
     </body>
   </html>

@@ -1,11 +1,12 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
-import ContactFieldInput from './ContactFieldInput';
-import ContactFieldTextArea from './ContactFieldTextArea';
-import ContactFieldSelect from './ContactFieldSelect';
-import ContactFieldRecaptcha from './ContactFieldRecaptcha';
-import { formInputs } from './formFields';
+import ContactFieldInput from './fields/ContactFieldInput';
+import ContactFieldTextArea from './fields/ContactFieldTextArea';
+import ContactFieldSelect from './fields/ContactFieldSelect';
+import ContactFieldRecaptcha from './fields/ContactFieldRecaptcha';
+import validateEmails from './utils/validateEmails';
+import { formInputs } from './fields/formFields';
 
 class ContactForm extends Component {
   renderInputs() {
@@ -65,6 +66,8 @@ class ContactForm extends Component {
 
 const validate = formValues => {
   const errors = {};
+
+  errors['email'] = validateEmails(formValues['email'] || '');
 
   _.each(formInputs, ({ name }) => {
     if (!formValues[name]) {

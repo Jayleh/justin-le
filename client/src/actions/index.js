@@ -6,6 +6,4 @@ export const submitContact = formValues => async dispatch => {
   await server.post('/api/email', formValues);
 
   dispatch({ type: SEND_MESSAGE });
-
-  // history.push('/surveys');
 };

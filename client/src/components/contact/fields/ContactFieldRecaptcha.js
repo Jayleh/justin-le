@@ -1,6 +1,6 @@
 import React from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
-import renderError from './utils/renderError';
+import renderError from '../utils/renderError';
 
 const ContactFieldRecaptcha = ({ input, meta }) => {
   return (
