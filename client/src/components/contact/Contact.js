@@ -1,12 +1,17 @@
 import React from 'react';
-
+import { connect } from 'react-redux';
+import { submitContact } from '../../actions';
 import ContactForm from './ContactForm';
 
 import './Contact.css';
 import cityScapeImg from './images/pexels-photo-373912-min.jpeg';
 import glassWindowImg from './images/pexels-photo-1029606-min.jpeg';
 
-const Contact = () => {
+const Contact = props => {
+  const onSubmit = formValues => {
+    props.submitContact(formValues);
+  };
+
   return (
     <main>
       <div className="row split">
@@ -19,7 +24,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="row msg-row">
-            <ContactForm />
+            <ContactForm onSubmit={onSubmit} />
           </div>
         </div>
         <div className="col s12 l6 image-container">
@@ -51,4 +56,7 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default connect(
+  null,
+  { submitContact }
+)(Contact);

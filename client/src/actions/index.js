@@ -3,9 +3,9 @@ import { SEND_MESSAGE } from './types';
 
 export const submitContact = formValues => async dispatch => {
   console.log(formValues);
-  // const response = await server.post('/api/email', formValues);
+  await server.post('/api/email', formValues);
 
-  // dispatch({ type: SEND_MESSAGE, payload: response.data });
+  dispatch({ type: SEND_MESSAGE });
 
   // history.push('/surveys');
 };

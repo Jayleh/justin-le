@@ -3,7 +3,7 @@ const keys = require('../config/keys');
 
 module.exports = app => {
   app.post('/api/email', (req, res) => {
-    // const { name, email, subject, body } = req.body;
+    // const { name, email, subject, message, connection } = req.body;
 
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({

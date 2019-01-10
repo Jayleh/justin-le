@@ -1,23 +1,17 @@
 import React, { Component } from 'react';
+import renderError from './utils/renderError';
 
 class ContactField extends Component {
   state = { labelClass: '' };
 
   onFocusInput = () => {
     this.setState({ labelClass: 'active' });
+    // console.log(this.props);
   };
 
-  onBlurInput = ({ value }) => {
+  onBlurInput = value => {
     if (value === '') {
       this.setState({ labelClass: '' });
-    }
-  };
-
-  renderError = ({ error, touched }) => {
-    // console.log(touched);
-    if (touched && error) {
-      console.log('hi');
-      return <span className="helper-text red-text">{error}</span>;
     }
   };
 
@@ -28,12 +22,17 @@ class ContactField extends Component {
       <div className="row">
         <div className="input-field col s12">
           <input
-            {...input}
-            onFocus={this.onFocusInput}
-            onBlur={() => this.onBlurInput(input)}
+            onFocus={e => {
+              input.onFocus(e);
+              this.onFocusInput();
+            }}
+            onBlur={e => {
+              input.onBlur(e);
+              this.onBlurInput(input);
+            }}
           />
           <label className={this.state.labelClass}>{label}</label>
-          {this.renderError(meta)}
+          {renderError(meta)}
         </div>
       </div>
     );

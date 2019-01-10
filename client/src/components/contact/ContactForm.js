@@ -1,8 +1,11 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
-import ContactField from './ContactField';
-import { formInputs, selectOptions } from './formFields';
+import ContactFieldInput from './ContactFieldInput';
+import ContactFieldTextArea from './ContactFieldTextArea';
+import ContactFieldSelect from './ContactFieldSelect';
+import ContactFieldRecaptcha from './ContactFieldRecaptcha';
+import { formInputs } from './formFields';
 
 class ContactForm extends Component {
   renderInputs() {
@@ -10,7 +13,7 @@ class ContactForm extends Component {
       return (
         <Field
           key={name}
-          component={ContactField}
+          component={ContactFieldInput}
           type="text"
           label={label}
           name={name}
@@ -21,53 +24,24 @@ class ContactForm extends Component {
 
   renderTextArea() {
     return (
-      <div className="row">
-        <div className="input-field col s12">
-          <Field
-            name="body"
-            component="textarea"
-            id="textarea1"
-            className="materialize-textarea"
-          />
-          <label html="textarea1">Your Message</label>
-        </div>
-      </div>
+      <Field
+        name="message"
+        component={ContactFieldTextArea}
+        label="Your Message"
+      />
     );
   }
 
-  renderOptions() {
-    return _.map(selectOptions, ({ label, value }) => {
-      return (
-        <option key={label} value={value}>
-          {label}
-        </option>
-      );
-    });
+  renderReCAPTCHA() {
+    return <Field name="recaptcha" component={ContactFieldRecaptcha} />;
   }
 
   renderSelect() {
-    return (
-      <div className="row">
-        <div className="col s12">
-          <label>How did you find me?</label>
-          <Field
-            name="connection"
-            component="select"
-            className="browser-default"
-          >
-            <option value="" disabled>
-              Choose your option
-            </option>
-            {this.renderOptions()}
-          </Field>
-        </div>
-      </div>
-    );
+    return <Field name="connection" component={ContactFieldSelect} />;
   }
 
   onSubmit = formValues => {
-    console.log(formValues);
-    // this.props.onSubmit(formValues);
+    this.props.onSubmit(formValues);
   };
 
   render() {
@@ -80,14 +54,7 @@ class ContactForm extends Component {
         {this.renderInputs()}
         {this.renderTextArea()}
         {this.renderSelect()}
-        <div className="row">
-          <div className="col s12">
-            <div
-              className="g-recaptcha"
-              data-sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-            />
-          </div>
-        </div>
+        {this.renderReCAPTCHA()}
         <button type="submit" className="btn">
           Send
         </button>
@@ -101,9 +68,21 @@ const validate = formValues => {
 
   _.each(formInputs, ({ name }) => {
     if (!formValues[name]) {
-      errors[name] = 'You must provide a value';
+      errors[name] = `You must provide ${name}`;
     }
   });
+
+  if (!formValues['message']) {
+    errors['message'] = 'You must provide message';
+  }
+
+  if (!formValues['connection']) {
+    errors['connection'] = 'Please select an option';
+  }
+
+  if (!formValues['recaptcha']) {
+    errors['recaptcha'] = 'reCAPTCHA required';
+  }
 
   return errors;
 };
