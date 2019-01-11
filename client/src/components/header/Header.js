@@ -1,7 +1,7 @@
 import M from 'materialize-css';
 import _ from 'lodash';
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import headerLinks from './headerLinks';
 import './Header.css';
 
@@ -21,18 +21,36 @@ class Header extends Component {
     });
   }
 
+  styleDark(location, selector) {
+    if (selector === 'nav-wrapper') {
+      return location.pathname === '/' ? 'nav-dark' : '';
+    } else if (selector === 'sidenav-trigger') {
+      return location.pathname === '/' ? 'sidenav-trigger-dark' : 'white-text';
+    }
+  }
+
   render() {
+    const { location } = this.props;
+
     return (
       <header>
         <nav>
-          <div className="nav-wrapper">
+          <div
+            className={`nav-wrapper ${this.styleDark(location, 'nav-wrapper')}`}
+          >
             <div className="container">
               <div className="row">
                 <div className="col s12">
                   <Link to="/" className="brand-logo">
                     Justin
                   </Link>
-                  <button data-target="mobile-nav" className="sidenav-trigger">
+                  <button
+                    data-target="mobile-nav"
+                    className={`sidenav-trigger ${this.styleDark(
+                      location,
+                      'sidenav-trigger'
+                    )}`}
+                  >
                     <i className="material-icons">menu</i>
                   </button>
                   <ul className="right hide-on-med-and-down nav-links">
@@ -51,4 +69,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default withRouter(Header);

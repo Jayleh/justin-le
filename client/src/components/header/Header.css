@@ -8,8 +8,8 @@ nav {
   box-shadow: 0 0 0 0;
 }
 
-.nav-wrapper a,
-.sidenav-trigger {
+.nav-dark a,
+.sidenav-trigger-dark {
   color: #b0bec5;
 }
 

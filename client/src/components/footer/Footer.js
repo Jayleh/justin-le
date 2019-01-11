@@ -5,13 +5,14 @@ import { Link } from 'react-router-dom';
 import { viewLinks, socialLinks } from './footerLinks';
 
 import './Footer.css';
-import scrollTop from './scrollTop';
+import styles from './Footer.module.css';
+import { scrollTopCubic, scrollTopInstant } from './scrollAnimate';
 import resumePdf from '../../assets/docs/Justin Le Resume.pdf';
 
 class Footer extends Component {
   componentDidMount() {
-    scrollTop($('.scroll-top > button'));
-    scrollTop($('.view-link'));
+    scrollTopCubic($('.scroll-top > button'));
+    scrollTopInstant($('.view-link'));
   }
 
   renderViewLinks = () =>
@@ -65,7 +66,7 @@ class Footer extends Component {
           <div className="container footer-copyright-content">
             <div className="row valign-wrapper">
               <div className="col s7 m6">
-                <div className="code-link">
+                <div className={styles['code-link']}>
                   &copy; 2019 &mdash;
                   <a
                     href="https://github.com/Jayleh/justin-le"
@@ -79,7 +80,7 @@ class Footer extends Component {
                 </div>
               </div>
               <div className="col s4 m3 offset-m2">
-                <div className="social-media">
+                <div className={styles['social-media']}>
                   {this.renderSocialLinks()}
                   <Link
                     className="grey-text text-lighten-4"

@@ -13,20 +13,6 @@ li {
   font-family: 'Roboto', Calibri, Arial, sans-serif;
 }
 
-.brand-logo,
-.code-link a {
-  font-family: 'Amaranth', Calibri, Arial, sans-serif;
-}
-
-.code-link a {
-  color: #00738c;
-  font-weight: 700;
-}
-
-.code-link {
-  font-size: 14px;
-}
-
 nav {
   background-color: #607d8b !important;
 }

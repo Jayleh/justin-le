@@ -1,6 +1,5 @@
 module.exports = ({ name, email, message, connection }) => {
   const formattedMessage = message.replace(/(?:\r\n|\r|\n)/g, '<br />');
-  console.log(formattedMessage);
 
   return `
   <html>

@@ -1,25 +1,3 @@
-.code-link a {
-  font-family: 'Amaranth', Calibri, Arial, sans-serif;
-}
-
-.code-link a {
-  color: #00738c;
-  font-weight: 700;
-}
-
-.code-link {
-  font-size: 14px;
-}
-
-.social-media i,
-.scroll-top i {
-  font-size: 24px;
-}
-
-.social-media i {
-  padding-right: 4px;
-}
-
 .scroll-top button {
   border: none;
   background-color: transparent;
@@ -27,8 +5,6 @@
   cursor: pointer;
 }
 
-@media (min-width: 600px) {
-  .code-link {
-    font-size: 16px;
-  }
+.scroll-top i {
+  font-size: 24px;
 }
