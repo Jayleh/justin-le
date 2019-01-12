@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectsCard from './ProjectsCard';
 
-import './Projects.css';
+// import './Projects.css';
 
 import vidBrowserImg from './images/vid-browser-min.PNG';
 import shipLiveImg from './images/shiplive-min.PNG';

@@ -1,51 +1,5 @@
-body {
-  font-family: 'Amaranth', Calibri, Arial, sans-serif;
-  color: #9a9a9a;
-}
-
 .row {
   margin-bottom: 10px;
-}
-
-p,
-a,
-li {
-  font-family: 'Roboto', Calibri, Arial, sans-serif;
-}
-
-nav {
-  background-color: #607d8b !important;
-}
-
-.nav-links li a {
-  font-family: 'Lato', Calibri, Arial, san-serif;
-  letter-spacing: 1px;
-}
-
-.social-media i,
-.scroll-top i {
-  font-size: 24px;
-}
-
-.text-important {
-  color: #161618;
-}
-
-.color-accent {
-  /* color: #5a46ff; */
-  color: #00738c;
-}
-
-.btn,
-.btn-large,
-.btn-small {
-  background-color: rgba(0, 115, 140, 1) !important;
-}
-
-.btn:hover,
-.btn-large:hover,
-.btn-small:hover {
-  background-color: rgba(0, 115, 140, 0.8) !important;
 }
 
 #about h3 {

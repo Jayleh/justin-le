@@ -13,7 +13,7 @@ import restImg from './images/rest-min.jpg';
 import turtleImg from './images/turtle-min.jpg';
 import resumePdf from '../../assets/docs/Justin Le Resume.pdf';
 
-import './About.css';
+import styles from './About.module.css';
 import mapConfig from './mapConfig';
 
 const {
@@ -27,7 +27,7 @@ const {
 
 class About extends Component {
   renderAccentSpan = text => {
-    return <span className="color-accent">{text}</span>;
+    return <span className="blue-dark">{text}</span>;
   };
 
   renderDates = (fromDate, toDate) => {
@@ -43,7 +43,7 @@ class About extends Component {
       <a
         href={link}
         target="_blank"
-        className="color-accent"
+        className="blue-dark"
         rel="noopener noreferrer"
       >
         {` ${name}`}
@@ -62,7 +62,7 @@ class About extends Component {
           </div>
           <div className="row">
             <div className="col s12">
-              <p>
+              <p className="text-light">
                 <span className="text-important">Developer</span>, specializing
                 in operations, sales analytics, and inventory management. Able
                 to <span className="text-important">solve business needs</span>{' '}
@@ -190,10 +190,10 @@ class About extends Component {
               </div>
               <div className="col s12 m6 xl12">
                 <div className="resume-linkedin-description">
-                  <p>
+                  <p className="text-light">
                     If you'd like a formal document please see my
                     <a
-                      className="color-accent"
+                      className="blue-dark"
                       href={resumePdf}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -203,7 +203,7 @@ class About extends Component {
                     </a>
                     . You can also checkout my
                     <a
-                      className="color-accent"
+                      className="blue-dark"
                       href="https://www.linkedin.com/in/jayleh/"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -226,9 +226,9 @@ class About extends Component {
           </div>
           <div id="text-word" className="row">
             <div className="col s12 l2">
-              <p>
+              <p className="text-light">
                 These are all the countries that I have{' '}
-                <span className="color-accent">visited</span> or{' '}
+                <span className="blue-dark">visited</span> or{' '}
                 <span className="text-important">lived</span> in.
               </p>
             </div>

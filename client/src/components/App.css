@@ -14,20 +14,24 @@ p {
   font-family: 'Roboto', Calibri, Arial, sans-serif;
 }
 
-p {
+.black-light {
   color: #424242;
 }
 
-.brand-logo {
-  font-family: 'Amaranth', Calibri, Arial, sans-serif;
-}
-
-h3 {
+.blue-dark {
   color: #00738c;
 }
 
-h4 {
+.blue-pastel {
   color: #81b0b2;
+}
+
+.text-light {
+  color: #9a9a9a;
+}
+
+.text-important {
+  color: #161618;
 }
 
 .btn,
