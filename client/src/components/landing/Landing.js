@@ -67,7 +67,7 @@ class Landing extends Component {
         </div>
         <section id={styles.hello}>
           <div className="container center-align">
-            <div className="row">
+            <div className="row mb0">
               <div className="col s12">
                 <article>
                   <img
@@ -89,19 +89,19 @@ class Landing extends Component {
           </div>
         </section>
         <Breaker />
-        <section id={styles['what-i-do']}>
+        <section id="what-i-do">
           <div className="container center-align">
             <div className="row">
               <div className="col s12">
                 <article>
-                  <div className="row">
+                  <div className="row mb0">
                     <div className="col s12">
                       <div className={styles.heading}>
                         <h3 className="blue-dark">What I can do.</h3>
                       </div>
                     </div>
                   </div>
-                  <div id={styles.data} className="row">
+                  <div id={styles.data} className="row mb0">
                     <div className="col s12 l5">
                       <div className="chart-container">
                         <ChartBubble />
@@ -142,7 +142,7 @@ class Landing extends Component {
         <Breaker />
         <section id={styles['i-can-help']}>
           <div className="container center-align">
-            <div className="row">
+            <div className="row mb0">
               <div className="col s12">
                 <article>
                   <div className={styles.heading}>

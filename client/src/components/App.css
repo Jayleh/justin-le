@@ -46,6 +46,22 @@ p {
   background-color: rgba(0, 115, 140, 0.8) !important;
 }
 
-.row {
-  margin-bottom: 0;
+.mb0 {
+  margin-bottom: 0 !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectsCard from './ProjectsCard';
 
-// import './Projects.css';
+import './Projects.css';
 
 import vidBrowserImg from './images/vid-browser-min.PNG';
 import shipLiveImg from './images/shiplive-min.PNG';
@@ -15,14 +15,14 @@ const ProjectsTest = () => {
   return (
     <main>
       <div id="projects-title" className="container">
-        <div className="row">
+        <div className="row mb0">
           <div className="col s12 center-align">
             <h3>Projects</h3>
           </div>
         </div>
       </div>
       <div className="container">
-        <div className="row grid">
+        <div className="row grid mb0">
           <div className="col s12 project-row">
             <ProjectsCard
               imageSrc={vidBrowserImg}
@@ -44,7 +44,7 @@ const ProjectsTest = () => {
             />
           </div>
         </div>
-        <div className="row grid">
+        <div className="row grid mb0">
           <div className="col s12 project-row">
             <ProjectsCard
               imageSrc={nflDashImg}
@@ -66,7 +66,7 @@ const ProjectsTest = () => {
             />
           </div>
         </div>
-        <div className="row grid">
+        <div className="row grid mb0">
           <div className="col s12 project-row">
             <ProjectsCard
               imageSrc={bellyButtonImg}
@@ -88,7 +88,7 @@ const ProjectsTest = () => {
             />
           </div>
         </div>
-        <div className="row grid">
+        <div className="row grid mb0">
           <div className="col s12 project-row">
             <ProjectsCard
               imageSrc={marsImg}

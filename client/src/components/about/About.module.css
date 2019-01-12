@@ -1,41 +1,34 @@
-.row {
-  margin-bottom: 10px;
-}
-
-#about h3 {
+.h3-about {
   margin: 1rem 0;
 }
 
-h3 {
+.h3 {
   color: #161618;
   font-size: 28px;
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
-p {
+.p {
   font-size: 16px;
+  margin-top: 0;
 }
 
 .location,
-.position h4 {
+.h4-position {
   color: #161618;
 }
 
-.position h4 {
+.h4-position {
   font-size: 18px;
   margin: 0;
 }
 
-p {
-  margin-top: 0;
-}
-
-.experience-time-place p {
+.p-experience-time-place {
   margin: 0;
 }
 
-.description p {
+.p-description {
   margin-top: 0.5rem;
 }
 
@@ -53,24 +46,24 @@ p {
   text-align: end;
 }
 
-.experience-image img {
+.experience-image {
   width: 65px;
 }
 
-.bootcamp-image {
+.bootcamp-image-container {
   padding: 5px;
 }
 
-.bootcamp-image img {
+.bootcamp-image {
   width: 80px;
   border-radius: 20%;
 }
 
-#resume-linkedin div.row {
+#resume-linkedin .row {
   margin-bottom: 0;
 }
 
-#resume-linkedin div.col:first-of-type {
+.bootcamp-container {
   display: flex !important;
   justify-content: center !important;
 }
@@ -94,15 +87,15 @@ p {
   flex-wrap: wrap;
 }
 
-.experience-panel > .experience-image {
+.experience-image-container {
   flex: 1 0 10%;
 }
 
-.experience-panel > .position {
+.position {
   flex: 1 0 50%;
 }
 
-.experience-panel > .description {
+.description {
   flex: 0 1 100%;
 }
 
@@ -127,31 +120,21 @@ p {
   background-color: #f6f7fb;
 }
 
-/* line break image */
-.breaker {
-  margin: 0 auto;
-  max-width: 100px;
-}
-
-.footer-copyright-content div.row {
-  margin: 0;
-}
-
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 600px) {
-  h3 {
+  .h3-about {
     font-size: 30px;
   }
 
-  .position h4 {
+  .h4-position {
     font-size: 21px;
   }
 
-  p {
+  .p {
     font-size: 18px;
   }
 
-  .description p {
+  .p-description {
     margin-top: 1rem;
   }
 
@@ -175,7 +158,7 @@ p {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .position h4 {
+  .h4-position {
     margin: 1rem 0;
   }
 
@@ -198,15 +181,15 @@ p {
     padding: 40px 0;
   }
 
-  .experience-image img {
+  .experience-image {
     width: 70px;
   }
 
-  .bootcamp-image img {
+  .bootcamp-image {
     width: 85px;
   }
 
-  #resume-linkedin div.col:first-of-type {
+  .bootcamp-container {
     justify-content: left !important;
   }
 
@@ -233,8 +216,7 @@ p {
   }
 
   /* align time and place vertical center */
-
-  article .row {
+  .article-row {
     display: flex !important;
     align-items: center;
   }
@@ -245,33 +227,33 @@ p {
     position: relative;
   }
 
-  .experience-panel > .experience-image {
+  .experience-image-container {
     flex: none;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
   }
 
-  .experience-panel > .position,
-  .experience-panel > .description {
+  .position,
+  .description {
     flex: none;
     padding-left: 20%;
   }
 
-  h3 {
+  .h3 {
     font-size: 32px;
   }
 
-  .position h4 {
+  .h4-position {
     font-size: 24px;
   }
 
-  p {
+  .p {
     font-size: 20px;
     margin-top: 0 !important;
   }
 
-  article {
+  .article {
     margin-bottom: 2rem;
   }
 
@@ -280,11 +262,11 @@ p {
     align-items: center;
   }
 
-  .experience-image img {
+  .experience-image {
     width: 80px;
   }
 
-  .bootcamp-image img {
+  .bootcamp-image {
     width: 100px;
   }
 
@@ -295,19 +277,19 @@ p {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  h3 {
+  .h3-about {
     font-size: 34px;
   }
 
-  .position h4 {
+  .h4-position {
     font-size: 26px;
   }
 
-  p {
+  .p {
     font-size: 20px;
   }
 
-  article {
+  .article {
     margin-bottom: 3rem;
   }
 
@@ -320,7 +302,7 @@ p {
     height: 400px;
   }
 
-  #resume-linkedin div.col:first-of-type {
+  .bootcamp-container {
     justify-content: center !important;
   }
 

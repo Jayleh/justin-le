@@ -54,15 +54,15 @@ class About extends Component {
   render() {
     return (
       <main>
-        <div id="about" className="container">
+        <div id={styles.about} className="container">
           <div className="row">
             <div className="col s12">
-              <h3>About</h3>
+              <h3 className={styles['h3-about']}>About</h3>
             </div>
           </div>
           <div className="row">
             <div className="col s12">
-              <p className="text-light">
+              <p className={`${styles.p} text-light`}>
                 <span className="text-important">Developer</span>, specializing
                 in operations, sales analytics, and inventory management. Able
                 to <span className="text-important">solve business needs</span>{' '}
@@ -79,10 +79,10 @@ class About extends Component {
           </div>
         </div>
         <Breaker />
-        <div id="experience" className="container">
+        <div id={styles.experience} className="container">
           <div className="row">
             <div className="col s12">
-              <h3>Work Experience</h3>
+              <h3 className={styles.h3}>Work Experience</h3>
             </div>
           </div>
           <section>
@@ -122,10 +122,10 @@ class About extends Component {
           </section>
         </div>
         <Breaker />
-        <div id="education" className="container">
+        <div id={styles.education} className="container">
           <div className="row">
             <div className="col s12">
-              <h3>Education</h3>
+              <h3 className={styles.h3}>Education</h3>
             </div>
           </div>
           <section>
@@ -169,28 +169,38 @@ class About extends Component {
             />
           </section>
         </div>
-        <div id="resume-linkedin">
+        <div id={styles['resume-linkedin']}>
           <div className="container">
             <div className="row">
-              <div className="col s12 m6 xl12">
-                <div className="bootcamp-image valign-wrapper">
+              <div
+                className={`col s12 m6 xl12 ${styles['bootcamp-container']}`}
+              >
+                <div
+                  className={`${
+                    styles['bootcamp-image-container']
+                  } valign-wrapper`}
+                >
                   <img
                     src={bootcampImg}
-                    className="responsive-img"
+                    className={`responsive-img ${styles['bootcamp-image']}`}
                     alt="bootcamp"
                   />
                 </div>
-                <div className="bootcamp-image valign-wrapper">
+                <div
+                  className={`${
+                    styles['bootcamp-image-container']
+                  } valign-wrapper`}
+                >
                   <img
                     src={certificateImg}
-                    className="responsive-img"
+                    className={`responsive-img ${styles['bootcamp-image']}`}
                     alt="certificate"
                   />
                 </div>
               </div>
               <div className="col s12 m6 xl12">
-                <div className="resume-linkedin-description">
-                  <p className="text-light">
+                <div className={styles['resume-linkedin-description']}>
+                  <p className={`${styles.p} text-light`}>
                     If you'd like a formal document please see my
                     <a
                       className="blue-dark"
@@ -218,22 +228,22 @@ class About extends Component {
             </div>
           </div>
         </div>
-        <div id="where-ive-been" className="container">
+        <div id={styles['where-ive-been']} className="container">
           <div className="row">
             <div className="col s12">
-              <h3>Where I've Been</h3>
+              <h3 className={styles.h3}>Where I've Been</h3>
             </div>
           </div>
-          <div id="text-word" className="row">
+          <div id={styles['text-word']} className="row">
             <div className="col s12 l2">
-              <p className="text-light">
+              <p className={`${styles.p} text-light`}>
                 These are all the countries that I have{' '}
                 <span className="blue-dark">visited</span> or{' '}
                 <span className="text-important">lived</span> in.
               </p>
             </div>
             <div className="col s12 l10 center-align">
-              <div id="map">
+              <div id={styles['map']}>
                 <VectorMap
                   containerStyle={containerStyle}
                   map={map}
