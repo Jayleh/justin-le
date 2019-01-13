@@ -1,0 +1,47 @@
+@font-face {
+  src: url('../../assets/fonts/Luna.ttf');
+  font-family: 'Luna';
+}
+
+.nav {
+  background-color: #607d8b !important;
+}
+
+/* .nav-landing {
+  background-color: transparent !important;
+  box-shadow: 0 0 0 0;
+} */
+
+.nav-dark a,
+.sidenav-trigger-dark {
+  color: #b0bec5;
+}
+
+.nav-wrapper {
+  z-index: 1;
+}
+
+.brand-logo {
+  font-family: 'Amaranth', Calibri, Arial, sans-serif;
+}
+
+.nav-links li a {
+  font-family: 'Lato', Calibri, Arial, san-serif;
+  letter-spacing: 1px;
+}
+
+.sidenav-trigger {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.sidenav-trigger:focus {
+  background-color: transparent;
+}
+
+@media only screen and (min-width: 993px) {
+  .sidenav-trigger {
+    display: none;
+  }
+}

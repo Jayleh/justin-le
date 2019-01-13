@@ -1,0 +1,316 @@
+.h3-about {
+  margin: 1rem 0;
+}
+
+.h3 {
+  color: #161618;
+  font-size: 28px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.p {
+  font-size: 16px;
+  margin-top: 0;
+}
+
+.location,
+.h4-position {
+  color: #161618;
+}
+
+.h4-position {
+  font-size: 18px;
+  margin: 0;
+}
+
+.p-experience-time-place {
+  margin: 0;
+}
+
+.p-description {
+  margin-top: 0.5rem;
+}
+
+.experience-time-place {
+  margin-bottom: 0.5rem;
+}
+
+.experience-time-place .col,
+.experience-panel .col,
+.experience-pos-des .col {
+  padding: 0;
+}
+
+.date-range {
+  text-align: end;
+}
+
+.experience-image {
+  width: 65px;
+}
+
+.bootcamp-image-container {
+  padding: 5px;
+}
+
+.bootcamp-image {
+  width: 80px;
+  border-radius: 20%;
+}
+
+#resume-linkedin .row {
+  margin-bottom: 0;
+}
+
+.bootcamp-container {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.resume-linkedin-description p {
+  text-align: center;
+  margin: 0;
+  padding-top: 15px;
+}
+
+/* flexbox for location and date range */
+.experience-time-place {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+/* flexbox for img, position, and description */
+.experience-panel {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.experience-image-container {
+  flex: 1 0 10%;
+}
+
+.position {
+  flex: 1 0 50%;
+}
+
+.description {
+  flex: 0 1 100%;
+}
+
+#map {
+  width: 320px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+#about,
+#experience,
+#education,
+#resume-linkedin {
+  padding: 10px 0;
+}
+
+#where-ive-been {
+  padding: 30px 0;
+}
+
+#resume-linkedin {
+  background-color: #f6f7fb;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 600px) {
+  .h3-about {
+    font-size: 30px;
+  }
+
+  .h4-position {
+    font-size: 21px;
+  }
+
+  .p {
+    font-size: 18px;
+  }
+
+  .p-description {
+    margin-top: 1rem;
+  }
+
+  #resume-linkedin {
+    padding: 20px 0;
+  }
+
+  .resume-linkedin-description p {
+    padding-top: 0;
+  }
+
+  #map {
+    width: 400px;
+    height: 300px;
+  }
+
+  .code-link {
+    font-size: 16px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .h4-position {
+    margin: 1rem 0;
+  }
+
+  #map {
+    width: 600px;
+    height: 350px;
+  }
+
+  #about,
+  #experience,
+  #education {
+    padding: 15px 0;
+  }
+
+  #resume-linkedin {
+    padding: 25px 0;
+  }
+
+  #where-ive-been {
+    padding: 40px 0;
+  }
+
+  .experience-image {
+    width: 70px;
+  }
+
+  .bootcamp-image {
+    width: 85px;
+  }
+
+  .bootcamp-container {
+    justify-content: left !important;
+  }
+
+  .resume-linkedin-description p {
+    text-align: right;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .location p,
+  .date-range p {
+    margin: 0;
+  }
+
+  .date-range {
+    text-align: start;
+  }
+
+  /* flexbox for location and date range */
+  .experience-time-place {
+    display: block !important;
+    justify-content: left !important;
+  }
+
+  /* align time and place vertical center */
+  .article-row {
+    display: flex !important;
+    align-items: center;
+  }
+
+  /* flexbox for img, position, and description */
+  .experience-panel {
+    display: block !important;
+    position: relative;
+  }
+
+  .experience-image-container {
+    flex: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .position,
+  .description {
+    flex: none;
+    padding-left: 20%;
+  }
+
+  .h3 {
+    font-size: 32px;
+  }
+
+  .h4-position {
+    font-size: 24px;
+  }
+
+  .p {
+    font-size: 20px;
+    margin-top: 0 !important;
+  }
+
+  .article {
+    margin-bottom: 2rem;
+  }
+
+  #text-word {
+    display: flex !important;
+    align-items: center;
+  }
+
+  .experience-image {
+    width: 80px;
+  }
+
+  .bootcamp-image {
+    width: 100px;
+  }
+
+  #resume-linkedin {
+    padding: 40px 0;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .h3-about {
+    font-size: 34px;
+  }
+
+  .h4-position {
+    font-size: 26px;
+  }
+
+  .p {
+    font-size: 20px;
+  }
+
+  .article {
+    margin-bottom: 3rem;
+  }
+
+  #resume-linkedin {
+    padding: 60px 0;
+  }
+
+  #map {
+    width: 750px;
+    height: 400px;
+  }
+
+  .bootcamp-container {
+    justify-content: center !important;
+  }
+
+  .resume-linkedin-description {
+    padding: 20px 300px 0 300px;
+  }
+
+  .resume-linkedin-description p {
+    text-align: center;
+  }
+}

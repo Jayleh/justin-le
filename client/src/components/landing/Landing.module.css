@@ -1,0 +1,154 @@
+@font-face {
+  src: url('../../assets/fonts/Luna.ttf');
+  font-family: 'Luna';
+}
+
+.parallax-box {
+  position: relative;
+  height: 100vh;
+  background-image: url('./images/pexels-photo-509922-min.jpeg');
+  background-size: cover;
+  background-position: top center;
+  /* background-attachment: fixed; */
+  transform: translateY(-64px);
+}
+
+#impression {
+  display: block !important;
+}
+
+#impression h2,
+#impression p {
+  font-family: 'Luna';
+  color: black;
+  /* letter-spacing: 0.2em; */
+  margin: 0;
+  padding: 1rem 0;
+}
+
+#impression h2 {
+  font-size: 3rem;
+  padding: 2rem 0;
+}
+
+#impression p {
+  font-size: 1rem;
+}
+
+.intro {
+  margin: 2rem 0;
+}
+
+.portrait-img {
+  height: 150px;
+  width: 150px;
+}
+
+#hello,
+#i-can-help {
+  margin-bottom: 3rem;
+}
+
+#hello article,
+#i-can-help article {
+  margin: 0 auto;
+  max-width: 460px;
+}
+
+#i-can-help article h4 {
+  padding-top: 2rem;
+}
+
+#i-can-help article p {
+  margin-top: 0;
+}
+
+.heading {
+  padding: 2rem 0;
+}
+
+.details {
+  padding: 2rem 0;
+}
+
+/* Visual containers */
+.chart-container {
+  position: relative;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 600px) {
+  #impression {
+    width: 90%;
+    display: flex !important;
+    justify-content: space-between !important;
+  }
+
+  .chart-container {
+    width: 70%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #impression {
+    width: 70%;
+  }
+
+  #impression h2 {
+    font-size: 3.2rem;
+    padding: 3rem 0;
+  }
+
+  #impression p {
+    font-size: 1.2rem;
+  }
+
+  #impression {
+    display: block !important;
+    justify-content: unset !important;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #impression h2 {
+    font-size: 3.2rem;
+    padding: 3rem 0;
+  }
+
+  #impression p {
+    font-size: 1.2rem;
+  }
+
+  #data,
+  #grow {
+    display: flex;
+    align-items: center;
+    padding: 0 75px;
+  }
+
+  .chart-container {
+    width: 100%;
+  }
+
+  .details {
+    padding: 0;
+    text-align: left;
+  }
+
+  #data .details {
+    padding-left: 35px;
+  }
+
+  #grow .details {
+    padding-right: 20px;
+  }
+
+  #grow {
+    margin: 3rem 0;
+  }
+}

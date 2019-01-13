@@ -1,0 +1,33 @@
+{
+  "name": "justin-le",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "10.14.2",
+    "npm": "6.5.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jayleh/justin-le.git"
+  },
+  "author": "Justin Le",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jayleh/justin-le/issues"
+  },
+  "homepage": "https://github.com/Jayleh/justin-le#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "nodemailer": "^5.0.0"
+  }
+}

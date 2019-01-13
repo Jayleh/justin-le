@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Amaranth|Roboto|Lato');
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Amaranth', Calibri, Arial, sans-serif;
+}
+
+a,
+li,
+p {
+  font-family: 'Roboto', Calibri, Arial, sans-serif;
+}
+
+.black-light {
+  color: #424242;
+}
+
+.blue-dark {
+  color: #00738c;
+}
+
+.blue-pastel {
+  color: #81b0b2;
+}
+
+.text-light {
+  color: #9a9a9a;
+}
+
+.text-important {
+  color: #161618;
+}
+
+.btn,
+.btn-large,
+.btn-small {
+  background-color: rgba(0, 115, 140, 1) !important;
+}
+
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover {
+  background-color: rgba(0, 115, 140, 0.8) !important;
+}
+
+.mb0 {
+  margin-bottom: 0 !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}

@@ -1,3 +1,5 @@
-/client
-/config
+# dependencies
 /node_modules
+
+# keys
+/config/dev.js
