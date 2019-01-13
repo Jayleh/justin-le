@@ -7,6 +7,6 @@ the previous version code here:
 [Version 1](https://github.com/Jayleh/portfolio-flask)
 
 ## Tech Stack
-React/ReduxJS
-Node/ExpressJS
+React/ReduxJS<br />
+Node/ExpressJS<br />
 CSS/Materialize.css
