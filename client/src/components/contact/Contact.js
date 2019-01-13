@@ -4,7 +4,7 @@ import { submitContact } from '../../actions';
 import ContactForm from './ContactForm';
 import ContactFormSent from './ContactFormSent';
 
-import './Contact.css';
+// import './Contact.css';
 import cityScapeImg from './images/pexels-photo-373912-min.jpeg';
 import glassWindowImg from './images/pexels-photo-1029606-min.jpeg';
 
