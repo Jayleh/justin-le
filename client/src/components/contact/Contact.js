@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { submitContact } from '../../actions';
@@ -15,6 +16,13 @@ class Contact extends Component {
     this.props.submitContact(formValues);
 
     this.setState({ showFormSent: true });
+
+    $('html, body').animate(
+      {
+        scrollTop: 0
+      },
+      0
+    );
   };
 
   renderContent() {

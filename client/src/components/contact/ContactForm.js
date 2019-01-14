@@ -56,7 +56,7 @@ class ContactForm extends Component {
         {this.renderTextArea()}
         {this.renderSelect()}
         {this.renderReCAPTCHA()}
-        <button type="submit" className="btn">
+        <button type="submit" className="btn submit-btn">
           Send
         </button>
       </form>

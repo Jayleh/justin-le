@@ -4,5 +4,8 @@ module.exports = {
   googleClientId: process.env.GOOGLE_CLIENT_ID,
   googleClientSecret: process.env.GOOGLE_CLIENT_SECRET,
   refreshToken: process.env.REFRESH_TOKEN,
-  defaultRecipient: process.env.DEFAULT_RECIPIENT
+  defaultRecipient: process.env.DEFAULT_RECIPIENT,
+  etherealUsername: process.env.ETHEREAL_USERNAME,
+  etherealPassword: process.env.ETHEREAL_PASSWORD,
+  sendGridKey: process.env.SEND_GRID_KEY
 };

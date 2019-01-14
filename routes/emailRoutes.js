@@ -1,42 +1,20 @@
-const nodemailer = require('nodemailer');
-const keys = require('../config/keys');
-const contactTemplate = require('./emailTemplates/contactTemplate');
+const Mailer = require('../services/Mailer');
+const contactTemplate = require('../services/emailTemplates/contactTemplate');
 
 module.exports = app => {
-  app.post('/api/email', (req, res) => {
-    const { name, email, subject, message } = req.body;
+  app.post('/api/email', async (req, res) => {
+    // const { name, email, subject, message } = req.body;
 
-    // create reusable transporter object using the default SMTP transport
-    let transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: keys.googleUsername,
-        pass: keys.googlePassword
-      }
-    });
+    // Creat mailer object
+    const mailer = new Mailer(req.body, contactTemplate(req.body));
 
-    // setup email data with unicode symbols
-    let mailOptions = {
-      from: `"${name}" <${email}>`, // sender address
-      to: keys.defaultRecipient, // list of receivers
-      subject: subject, // Subject line
-      text: message, // plain text body
-      html: contactTemplate(req.body) // html body
-    };
+    try {
+      // Send email!
+      await mailer.send();
 
-    // send mail with defined transport object
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        return console.log(error);
-      }
-      console.log(`Message sent: ${info.messageId}`);
-      // console.log(info.envelope.from); // foo@example.com
-    });
-
-    res.send({ message: 'Hi there!' });
-  });
-
-  app.get('/api/test', (req, res) => {
-    res.send({ message: 'Hi there!' });
+      res.send({ status: 'successful' });
+    } catch (err) {
+      res.status(500).send(err);
+    }
   });
 };
