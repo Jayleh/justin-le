@@ -136,7 +136,7 @@ class About extends Component {
               imageAlt="rest"
               title="Self-learning"
               subTitle={
-                'From each job, className, co-worker, book, article, meet-up or life experience'
+                'From each job, class, co-worker, book, article, meet-up or life experience'
               }
               description="This is how I learned 80% of what I know now."
               hashtags="#LearnByDoing"
